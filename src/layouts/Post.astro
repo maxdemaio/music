@@ -1,0 +1,86 @@
+---
+import Navbar from '@components/Navbar.astro';
+import type { CollectionEntry } from 'astro:content';
+import CommonHead from '@components/CommonHead.astro';
+import '@styles/prose.css';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+// Now, `frontmatter`, `url`, and other Markdown layout properties
+// are accessible with type safety
+const { title, description, duration, pubDate, fileName, image, tags } = Astro.props;
+---
+
+<style>
+  /* dynamic stylings unique for tags */
+  .logic {
+    color: rgb(2, 132, 199);
+    border-color: rgb(2, 132, 199);
+  }
+  html.dark .logic {
+    /* sky-300 */
+    color: rgb(125 211 252);
+    border-color: rgb(125 211 252);
+  }
+  .producing {
+    color: rgb(192 38 211);
+    border-color: rgb(192 38 211);
+  }
+  html.dark .producing {
+    color: rgb(240 171 252);
+    border-color: rgb(240 171 252);
+  }
+
+  .life {
+    color: rgb(219 39 119);
+    border-color: rgb(219 39 119);
+  }
+  html.dark .life {
+    /* pink-300 */
+    color: rgb(249 168 212);
+    border-color: rgb(249 168 212);
+  }
+</style>
+
+<html lang="en" class="scroll-smooth">
+  <CommonHead title={title} description={description} image={image} />
+  <body class="text-lg text-gray-700 bg-white dark:text-gray-200 dark:bg-neutral-900">
+    <Navbar />
+    <!-- prose start -->
+    <main class="prose break-words lt-xs:px-4 px-8 max-w-3xl mx-auto text-lg">
+      <section class="mb-6">
+        <h1 id={fileName}>{title}</h1>
+        <div class="flex flex-wrap gap-1">
+          <time datetime={pubDate} class="font-kai dark:opacity-70 opacity-80">
+            {
+              new Date(pubDate).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })
+            }</time
+          >
+          <span class="font-kai dark:opacity-70 opacity-80">·</span>
+          <span class="font-kai dark:opacity-70 opacity-80">{duration}min</span>
+          {tags && <span class="font-kai dark:opacity-70 opacity-80">·</span>}
+          {
+            tags && (
+              <>
+                {tags.map((tag) => (
+                  <span
+                    class={`${tag} transition-opacity ease-in-out duration-400 group-hover:opacity-100 border rounded px-1`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </>
+            )
+          }
+        </div>
+      </section>
+      <slot />
+      <!-- blog content is injected here -->
+    </main>
+    <!-- prose end -->
+  </body>
+</html>

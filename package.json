@@ -11,7 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.0.4",
+    "@astrojs/sitemap": "^3.0.4",
     "astro": "^4.1.3",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.169",
+    "unocss": "^0.58.3"
   }
 }
