@@ -1,13 +1,82 @@
 ---
-import Default from '@layouts/Default.astro';
-import { getCollection } from 'astro:content';
+//// server side stuff start
+type ETrack = {
+  ranking: number;
+  songUrl: string;
+  artist: string;
+  title: string;
+};
 
-const blogPosts = await getCollection('blog', ({ data }) => {
+type ETracks = {
+  tracks: ETrack[];
+};
+
+export const prerender = false;
+const client_id: string | undefined = process.env.SPOTIFY_CLIENT_ID;
+const client_secret: string | undefined = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token: string | undefined = process.env.SPOTIFY_REFRESH_TOKEN;
+const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
+const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+
+// Top 10 tracks over 4 week period
+// https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
+const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10`;
+
+const getAccessToken = async () => {
+  const response = await fetch(TOKEN_ENDPOINT, {
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${basic}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      grant_type: "refresh_token",
+      refresh_token: refresh_token || "",
+    }),
+  });
+
+  return response.json();
+};
+
+const getTopTracks = async () => {
+  const { access_token } = await getAccessToken();
+  const url =
+    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5";
+  const payload = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  };
+  const res = await fetch(url, payload);
+  const data = await res.json();
+  return data;
+};
+
+const response = await getTopTracks();
+const { items } = await response.json();
+
+// typed as any because Spotify API could change and will adjust as needed
+const tracks = items.slice(0, 10).map((track: any) => ({
+  artist: track.artists.map((_artist: any) => _artist.name).join(", "),
+  songUrl: track.external_urls.spotify,
+  title: track.name,
+}));
+import Track from "@components/Track.astro";
+//// server side stuff end
+
+import Default from "@layouts/Default.astro";
+import { getCollection } from "astro:content";
+
+const blogPosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
 
 // Sort my music posts
-blogPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf());
+blogPosts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+);
 ---
 
 <style>
@@ -33,35 +102,36 @@ blogPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pu
 
 <Default title="Home - Max DeMaio" description="Max DeMaio's personal website">
   <section class="mb-6">
-    <h2 class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4">Lately</h2>
-    <p class="mb-4 ">My most played tracks on Spotify over the last 4 weeks, updated daily.</p>
-    <div class="flex flex-row items-baseline border-b border-neutral-200 dark:border-neutral-800 w-full mb-8">
-      <p class="text-sm font-bold text-neutral-400 dark:text-neutral-600">
-        1
-      </p>
-      <div class="flex flex-col pl-3">
-        <a
-          class="font-medium underline decoration-green-300 decoration-2 text-neutral-900 dark:text-neutral-100 truncate w-60 sm:w-96 md:w-full"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          title
-        </a>
-        <p
-          class="text-neutral-500 mb-4 truncate w-60 sm:w-96 md:w-full"
-          color="neutral.500"
-        >
-          artist
-        </p>
-      </div>
-    </div>
+    <h2
+      class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4"
+    >
+      Lately
+    </h2>
+    <p class="mb-4">
+      My most played tracks on Spotify over the last 4 weeks, updated daily.
+    </p>
+
+    {
+      tracks.map((track: ETrack, index: number) => (
+        <Track
+          ranking={index + 1}
+          songUrl={track.songUrl}
+          artist={track.artist}
+          title={track.title}
+        />
+      ))
+    }
   </section>
   <section class="mb-6">
-    <h2 class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4">Stay Tuned</h2>
+    <h2
+      class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4"
+    >
+      Stay Tuned
+    </h2>
     <p class="">
-      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection of all the useful music tips and
-      tricks I've learned along the way. So far, I've written {blogPosts.length} posts.
+      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection
+      of all the useful music tips and tricks I've learned along the way. So far,
+      I've written {blogPosts.length} posts.
     </p>
   </section>
   <section class="mb-4">
@@ -76,10 +146,10 @@ blogPosts.sort((a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pu
                 </div>
                 <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-wrap gap-1">
                   <time datetime={post.data.pubDate}>
-                    {new Date(post.data.pubDate).toLocaleDateString('en-us', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric',
+                    {new Date(post.data.pubDate).toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
                     })}
                   </time>
                   <span>·</span>
