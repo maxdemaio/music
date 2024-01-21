@@ -3,12 +3,13 @@ const { ranking, songUrl, artist, title } = Astro.props;
 ---
 
 <div
-  class="flex flex-row items-baseline border-b border-neutral-200 dark:border-neutral-800 w-full mb-8"
+
+  class="cursor-pointer group flex flex-row items-baseline border-b border-opacity-30 border-neutral-5 w-full"
 >
-  <p class="text-sm font-bold text-neutral-400 dark:text-neutral-600">{ranking}</p>
+  <p class="text-sm font-bold transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80">{ranking}</p>
   <div class="flex flex-col pl-3">
     <a
-      class="font-medium underline decoration-green-300 decoration-2 text-neutral-900 dark:text-neutral-100 truncate w-60 sm:w-96 md:w-full"
+      class="underline decoration-green-300 decoration-2 transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100 truncate w-60 sm:w-96 md:w-full"
       href={songUrl}
       target="_blank"
       rel="noopener noreferrer"
@@ -16,7 +17,7 @@ const { ranking, songUrl, artist, title } = Astro.props;
       {title}
     </a>
     <p
-      class="text-neutral-500 mb-4 truncate w-60 sm:w-96 md:w-full"
+      class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 mb-4 truncate w-60 sm:w-96 md:w-full"
       color="neutral.500"
     >
       {artist}

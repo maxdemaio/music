@@ -1,5 +1,12 @@
 ---
-//// server side stuff start
+export const prerender = false;
+
+// For local development
+// make sure you set them via CLI
+const client_id = process.env.SPOTIFY_CLIENT_ID;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+
 type ETrack = {
   ranking: number;
   songUrl: string;
@@ -7,14 +14,6 @@ type ETrack = {
   title: string;
 };
 
-type ETracks = {
-  tracks: ETrack[];
-};
-
-export const prerender = false;
-const client_id: string | undefined = process.env.SPOTIFY_CLIENT_ID;
-const client_secret: string | undefined = process.env.SPOTIFY_CLIENT_SECRET;
-const refresh_token: string | undefined = process.env.SPOTIFY_REFRESH_TOKEN;
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
@@ -34,14 +33,12 @@ const getAccessToken = async () => {
       refresh_token: refresh_token || "",
     }),
   });
-
-  return response.json();
+  return await response.json();
 };
 
 const getTopTracks = async () => {
   const { access_token } = await getAccessToken();
-  const url =
-    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5";
+  const url = TOP_TRACKS_ENDPOINT;
   const payload = {
     method: "GET",
     headers: {
@@ -53,17 +50,20 @@ const getTopTracks = async () => {
   return data;
 };
 
-const response = await getTopTracks();
-const { items } = await response.json();
+let { items } = await getTopTracks();
 
-// typed as any because Spotify API could change and will adjust as needed
-const tracks = items.slice(0, 10).map((track: any) => ({
-  artist: track.artists.map((_artist: any) => _artist.name).join(", "),
-  songUrl: track.external_urls.spotify,
-  title: track.name,
-}));
+let tracks: ETrack[] | null = null;
+
+if (items) {
+  // typed as any because Spotify API could change and will adjust as needed
+  tracks = items.slice(0, 10).map((track: any) => ({
+    artist: track.artists.map((_artist: any) => _artist.name).join(", "),
+    songUrl: track.external_urls.spotify,
+    title: track.name,
+  }));
+}
+
 import Track from "@components/Track.astro";
-//// server side stuff end
 
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
@@ -101,26 +101,37 @@ blogPosts.sort(
 </style>
 
 <Default title="Home - Max DeMaio" description="Max DeMaio's personal website">
-  <section class="mb-6">
+  <section class="mb-10">
     <h2
       class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4"
     >
       Lately
     </h2>
-    <p class="mb-4">
-      My most played tracks on Spotify over the last 4 weeks, updated daily.
+    <p class="mb-6">
+      My 10 most played tracks on Spotify over the last 4 weeks, updated daily.
     </p>
-
-    {
-      tracks.map((track: ETrack, index: number) => (
-        <Track
-          ranking={index + 1}
-          songUrl={track.songUrl}
-          artist={track.artist}
-          title={track.title}
-        />
-      ))
-    }
+    <div class="flex flex-col gap-8 mb-10">
+      {
+        tracks ? (
+          <>
+            {tracks.map((track: ETrack, index: number) => (
+              <Track
+                ranking={index + 1}
+                songUrl={track.songUrl}
+                artist={track.artist}
+                title={track.title}
+              />
+            ))}
+          </>
+        ) : (
+          <div class="text-red-600 dark:text-red-200 flex opacity-60 items-center gap-1">
+            <div class="i-mdi-fire" />
+            <p>Sorry, couldn't load tracks from the Spotify API </p>
+            <div class="i-mdi-fire" />
+          </div>
+        )
+      }
+    </div>
   </section>
   <section class="mb-6">
     <h2
@@ -140,7 +151,7 @@ blogPosts.sort(
         blogPosts.map((post) => (
           <>
             <li>
-              <a href={`/blog/${post.slug}`} class="group ">
+              <a href={`/blog/${post.slug}`} class="group">
                 <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
                   {post.data.title}
                 </div>
