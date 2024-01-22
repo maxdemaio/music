@@ -27,7 +27,7 @@ After, just re-import it into your project and then you can change the BPM/key t
 
 ### Deleting User Created Loops
 
-If you'd like to delete your loop, navigate to `/Audio/Apple Loops/User Loops/`. Your loop should be there. Go ahead and delete it! Once the loop library re-indexes, it should be gone.
+If you'd like to delete your loop, navigate to `/Audio/Apple Loops/User Loops/`. Your loop should be there. Go ahead and delete it! Once the loop library re-indexes, it should be gone. If you want to manually trigger a re-index, go into the normal "Sound Packs" dropdown menu. At the very bottom there's an option to re-index all loops.
 
 ## Flex Tool
 
