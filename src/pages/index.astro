@@ -19,7 +19,7 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 // Top 10 tracks over 4 week period
 // https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
-const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10`;
+const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5`;
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -46,6 +46,7 @@ const getTopTracks = async () => {
     },
   };
   const res = await fetch(url, payload);
+  
   const data = await res.json();
   return data;
 };
@@ -56,7 +57,7 @@ let tracks: ETrack[] | null = null;
 
 if (items) {
   // typed as any because Spotify API could change and will adjust as needed
-  tracks = items.slice(0, 10).map((track: any) => ({
+  tracks = items.slice(0, 5).map((track: any) => ({
     artist: track.artists.map((_artist: any) => _artist.name).join(", "),
     songUrl: track.external_urls.spotify,
     title: track.name,
@@ -77,11 +78,20 @@ blogPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 );
+
+// https://github.com/withastro/roadmap/discussions/181
+// Cache this page for a day
+// max age 1 day, re-validate every half day
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, s-maxage=86400, stale-while-revalidate=43200"
+);
 ---
 
 <style>
   /* dynamic stylings unique for tags */
   .logic {
+    /* sky-600 */
     color: rgb(2, 132, 199);
     border-color: rgb(2, 132, 199);
   }
@@ -98,6 +108,15 @@ blogPosts.sort(
     color: rgb(240 171 252);
     border-color: rgb(240 171 252);
   }
+
+  .songwriting {
+    color: rgb(217 119 6);
+    border-color: rgb(217 119 6);
+  }
+  html.dark .songwriting {
+    color: rgb(252 211 77);
+    border-color: rgb(252 211 77);
+  }
 </style>
 
 <Default title="Home - Max DeMaio" description="Max DeMaio's personal website">
@@ -108,7 +127,7 @@ blogPosts.sort(
       Lately
     </h2>
     <p class="mb-6">
-      My 10 most played tracks on Spotify over the last 4 weeks, updated daily.
+      My 5 most played tracks on Spotify over the last 4 weeks, updated daily.
     </p>
     <div class="flex flex-col gap-8 mb-10">
       {

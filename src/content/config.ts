@@ -6,6 +6,7 @@ import { z, defineCollection } from 'astro:content';
 export enum Tag {
   LOGIC = 'logic',
   PRODUCING = 'producing',
+  SONGWRITING = 'songwriting',
 }
 
 // Define schemas for each collection we'd like to validate.

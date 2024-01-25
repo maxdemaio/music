@@ -3,7 +3,7 @@ fileName: audio-file-speed-slow
 description: How to Speed Up or Slow Down Tracks in Logic Pro
 pubDate: 'Jan 20 2024'
 title: How to Speed Up or Slow Down Tracks in Logic Pro
-duration: 0
+duration: 3
 tags: ['logic', 'producing']
 ---
 
