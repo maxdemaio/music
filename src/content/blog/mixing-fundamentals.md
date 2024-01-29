@@ -28,7 +28,7 @@ Mixing won’t fix a bad song. Before you start mixing, all the pieces of your s
 
 ## Keep an eye on the stereo output decibels
 
-The stereo output serves as the channel for all audio in the mix. Monitoring the stereo decibel output is crucial, indicating the overall volume of the song. Maintaining a level around `-0.5db` to `-0.6db` which is in the green ensures optimal headroom and space for subsequent mastering processes.
+The stereo output serves as the channel for all audio in the mix. Monitoring the stereo decibel output is crucial, indicating the overall volume of the song. Maintaining a level around `-0.5db` to `-0.6db` which is in the green ensures optimal headroom and space for subsequent mastering processes. We'd ideally like our resulting master level to end up being around `-6db` to `-3db`.
 
 ## Helpful tips for organization
 

@@ -16,5 +16,9 @@ export default defineConfig({
       theme: 'github-dark-dimmed'
     }
   },
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
