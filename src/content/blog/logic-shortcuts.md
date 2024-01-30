@@ -3,7 +3,7 @@ fileName: logic-shortcuts
 description: All the logic shortcuts I find useful
 pubDate: 'Jan 28 2024'
 title: Logic Shortcuts
-duration: 2
+duration: 0
 tags: ['logic', 'producing']
 ---
 

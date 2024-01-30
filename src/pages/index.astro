@@ -46,7 +46,7 @@ const getTopTracks = async () => {
     },
   };
   const res = await fetch(url, payload);
-  
+
   const data = await res.json();
   return data;
 };
@@ -69,15 +69,19 @@ import Track from "@components/Track.astro";
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
 
-const blogPosts = await getCollection("blog", ({ data }) => {
+let blogPosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
 
-// Sort my music posts
-blogPosts.sort(
-  (a, b) =>
-    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
-);
+const totalBlogPosts = blogPosts.length;
+
+// Sort my music posts and only get the 3 most recent
+blogPosts = blogPosts
+  .sort(
+    (a, b) =>
+      new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+  )
+  .slice(0, 3);
 
 // https://github.com/withastro/roadmap/discussions/181
 // Cache this page for a day
@@ -89,6 +93,10 @@ Astro.response.headers.set(
 ---
 
 <style>
+  /* https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items */
+  .my-grid {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
+  }
   /* dynamic stylings unique for tags */
   .logic {
     /* sky-600 */
@@ -120,9 +128,69 @@ Astro.response.headers.set(
 </style>
 
 <Default title="Home - Max DeMaio" description="Max DeMaio's personal website">
-  <section class="mb-10">
+  <section class="mt-8 mb-10">
+    <div class="flex justify-between mb-4 items-center">
+      <h2
+        class="uppercase text-black dark:text-white font-kai font-bold text-2xl"
+      >
+        Stay Tuned
+      </h2>
+      <div>
+        <a href="/" class="mlink"
+          >See all posts{" "}<span class="i-solar-arrow-right-linear"></span></a
+        >
+      </div>
+    </div>
+    <p class="mb-6">
+      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection
+      of all the useful music tips and tricks I've learned along the way. So far,
+      I've written a total of {totalBlogPosts} posts.
+    </p>
+
+    <ul class="grid my-grid auto-cols-max gap-4 justify-center">
+      {
+        blogPosts.map((post) => (
+          <>
+            <a
+              href={`/blog/${post.slug}`}
+              class="p-4 w-60 rounded group duration-400 ease shadow-md hover:translate-y-[-5px] bg-neutral-50 hover:shadow-xl dark:hover-shadow-none dark:bg-neutral-950 dark:border dark:border-neutral-800 dark:hover:border-neutral-600 dark:shadow-none"
+            >
+              <li>
+                <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
+                  {post.data.title}
+                </div>
+                <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
+                  <div class="flex gap-1">
+                    <time datetime={post.data.pubDate}>
+                      {new Date(post.data.pubDate).toLocaleDateString("en-us", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                    <span>·</span>
+                    <span>{post.data.duration}min</span>
+                  </div>
+
+                  {post.data.tags && (
+                    <div class="flex gap-1 flex-wrap">
+                      {post.data.tags.map((tag) => (
+                        <span class={`${tag} border rounded px-1`}>{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </li>
+            </a>
+          </>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mb-6">
     <h2
-      class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4"
+      class="uppercase text-black dark:text-white font-kai font-bold text-2xl mb-4"
     >
       Lately
     </h2>
@@ -201,53 +269,5 @@ Astro.response.headers.set(
         )
       }
     </div>
-  </section>
-  <section class="mb-6">
-    <h2
-      class="text-center uppercase text-black dark:text-white font-kai font-bold text-3xl mb-4"
-    >
-      Stay Tuned
-    </h2>
-    <p class="">
-      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection
-      of all the useful music tips and tricks I've learned along the way. So far,
-      I've written {blogPosts.length} posts.
-    </p>
-  </section>
-  <section class="mb-4">
-    <ul class="space-y-4">
-      {
-        blogPosts.map((post) => (
-          <>
-            <li>
-              <a href={`/blog/${post.slug}`} class="group">
-                <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
-                  {post.data.title}
-                </div>
-                <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-wrap gap-1">
-                  <time datetime={post.data.pubDate}>
-                    {new Date(post.data.pubDate).toLocaleDateString("en-us", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </time>
-                  <span>·</span>
-                  <span>{post.data.duration}min</span>
-                  {post.data.tags && <span>·</span>}
-                  {post.data.tags && (
-                    <>
-                      {post.data.tags.map((tag) => (
-                        <span class={`${tag} border rounded px-1`}>{tag}</span>
-                      ))}
-                    </>
-                  )}
-                </div>
-              </a>
-            </li>
-          </>
-        ))
-      }
-    </ul>
   </section>
 </Default>

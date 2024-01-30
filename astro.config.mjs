@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import UnoCSS from 'unocss/astro';
 import sitemap from '@astrojs/sitemap';
-
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
