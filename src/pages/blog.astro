@@ -1,0 +1,93 @@
+---
+import Default from "@layouts/Default.astro";
+import { getCollection } from "astro:content";
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return data.draft !== true;
+});
+
+// Sort my music posts
+blogPosts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+);
+---
+
+<style>
+  /* dynamic stylings unique for tags */
+  .logic {
+    /* sky-600 */
+    color: rgb(2, 132, 199);
+    border-color: rgb(2, 132, 199);
+  }
+  html.dark .logic {
+    /* sky-300 */
+    color: rgb(125 211 252);
+    border-color: rgb(125 211 252);
+  }
+  .producing {
+    color: rgb(192 38 211);
+    border-color: rgb(192 38 211);
+  }
+  html.dark .producing {
+    color: rgb(240 171 252);
+    border-color: rgb(240 171 252);
+  }
+
+  .songwriting {
+    color: rgb(217 119 6);
+    border-color: rgb(217 119 6);
+  }
+  html.dark .songwriting {
+    color: rgb(252 211 77);
+    border-color: rgb(252 211 77);
+  }
+</style>
+<Default title="Home - Max DeMaio" description="Max DeMaio's personal website">
+  <section class="mt-8 mb-10">
+    <h2
+      class="uppercase text-black dark:text-white font-kai font-bold text-2xl mb-4"
+    >
+      Stay Tuned
+    </h2>
+    <p class="mb-6">
+      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection
+      of all the useful music tips and tricks I've learned along the way. So far,
+      I've written a total of {blogPosts.length} posts.
+    </p>
+    <ul class="space-y-4">
+      {
+        blogPosts.map((post) => (
+          <>
+            <li>
+              <a href={`/blog/${post.slug}`} class="group">
+                <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
+                  {post.data.title}
+                </div>
+                <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-wrap gap-1">
+                  <time datetime={post.data.pubDate}>
+                    {new Date(post.data.pubDate).toLocaleDateString("en-us", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <span>·</span>
+                  <span>{post.data.duration}min</span>
+                  {post.data.tags && <span>·</span>}
+                  {post.data.tags && (
+                    <>
+                      {post.data.tags.map((tag) => (
+                        <span class={`${tag} border rounded px-1`}>{tag}</span>
+                      ))}
+                    </>
+                  )}
+                </div>
+              </a>
+            </li>
+          </>
+        ))
+      }
+    </ul>
+  </section>
+</Default>
