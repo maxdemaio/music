@@ -101,9 +101,6 @@ Astro.response.headers.set(
     grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
   }
 
-  .track-grid {
-    grid-template-columns: repeat(auto-fit, minmax(17.5rem, max-content));
-  }
   /* dynamic stylings unique for tags */
   .logic {
     /* sky-600 */
@@ -204,7 +201,7 @@ Astro.response.headers.set(
     <p class="mb-6">
       My 10 most played tracks on Spotify over the last 4 weeks, updated daily.
     </p>
-    <div class="grid track-grid justify-center gap-2 mb-10">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-2 mb-10">
       {
         tracks ? (
           <>
