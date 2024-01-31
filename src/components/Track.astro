@@ -4,7 +4,7 @@ const { ranking, songUrl, artist, title, albumUrls } = Astro.props;
 
 <a
   href={songUrl}
-  class="overflow-hidden group duration-400 ease rounded relative inline-grid cursor-pointer group border hover:border-neutral-500 border-neutral-300 dark:border-neutral-800 dark:hover:border-neutral-600 w-70"
+  class="overflow-hidden group duration-400 ease rounded relative inline-grid cursor-pointer group border hover:border-neutral-500 border-neutral-300 dark:border-neutral-800 dark:hover:border-neutral-600 w-full md:w-70 "
   target="_blank"
   rel="noopener noreferrer"
 >
@@ -16,14 +16,14 @@ const { ranking, songUrl, artist, title, albumUrls } = Astro.props;
   <div class="flex gap-3 items-center">
     <img width="150" height="150" src={albumUrls[0]} alt="album art" />
     <div class="flex flex-col">
-      <div class="w-20 md:w-30 truncate">
+      <div class="w-30 truncate">
         <span
           class="underline decoration-green-300 decoration-2 transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100 truncate w-full"
         >
           {title}
         </span>
       </div>
-      <div class="w-20 md:w-30 truncate">
+      <div class="w-30 truncate">
         <span
         class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 mb-4 truncate w-full"
         color="neutral.500"
