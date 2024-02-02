@@ -2,13 +2,13 @@
 fileName: vocals
 description: Everything I know about mixing vocals
 pubDate: 'Jan 28 2024'
-title: Everything I Know About Mixing Vocals
+title: Everything I Know About Recording/Mixing Vocals
 duration: 3
 draft: true
 tags: ['logic', 'producing']
 ---
 
-If you've made it here, you've found the right spot for learning how to mix/produce vocals. Over time, I'll add new knowledge I've found in this post too. By the way, honestly the stock plugins that come with your DAW are pretty sweet. I wouldn't reccomend buying plugins unless you really feel the need.
+If you've made it here, you've found the right spot for learning how to record/mix/produce vocals. By the way, honestly the stock plugins that come with your DAW are pretty sweet. I wouldn't reccomend buying plugins unless you really feel the need.
 
 ---
 
@@ -27,6 +27,7 @@ If you've made it here, you've found the right spot for learning how to mix/prod
 - [Recording Vocals with Scarlett (YT Short) - Scarlett](https://youtube.com/shorts/KqIZC38y5Pc?si=vEFELnDLkmFhdZnx)
 - [How to not record vocals too loud (YT Short) - MrDifferentTv](https://youtube.com/shorts/59HxaDVPwUI?si=9hFa2LAasogtN8O6)
 - [11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios](https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg)
+- [How to Use Reverb in Logic Pro X - Wayne.wav](https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_) can also be used for delay, flangers, and other time based effects
 
 
 ## Recording always comes first
@@ -35,7 +36,7 @@ No matter what kind of vocal chain you add, you can't salvage bad vocals. Make s
 
 Then, experiment with the distance and height of the mic until you find the right tone. **Keep it consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic microphone, the Shure SM57. Dynamic microphones reject more background noise so are great if you are in a particularly bad sounding room. These microphones are designed to be used up close. The low end is artificially lowered to account for the proximity effect. For this reason, it makes things easy. Once again, it's what sounds good to you so mess around with different distances.
+Personally, I use a dynamic microphone, the Shure SM57. Dynamic microphones reject more background noise so are great if you are in a particularly bad sounding room. These microphones are designed to be used up close. The low end is artificially lowered to account for the proximity effect. For this reason, it makes things easy. Once again, it's what sounds good to you so mess around with different distances. Then, db level stuff
 
 When you record, I use a Scarlett. You should aim for your vocals to come through all green on the interface itself. Yellow is fine but red on the interface means you're clipping.
 
@@ -92,7 +93,7 @@ Btw, right now my vocal chain is just Logic's "Warm Vocal" plus custom pitch cor
 
 ## Vocal Chain - Noise Gate
 
-I like the "Fast Gate" preset Logic gives you if I need it. This is optional and personally I don't use one.
+I like the "Fast Gate" preset Logic gives you if I need it. **This is optional and personally I don't use one.**
 
 A noise gate automatically mutes or reduces the volume of audio signals below a certain threshold, helping to eliminate unwanted background noise or hum during quiet passages. Keep in mind, noise gates can’t get rid of all background noise. If there's background noise during the vocal phrase, you won’t be able to get rid of it.
 
@@ -110,7 +111,7 @@ You play it by ear to make sure it works and isn't cutting the vocal too short. 
 
 Personally, I don't mind the stock EQs from Logic's "Warm Vocal" sound. It takes out the lows, and boosts the high frequencies slightly.
 
-## Vocal Chain - Gain staging + Compression
+## Vocal Chain - Gain staging + Compression (TODO: work on this more)
 
 ### Compression
 
@@ -118,13 +119,11 @@ A compressor reduces the dynamic range of an audio signal by reducing the loud p
 
 ## Vocal Chain - Reverb
 
-(this is optional)
+Reverb is a time based effect. This is unlike dynamic/gain based effects where we usually want those on the directly on the signal to control it. We don't want our time based effect aka reverb to take over the signal, rather we want to add just a little bit of it.
 
-reverb is destructive btw
+We'll want to create a new channel/bus and send it to that. The benefit is we can also send other vocals to this same reverb! Then, we'll turn up the send level on the vocal track which determines how much of the original vocal we send to be processed. Since it's on its own channel, we can EQ the reverb. **This means the frequencies you EQ out won't even enter the reverb**. So, you're adding reverb precisely on the frequencies you want.
 
-## Vocal Chain - Echo
-
-(this is optional)
+We'll EQ out the basic lows and highs. So do a low cut around 500hz and a high cut around 5000hz. This gives you much more space in your mix because low/high ends that have reverb tend to cause havoc.
 
 ## Doubling vocals
 
