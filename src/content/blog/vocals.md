@@ -36,7 +36,12 @@ No matter what kind of vocal chain you add, you can't salvage bad vocals. Make s
 
 Then, experiment with the distance and height of the mic until you find the right tone. **Keep it consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic microphone, the Shure SM57. Dynamic microphones reject more background noise so are great if you are in a particularly bad sounding room. These microphones are designed to be used up close. The low end is artificially lowered to account for the proximity effect. For this reason, it makes things easy. Once again, it's what sounds good to you so mess around with different distances. Then, db level stuff
+Personally, I use a dynamic microphone, the Shure SM57. Dynamic microphones reject more background noise so are great if you are in a particularly bad sounding room. These microphones are designed to be used up close. The low end is artificially lowered to account for the proximity effect. For this reason, it makes things easy. Once again, it's what sounds good to you so mess around with different distances. 
+
+Then, db level stuff. Since it's a dynamic microphone, you need to apply a lot of gain. But try to mess with it just enough so you can't hear background noise really. For me, it's like just off full power.
+
+64 Sampler, low latency monitoring mode
+
 
 When you record, I use a Scarlett. You should aim for your vocals to come through all green on the interface itself. Yellow is fine but red on the interface means you're clipping.
 
@@ -61,6 +66,7 @@ After putting together all the best takes there can still be imperfections. Keep
 When doing pitch correction, you could either manually correct notes "Flex Pitch" or use Logic's "Pitch Correction" plugin on the whole track. "Flex Pitch" can take more time, but it allows you to be more precise so the results could be worth it. "Pitch Correction" is easier to apply, but could work against you if it pulls a note in the wrong direction.
 
 Personally, I've seen very good results with the "Pitch Correction" plugin. Basically, I make sure I get a near perfect vocal take and then the plugin will help taper anything out of tolerance. You can toggle the plugin on/off just to double check things.
+
 
 ### Flex Pitch
 
