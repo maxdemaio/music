@@ -5,6 +5,7 @@ pubDate: 'Jan 15 2024'
 title: Mixing Fundamentals
 duration: 9
 tags: ['logic', 'producing']
+draft: true
 ---
 
 In addition to leveling, mastering the fundamentals of mixing involves four key elements:
@@ -26,23 +27,34 @@ Also, having a north star of a production grade song for reference is always goo
 
 Mixing won’t fix a bad song. Before you start mixing, all the pieces of your song should be in place from a production standpoint. For example, all instruments should be recorded and the song should be structurally complete.
 
+## Count in
+
+By the way, let the track breathe a bit before starting. Count in to 4 or 8 so it's not missing anything at the beginning or hard to record the start.
+
+## Best possible source
+
+Get all your instruments in tune. If you have a guitar, make sure you have fresh strings on it for the best tone. Similarly apply that concept to any other instrument you're working with. Also, retune after takes!
+
+## File format
+
+Before heading to a professional studio, ask them for the required file format. This is generally 24 WAV bit depth and 48kHz sample rate.
+
 ## Keep an eye on the stereo output decibels
 
-The stereo output serves as the channel for all audio in the mix. Monitoring the stereo decibel output is crucial, indicating the overall volume of the song. Maintaining a level around `-0.5db` to `-0.6db` which is in the green ensures optimal headroom and space for subsequent mastering processes. We'd ideally like our resulting master level to end up being around `-6db` to `-3db`.
+The stereo output serves as the channel for all audio in the mix. Monitoring the stereo decibel output is crucial, indicating the overall volume of the song. Maintaining a level around `-5db` to `-6db` which is in the green ensures optimal headroom and space for subsequent mastering processes. We'd ideally like our resulting master level to end up being around `-3db`.
 
 ## Helpful tips for organization
 
 - Utilize markers to delineate song sections such as verses, pre-choruses, choruses, and bridges. Begin mixing by focusing on specific sections. You could start with the most prominent, like the chorus. Or, picking the loudest section first is also a good strategy.
+- Label your tracks correctly so people other than yourself can understand them. Also, when you label them in exporting, you should number them. That way if you drop them into a new DAW they're imported in the right order. Like `08 Tom 3.wav` or `07 Tom 2.wav`. You'll also need to learn how to consolidate export so they can line up properly when imported to a different DAW.
 - Similarly, we can group tracks. For instance, combine drums, guitar, vocals, bass, etc. To create a track stack, use the “Create Track Stack” option in the right-click dropdown menu or `shift` + `option` + `d`. Folder stacks are ideal for organization, while a summing stack enables global effects, optimizing CPU usage since we won’t have an effect individually on each track.
 - Simplify navigation and visual clarity by color coding tracks. Use `option` + `c` to apply colors either by selecting tracks or dragging over them. Additionally, assign meaningful names to your tracks for a cohesive and organized workflow.
 
-## Mixing drums
+## Mixing Order
 
 Everything should be mixed in accordance to the drums since we start with them. After, we mix the bass in so it sounds good with the drums, then the guitars, the synths and keys, the vocals, atmospheric sounds, and more.
 
-We start by solo’ing off tracks. For example, we solo the kick and observe the leveling that it peaks at (look at the stereo output decibels). Make sure all your effects are on point on the solo’d track. In fact, there are a lot of presets on effects that you can choose that will help out. These very subtle effects will add up in the song as a whole.
-
-When it comes to effects, rely on the foundational elements of mixing: EQ, compression, reverb, and delay. It's not necessary to employ all these effects in every instance; experimentation with different combinations can yield diverse and creative outcomes.
+## Drums
 
 ### Kick
 
@@ -68,7 +80,7 @@ After you’re done mixing all the drums, feel free to add effects on the groupi
 
 This meticulous approach to drum mixing ensures each element contributes to a cohesive and impactful rhythm section. Remember to trust your ears and make adjustments based on the overall sound you aim to achieve.
 
-## Mixing electric bass
+## Mixing bass
 
 - Apply effects and then level
 
@@ -90,12 +102,6 @@ If using preset instruments, you don’t need to adjust the effects much, given 
 
 Reverb adds spatial context, influencing perception of depth in the mix. Keep main song elements centered, enhancing focus. When panning, consider creating a stage-like atmosphere; for instance, pan a Wurlitzer Modern keyboard slightly left to envision a band on stage. Experiment with panning for different keys/synths to achieve a balanced spatial arrangement.
 
-## Mixing Vocals
-
-- Apply effects and then level.
-
-For background vocals, consider adding subtle echoes to create depth. Adjust levels accordingly for a harmonious blend within the mix.
-
 ## Mixing atmospheric and background noise
 
 You can use automation to have the audio come in and out and not be at just a certain level. For example, let’s say we had some background coffee shop chatter in the background. You could use automation to make that sound come in and out at a low volume throughout the track. This can be done w/ the automation view. You’d choose to automate the volume (default) and then click to add a baseline audio level. You can click to add different points on the line and drag them around. Or you could use “T-Latch” and play the audio section, changing the level as it plays and Logic will auto add the points for you.
@@ -111,3 +117,4 @@ Incorporate these fundamental mixing principles to sculpt a professional and bal
 ## Resources
 
 - [https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
+- [15 MISTAKES to AVOID When Recording at Home! - SpectreSoundStudios](https://youtu.be/MSZ52Lejjog?si=ivV4dn8twpXkuBiC)

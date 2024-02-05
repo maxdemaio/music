@@ -24,26 +24,24 @@ If you've made it here, you've found the right spot for learning how to record/m
 - [How to Use Flex Pitch in Logic Pro X | Tutorial - Nathan James Larsen](https://youtu.be/uGScoEhjKus?si=SIr24y-4mXpiHCcK)
 - [Flex Pitch vs. Pitch Correction (autotune) - The Band Guide](https://youtu.be/14sTNC0lCHQ?si=O_7Xd8J4WP134_Gg)
 - [What's the Difference Between Gain and Volume? - Fender](https://www.fender.com/articles/setup/amp-basics-gain-vs-volume)
-- [Recording Vocals with Scarlett (YT Short) - Scarlett](https://youtube.com/shorts/KqIZC38y5Pc?si=vEFELnDLkmFhdZnx)
-- [How to not record vocals too loud (YT Short) - MrDifferentTv](https://youtube.com/shorts/59HxaDVPwUI?si=9hFa2LAasogtN8O6)
 - [11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios](https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg)
 - [How to Use Reverb in Logic Pro X - Wayne.wav](https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_) can also be used for delay, flangers, and other time based effects
 
 
 ## Recording always comes first
 
-No matter what kind of vocal chain you add, you can't salvage bad vocals. Make sure the recording is near perfect without any effects and then you can start to add them in! Following the Pareto principle, a good vocal is 80% recording and 20% mixing. 
+No matter what kind of vocal chain you add, you can't salvage bad vocals. Make sure the recording is near perfect **without any effects** and then you can start to add them in! If you hear what's really going on, you might as well not even bother. Following the Pareto principle, a good vocal is 80% recording and 20% mixing.
 
-Then, experiment with the distance and height of the mic until you find the right tone. **Keep it consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
+**Keep the positioning the distance from your mic consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic microphone, the Shure SM57. Dynamic microphones reject more background noise so are great if you are in a particularly bad sounding room. These microphones are designed to be used up close. The low end is artificially lowered to account for the proximity effect. For this reason, it makes things easy. Once again, it's what sounds good to you so mess around with different distances. 
+Personally, I use a dynamic microphone, the Shure SM57. These microphones are designed to be used up close. Dynamic microphones reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic microphones. If you are using phantom power in a condenser microphone, make sure to turn it off before unplugging the microphone. Finally, You'll definitely need a pop filter to get rid of plosives.
 
-Then, db level stuff. Since it's a dynamic microphone, you need to apply a lot of gain. But try to mess with it just enough so you can't hear background noise really. For me, it's like just off full power.
+When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted. Once again, consistency is key.
 
-64 Sampler, low latency monitoring mode
+Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU.
 
-
-When you record, I use a Scarlett. You should aim for your vocals to come through all green on the interface itself. Yellow is fine but red on the interface means you're clipping.
+- By the way, keep your hands off the microphone!
+- Recording to a click track is optional, honestly might be better to record with just the music!
 
 ## Editting
 
@@ -51,7 +49,7 @@ For editting, we want to go with our best takes and put them together. This is t
 
 Once you're happy with all the takes, you need to check for clicks/pops and apply crossfades to mitigate them. Add a short crossfade between the clips of about 5 - 15ms.
 
-If there’s any background noise between phrases, you can simply cut this out. Some people like to cut out the breaths, but I think this completely ruins the emotion of the performance. **My advice is to leave the breaths in**.
+If there’s any background noise between phrases, you can simply cut this out. Some people like to cut out the breaths, but I think this completely ruins the emotion of the performance. My advice is to leave the breaths in.
 
 You can also go through and fix any timing issues. If a phrase comes in a little early or late – move it into place with the "Nudge Value" tool.
 
@@ -63,10 +61,9 @@ According to Charlie Puth, from their [video on getting your vocals production r
 
 After putting together all the best takes there can still be imperfections. Keep in mind imperfections aren't always a bad thing - they can add raw emotion and energy.
 
-When doing pitch correction, you could either manually correct notes "Flex Pitch" or use Logic's "Pitch Correction" plugin on the whole track. "Flex Pitch" can take more time, but it allows you to be more precise so the results could be worth it. "Pitch Correction" is easier to apply, but could work against you if it pulls a note in the wrong direction.
+When doing pitch correction, you could either manually correct notes "Flex Pitch" or use Logic's "Pitch Correction" plugin on the whole track. "Flex Pitch" can take more time, but it allows you to be more precise so the results could be worth it. With "Flex Pitch," you can also revert it back to the original vocal after editting it by right clicking the background of the selected region and "Set all to Original Pitch." "Pitch Correction" is easier to apply, but could work against you if it pulls a note in the wrong direction.
 
-Personally, I've seen very good results with the "Pitch Correction" plugin. Basically, I make sure I get a near perfect vocal take and then the plugin will help taper anything out of tolerance. You can toggle the plugin on/off just to double check things.
-
+Personally, I've seen very good results with both. Basically, I make sure I get a near perfect vocal take and then the plugin/flex pitch will help taper anything out of tolerance.
 
 ### Flex Pitch
 
@@ -95,11 +92,11 @@ Setting the response and tolerance to 0 will set the plugin in full effect and y
 
 I create the vocal chain in the order below. Like, we want to EQ before compressing because we don't want the compressor bringing out frequencies we don't want. Your vocal chain really will depend on what genre you're in and what you're trying to achieve.
 
-Btw, right now my vocal chain is just Logic's "Warm Vocal" plus custom pitch correction.
+Btw, right now my vocal chain is just Logic's "Warm Vocal" or sometimes "Natural Vocal" plus custom pitch correction and reverb. I'm still working on it.
 
 ## Vocal Chain - Noise Gate
 
-I like the "Fast Gate" preset Logic gives you if I need it. **This is optional and personally I don't use one.**
+**This is optional and personally I don't use one.**
 
 A noise gate automatically mutes or reduces the volume of audio signals below a certain threshold, helping to eliminate unwanted background noise or hum during quiet passages. Keep in mind, noise gates can’t get rid of all background noise. If there's background noise during the vocal phrase, you won’t be able to get rid of it.
 
@@ -115,7 +112,7 @@ You play it by ear to make sure it works and isn't cutting the vocal too short. 
 
 ## Vocal Chain - EQ
 
-Personally, I don't mind the stock EQs from Logic's "Warm Vocal" sound. It takes out the lows, and boosts the high frequencies slightly.
+Personally, I don't mind the stock EQs from Logic's preset libraries.
 
 ## Vocal Chain - Gain staging + Compression (TODO: work on this more)
 
@@ -135,9 +132,7 @@ We'll EQ out the basic lows and highs. So do a low cut around 500hz and a high c
 
 ### Two takes panned left/right
 
-For this technique, you want two takes of your doubled vocals. Let's say they're both an octave lower. Then, what you'll want to do is pan one take to the left and the other to the right. This technique makes the vocal sound wide. Vocals are in mono so any time you can add width with doubles it adds a lot of energy.
-
-So for example you could have two doubles one octave higher, two doubles one octave lower, and then the main vocals. 
+For this technique, you want two takes of your doubled vocals. Let's say they're both an octave lower. Then, what you'll want to do is pan one take to the left and the other to the right. This technique makes the vocal sound wide. For example, you could have two doubles one octave higher, two doubles one octave lower, and then the main vocals. 
 
 ## Harmonies
 
@@ -147,6 +142,6 @@ You could also do the same technique you use with doubling vocals. This is where
 
 ### Character voices
 
-From Charlie Puth's video on vocals, you can also sing it in kinds of character voices. For example, more open vowels helps with blending.
+From Charlie Puth's video on vocals, you can also sing it in kinds of character voices. For example, more open vowels helps with blending. Mess around with different distances from the microphone as well.
 
 ---
