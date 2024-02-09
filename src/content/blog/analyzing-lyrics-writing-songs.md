@@ -30,6 +30,7 @@ Songwriting is a skill you build up through lots of practice. There is no perfec
 - Write for yourself, don't write for others
 - Pop setup: Verse 1, Prechorus Chorus, Verse 2, Prechorus, Chorus, Bridge, Chorus
 
+Then, also try these ideas (I stole this from an old Tate McRae video):
 1. Write down words of how you are feeling (Ex. Alone)
 2. Write words next to it that rhyme with that word (It has to make sense tho) (Ex. Own)
 3. Basically just make something outta that (You left me here all on my own, baby I've been feeling so alone)
@@ -62,9 +63,9 @@ vs
 
 Turning simple things into interesting stories. It helps to look at lyrics the way you’d look at words in a poem. Personally, I like to look at [the poem of the day](https://www.poetryfoundation.org/poems/poem-of-the-day) and I'll write down phrases I really like.
 
-1. What literary devices can I use?
-    1. metaphors, similes, repetition, imagery, alliteration, etc…
-2. Can I change the poetic form or rhyming schemes?
+- What literary devices can I use?
+  - metaphors, similes, repetition, imagery, alliteration, etc…
+- Can I change the poetic form or rhyming schemes?
 
 ### Cherry Wine by Hozier (example)
 
