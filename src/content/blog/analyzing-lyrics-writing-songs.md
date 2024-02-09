@@ -30,7 +30,7 @@ Songwriting is a skill you build up through lots of practice. There is no perfec
 - Write for yourself, don't write for others
 - Pop setup: Verse 1, Prechorus Chorus, Verse 2, Prechorus, Chorus, Bridge, Chorus
 
-Then, also try these ideas (I stole this from an old Tate McRae video):
+Then, also try these ideas (I stole this from an old Tate McRae video [which is now private]):
 1. Write down words of how you are feeling (Ex. Alone)
 2. Write words next to it that rhyme with that word (It has to make sense tho) (Ex. Own)
 3. Basically just make something outta that (You left me here all on my own, baby I've been feeling so alone)
