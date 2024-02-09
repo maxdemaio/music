@@ -12,12 +12,13 @@ export interface Props {
 const { title, description, image } = Astro.props;
 ---
 
-<html lang="en" class="scroll-smooth">
-  <CommonHead
-    title={title}
-    description={description}
-    image={image}
-  />
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+<html lang="en">
+  <CommonHead title={title} description={description} image={image} />
   <body
     class="text-lg text-gray-700 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
   >
