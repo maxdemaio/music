@@ -116,3 +116,4 @@ Sometimes the easiest way to come back to a mix is taking a break and coming bac
 - [13 things to AVOID when Recording Amp Sims](https://www.youtube.com/watch?v=MXElgek9J78&t=210s)
 - [13 Things to AVOID Recording Guitar in your Home Studio](https://youtu.be/Mc8W-cSkZHo?si=IlWYpEqSJ6mvsfOR)
 - [13 Things to AVOID when Recording GUITAR at HOME](https://youtu.be/RvRAL_q3csk?si=fodu-yvtPsApVZYa)
+- [Studio One Minute: The Right Way to Double Guitars - PreSonus](https://youtu.be/3I-R9426CC8?si=OxNjUHBJa8EBjUkv)

@@ -26,6 +26,7 @@ If you've made it here, you've found the right spot for learning how to record/m
 - [What's the Difference Between Gain and Volume? - Fender](https://www.fender.com/articles/setup/amp-basics-gain-vs-volume)
 - [11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios](https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg)
 - [How to Use Reverb in Logic Pro X - Wayne.wav](https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_) can also be used for delay, flangers, and other time based effects
+- [Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy](https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG)
 
 
 ## Recording always comes first
@@ -34,9 +35,9 @@ No matter what kind of vocal chain you add, you can't salvage bad vocals. Make s
 
 **Keep the positioning the distance from your mic consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic microphone, the Shure SM57. These microphones are designed to be used up close. Dynamic microphones reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic microphones. If you are using phantom power in a condenser microphone, make sure to turn it off before unplugging the microphone. Finally, You'll definitely need a pop filter to get rid of plosives.
+Personally, I use a dynamic microphone, the Shure SM57. These microphones are designed to be used up close. Dynamic microphones reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic microphones. **If you are using phantom power in a condenser microphone, make sure to turn it off before unplugging the microphone**. Finally, You'll definitely need a pop filter to get rid of plosives.
 
-When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted. Once again, consistency is key.
+When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This actually applies to most instruments too.This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted. Once again, consistency is key.
 
 Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU.
 
@@ -45,7 +46,7 @@ Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O bu
 
 ## Editting
 
-For editting, we want to go with our best takes and put them together. This is totally normal for pop songs and some may even do different takes for each word. You can skip this if you want to keep the original performance.
+For editting, we want to go with our best takes and put them together. This is totally normal for pop songs and some may even do different takes for each word. You can skip this if you want to keep the original performance. Personally I split them up by phrases but it depends.
 
 Once you're happy with all the takes, you need to check for clicks/pops and apply crossfades to mitigate them. Add a short crossfade between the clips of about 5 - 15ms.
 
@@ -57,7 +58,59 @@ You can also go through and fix any timing issues. If a phrase comes in a little
 
 According to Charlie Puth, from their [video on getting your vocals production read](https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW), we should target the hardest vocals first and split up the hardest parts. For example if you have to do an octave jump “hopes up”, split it into “hopes” and “up” and record them separately. Sing the “up” a little bit so you can connect it in the software in the “hopes” part. Blend/combine them with cross fades.
 
-## Applying subtle pitch correction
+## Vocal Chain
+
+I create the vocal chain in the order below. Like, we want to EQ before compressing because we don't want the compressor bringing out frequencies we don't want. Your vocal chain really will depend on what genre you're in and what you're trying to achieve.
+
+Btw, right now my vocal chain is just Logic's "Warm Vocal" or sometimes "Natural Vocal" plus custom pitch correction and reverb. I'm still working on it.
+
+### Removing Plosives
+
+Keep in mind, as mentioned above, this should be done first after recording without any affects and before any mixing is done. If there are already effects on your vocal, bypass them before trying to remove plosives.
+
+Normally with your pop filter you shouldn't have harsh plosives. There are other ways to mitigate harsh plosives like angling the mic or increasing the distance from it. But, that may alter the tone and sometimes you can't avoid being up close if you're using a dynamic mic. If you do end up having plosives, we do have some tricks to deal with them.
+
+We'll use the marquee tool to select the region where the plosive is happening. We'll want to be a bit generous with the selection because we'll have to cross fade and blend it back in. After you've made your selection, click on it to separate. You'll want to do a high pass EQ filter on that region. Set the cycle on that region by using the "Set Locators" function in the toolbar menu. Then, listen as you set the high pass filter. For a general starting point, apply a 150hz 48 dB/Oct pass on the lows. Then, we bounce the selection with source as "leave" and the destination as "new track" and check to include the volume levels. Normalize should be off. Leave everything else unchecked.
+
+![bouncing plosive image](/blog/vocals/bouncing-plosive.png)
+
+![eq'd plosive](/blog/vocals/plosive-eq.png)
+
+After bouncing to a new track you should see there's no longer huge peaks in our waveform after EQ'ing it. Delete the old section, pull the newly EQ'd section in its place. Then take the regions adjacent to it and apply a subtle crossfade. The final step would just be joining the clips back together.
+
+https://youtu.be/Xaxcoqddklg?si=pKG7rqW8v3sCZheT
+
+### Noise Gate
+
+**This is optional and personally I don't use one.** But, you do want to take out the sounds of lip smacking/unwanted noises. I usually get this done w/ the remove silence tool across the phrases I find unwanted noises in.
+
+A noise gate automatically mutes or reduces the volume of audio signals below a certain threshold, helping to eliminate unwanted background noise or hum during quiet passages. Keep in mind, noise gates can’t get rid of all background noise. If there's background noise during the vocal phrase, you won’t be able to get rid of it.
+
+You play it by ear to make sure it works and isn't cutting the vocal too short. But, the noise gate will remove any spillage from after you're done singing.
+
+- Threshold: at what signal level the gate opens and closes
+- Hold: How long it stays open
+- Attack: How fast it opens
+- Release: How fast it closes
+- Lookahead: tells the gate to do everything `N`ms in advance by looking ahead to see how loud the instrument/vocal is going to be later. The gate can know ahead of time that it’ll need to open up. Then it’s less likely to chop off the beginning of a sound. You only need a few ms because it'll stress the CPU.
+- Hysteresis: If the threshold is at -15db and the hysteresis is at -5db, the gate will open at any audio signal louder than -15db and only close when it falls below -20db. Turns the threshold into a range instead of a single number.
+- Reduction: Amount of volume the audio signal is reduced by if it falls below the threshold.
+
+### Small excerpt on Vocal EQ
+
+Personally, I don't mind the stock EQs from Logic's preset libraries.
+
+### DeEssers
+
+something here
+
+### Compression
+
+A compressor reduces the dynamic range of an audio signal by reducing the loud parts and boosting the quiet ones, resulting in a more controlled and balanced sound. Our ears don't like recordings with too many loud and soft parts all throughout the recording.
+
+For compression, I will probably do a whole separate post on this. I really like Logic's "Warm Vocal" and "Natural Vocal." The only small tweak I've done so far is changing the "Natural Vocal" compressor to the "Vintage Medium" setting. Then I'll add Logic's "Airy" reverb on top.
+
+### Pitch correction
 
 After putting together all the best takes there can still be imperfections. Keep in mind imperfections aren't always a bad thing - they can add raw emotion and energy.
 
@@ -65,7 +118,7 @@ When doing pitch correction, you could either manually correct notes "Flex Pitch
 
 Personally, I've seen very good results with both. Basically, I make sure I get a near perfect vocal take and then the plugin/flex pitch will help taper anything out of tolerance.
 
-### Flex Pitch
+**Flex Pitch**
 
 This is what the manual "Flex Pitch" looks like in the editor window:
 
@@ -79,7 +132,7 @@ Scale quantize doesn't actually set the notes to the perfect pitch until you mov
 
 The graph just looks like a large piecewise function and pitch shifting involves fast fourier transforms. I noticed that for lines with linear slope at the beginning/end shouldn't be worried about too much because that's just you leading/away to/from a note.
 
-### Pitch Correction Plugin
+**Pitch Correction Plugin**
 
 ![pitch correction plugin](/blog/vocals/pitch-plugin.png)
 
@@ -88,39 +141,7 @@ Setting the response and tolerance to 0 will set the plugin in full effect and y
 - Tolerance: how much you can go over/under before the plugin starts to tune the note
 - Response: how quickly the note will be tuned
 
-## Vocal Chain
-
-I create the vocal chain in the order below. Like, we want to EQ before compressing because we don't want the compressor bringing out frequencies we don't want. Your vocal chain really will depend on what genre you're in and what you're trying to achieve.
-
-Btw, right now my vocal chain is just Logic's "Warm Vocal" or sometimes "Natural Vocal" plus custom pitch correction and reverb. I'm still working on it.
-
-## Vocal Chain - Noise Gate
-
-**This is optional and personally I don't use one.**
-
-A noise gate automatically mutes or reduces the volume of audio signals below a certain threshold, helping to eliminate unwanted background noise or hum during quiet passages. Keep in mind, noise gates can’t get rid of all background noise. If there's background noise during the vocal phrase, you won’t be able to get rid of it.
-
-You play it by ear to make sure it works and isn't cutting the vocal too short. But, the noise gate will remove any spillage from after you're done singing. You could also get this done w/ the remove silence tool if you wanted though.
-
-- Threshold: at what signal level the gate opens and closes
-- Hold: How long it stays open
-- Attack: How fast it opens
-- Release: How fast it closes
-- Lookahead: tells the gate to do everything `N`ms in advance by looking ahead to see how loud the instrument/vocal is going to be later. The gate can know ahead of time that it’ll need to open up. Then it’s less likely to chop off the beginning of a sound. You only need a few ms because it'll stress the CPU.
-- Hysteresis: If the threshold is at -15db and the hysteresis is at -5db, the gate will open at any audio signal louder than -15db and only close when it falls below -20db. Turns the threshold into a range instead of a single number.
-- Reduction: Amount of volume the audio signal is reduced by if it falls below the threshold.
-
-## Vocal Chain - EQ
-
-Personally, I don't mind the stock EQs from Logic's preset libraries.
-
-## Vocal Chain - Gain staging + Compression (TODO: work on this more)
-
-### Compression
-
-A compressor reduces the dynamic range of an audio signal by reducing the loud parts and boosting the quiet ones, resulting in a more controlled and balanced sound. Our ears don't like recordings with too many loud and soft parts all throughout the recording.
-
-## Vocal Chain - Reverb
+### Reverb
 
 Reverb is a time based effect. This is unlike dynamic/gain based effects where we usually want those on the directly on the signal to control it. We don't want our time based effect aka reverb to take over the signal, rather we want to add just a little bit of it.
 
@@ -132,7 +153,7 @@ We'll EQ out the basic lows and highs. So do a low cut around 500hz and a high c
 
 ### Two takes panned left/right
 
-For this technique, you want two takes of your doubled vocals. Let's say they're both an octave lower. Then, what you'll want to do is pan one take to the left and the other to the right. This technique makes the vocal sound wide. For example, you could have two doubles one octave higher, two doubles one octave lower, and then the main vocals. 
+For this technique, you want two takes of your doubled vocals. Let's say they're both an octave lower. Then, what you'll want to do is pan one take to the left and the other to the right. This technique makes the vocal sound wide. For example, you could have two doubles one octave higher, two doubles one octave lower, and then the main vocals.
 
 ## Harmonies
 
@@ -144,4 +165,6 @@ You could also do the same technique you use with doubling vocals. This is where
 
 From Charlie Puth's video on vocals, you can also sing it in kinds of character voices. For example, more open vowels helps with blending. Mess around with different distances from the microphone as well.
 
----
+## Conclusion
+
+If you take away anything from this article, just know the recording is 80% of the vocal! The remaining 20% is what you're able to with it in the mix with effects. Keep your eye out for more posts on vocals because there's so much to learn in this space.

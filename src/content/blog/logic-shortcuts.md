@@ -21,3 +21,4 @@ tags: ['logic', 'producing']
 - `;` brings selected track to current cursor
 - `enter` bring us back to the beginning of the whole song
 - `enter` then `;` will bring track to beginning
+- `option` + `click` + `drag` will copy the region you are dragging rather than moving it
