@@ -1,14 +1,13 @@
 ---
 fileName: vocals
-description: Everything I know about mixing vocals
-pubDate: 'Jan 28 2024'
-title: Everything I Know About Recording/Mixing Vocals
-duration: 3
-draft: true
-tags: ['logic', 'producing']
+description: Starter knowledge to producing vocals
+pubDate: "Feb 10 2024"
+title: Starting Knowledge for Vocals
+duration: 15
+tags: ["logic", "producing"]
 ---
 
-If you've made it here, you've found the right spot for learning how to record/mix/produce vocals. By the way, honestly the stock plugins that come with your DAW are pretty sweet. I wouldn't reccomend buying plugins unless you really feel the need.
+If you've made it here, you've found the right spot for learning how to record/produce vocals. By the way, honestly the stock plugins that come with your DAW are pretty sweet. I wouldn't reccomend buying plugins unless you really feel the need. This is my starting point to learning to record/produce vocals so I'm putting a good amount of tips in here.
 
 ---
 
@@ -18,37 +17,35 @@ If you've made it here, you've found the right spot for learning how to record/m
 - [Getting your vocals production ready - Charlie Puth](https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW) - Mainly about setting up vocal harmonies and how to record tricky vocal parts.
 - [I Reveal How The Pro’s Mix Vocals - Streaky](https://youtu.be/Cf0DCaVa5sM?si=N7fGCCPqbUPo2lCq) - This one is mainly if you have a pre-existing beat just as an audio file and you want to blend your vocals into it via eq'ing/leveling so the vocal sits in the pockets. This makes a **huge** difference.
 - [Noise Gate: 12 Tips For A Clean And Natural Tone - Drew Swisher](https://mastering.com/noise-gate/) - Goes over everything you need to know on noise gates.
-- [Vocal Compression: Learn How To Mix Like The Pros - Rob Mayzes](https://mastering.com/vocal-compression-how-to-compress-vocals/) - Probably one of the best articles I could find on the internet. It also embeds YT videos in it.
-- [How To Mix Vocals: The Definitive Guide in 15 Steps - Rob Mayzes](https://mastering.com/mixing-vocals-how-to-mix-vocals/) - Really good overall framework and has helpful graphics. Also, this guy is the CEO of mastering.com and is very knowledgable in production engineering.
-- [The 3 Key Phases For Recording Vocals Like A Pro - Rob Mayzes](https://mastering.com/recording-vocals-how-to-record-vocals/)
 - [How to Use Flex Pitch in Logic Pro X | Tutorial - Nathan James Larsen](https://youtu.be/uGScoEhjKus?si=SIr24y-4mXpiHCcK)
 - [Flex Pitch vs. Pitch Correction (autotune) - The Band Guide](https://youtu.be/14sTNC0lCHQ?si=O_7Xd8J4WP134_Gg)
 - [What's the Difference Between Gain and Volume? - Fender](https://www.fender.com/articles/setup/amp-basics-gain-vs-volume)
 - [11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios](https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg)
 - [How to Use Reverb in Logic Pro X - Wayne.wav](https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_) can also be used for delay, flangers, and other time based effects
-- [Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy](https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG)
-
+- [Run Your Reverb & Effects on Inserts or Sends? Pre-Fader or Post-Fader?? - SonicScoop](https://youtu.be/wK9bfwJl4cg?si=leKhg0n_RfHYrPoO)
+- [How To Get A BIG CLEAN REVERB In Your Mixes? - Help Me Devvon](https://youtu.be/VrGKTYxxug0?si=RuCxkTP-yotruF4Y) - super useful to prevent bleed in reverbs
+- [Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy](https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG) - eq and bounce trick
 
 ## Recording always comes first
 
-No matter what kind of vocal chain you add, you can't salvage bad vocals. Make sure the recording is near perfect **without any effects** and then you can start to add them in! If you hear what's really going on, you might as well not even bother. Following the Pareto principle, a good vocal is 80% recording and 20% mixing.
+No matter what kind of vocal chain you add, you can't salvage bad vocals. Make sure the recording is near perfect **without any effects** and then you can start to add them in! If you can't hear what's really going on, you might as well not even bother. Following the Pareto principle, a good vocal is 80% recording and 20% mixing.
 
-**Keep the positioning the distance from your mic consistent**. Microphone choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
+**Keep the positioning the distance from your mic consistent**. Mic choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic microphone, the Shure SM57. These microphones are designed to be used up close. Dynamic microphones reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic microphones. **If you are using phantom power in a condenser microphone, make sure to turn it off before unplugging the microphone**. Finally, You'll definitely need a pop filter to get rid of plosives.
+Personally, I use a dynamic mic, the Shure SM57. These mics are designed to be used up close. Dynamic mics reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic mics. **If you are using phantom power in a condenser mic, make sure to turn it off before unplugging the mic**. Finally, You'll definitely need a pop filter to get rid of plosives.
 
-When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This actually applies to most instruments too.This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted. Once again, consistency is key.
+When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This actually applies to most instruments too. This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted.
 
-Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU.
+Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU when I'm not recording.
 
-- By the way, keep your hands off the microphone!
+- By the way, keep your hands off the mic!
 - Recording to a click track is optional, honestly might be better to record with just the music!
 
 ## Editting
 
 For editting, we want to go with our best takes and put them together. This is totally normal for pop songs and some may even do different takes for each word. You can skip this if you want to keep the original performance. Personally I split them up by phrases but it depends.
 
-Once you're happy with all the takes, you need to check for clicks/pops and apply crossfades to mitigate them. Add a short crossfade between the clips of about 5 - 15ms.
+Once you're happy with all the takes, you need to check for clicks/pops and apply crossfades to mitigate them. Add a short crossfade between the clips of about 5 to 15ms.
 
 If there’s any background noise between phrases, you can simply cut this out. Some people like to cut out the breaths, but I think this completely ruins the emotion of the performance. My advice is to leave the breaths in.
 
@@ -78,8 +75,6 @@ We'll use the marquee tool to select the region where the plosive is happening. 
 
 After bouncing to a new track you should see there's no longer huge peaks in our waveform after EQ'ing it. Delete the old section, pull the newly EQ'd section in its place. Then take the regions adjacent to it and apply a subtle crossfade. The final step would just be joining the clips back together.
 
-https://youtu.be/Xaxcoqddklg?si=pKG7rqW8v3sCZheT
-
 ### Noise Gate
 
 **This is optional and personally I don't use one.** But, you do want to take out the sounds of lip smacking/unwanted noises. I usually get this done w/ the remove silence tool across the phrases I find unwanted noises in.
@@ -100,15 +95,11 @@ You play it by ear to make sure it works and isn't cutting the vocal too short. 
 
 Personally, I don't mind the stock EQs from Logic's preset libraries.
 
-### DeEssers
-
-something here
-
 ### Compression
 
 A compressor reduces the dynamic range of an audio signal by reducing the loud parts and boosting the quiet ones, resulting in a more controlled and balanced sound. Our ears don't like recordings with too many loud and soft parts all throughout the recording.
 
-For compression, I will probably do a whole separate post on this. I really like Logic's "Warm Vocal" and "Natural Vocal." The only small tweak I've done so far is changing the "Natural Vocal" compressor to the "Vintage Medium" setting. Then I'll add Logic's "Airy" reverb on top.
+For compression, I will probably do a whole separate post on this. I really like Logic's "Warm Vocal" and "Natural Vocal" stock plugins and what they come with. The only small tweak I've done so far is changing the "Natural Vocal" compressor to the "Vintage Medium" setting.
 
 ### Pitch correction
 
@@ -143,11 +134,27 @@ Setting the response and tolerance to 0 will set the plugin in full effect and y
 
 ### Reverb
 
-Reverb is a time based effect. This is unlike dynamic/gain based effects where we usually want those on the directly on the signal to control it. We don't want our time based effect aka reverb to take over the signal, rather we want to add just a little bit of it.
+Reverb is a time based effect. This is unlike dynamic/gain based effects where we usually want those on the directly on the signal to control it. We don't want our time based effect aka reverb to take over the signal, rather we want to add just a little bit of it. I really like Logic's "Airy" reverb effect btw.
 
 We'll want to create a new channel/bus and send it to that. The benefit is we can also send other vocals to this same reverb! Then, we'll turn up the send level on the vocal track which determines how much of the original vocal we send to be processed. Since it's on its own channel, we can EQ the reverb. **This means the frequencies you EQ out won't even enter the reverb**. So, you're adding reverb precisely on the frequencies you want.
 
 We'll EQ out the basic lows and highs. So do a low cut around 500hz and a high cut around 5000hz. This gives you much more space in your mix because low/high ends that have reverb tend to cause havoc.
+
+**Then the question becomes, do we send it Post or Pre fader?**
+
+Whenever you're running effects, you can have them run before or after they hit your fader (pre or post). This makes the most sense when we are doing sends. The vast majority of the time you're going to want to run effects in post-fader mode. For reverb we'd also want to apply it post-fader.
+
+If you apply it pre-fader, any changes you make to the fader will not affect the effect (it won't affect how much vocal you're sending to the reverb). If you bring your vocal down, the amount of reverb won't go down along with it and same thing if you bring it up. It's rare to do this with reverb. The only use case is if you want some haunting ghostly reverb being left behind while the dry signal fades out or is low.
+
+If you apply it post-fader, any changes you make will affect the effect (it will affect how much vocal you're sending to the reverb). This makes the effect scale alongside the fader.
+
+If you apply a reverb without a send directly on your vocal, you're applying it pre-fader since you're putting it on an insert (don't do this though). Even though it's technically pre-fader, you make the determation of the balance of wet/dry on that instrument. Now when you turn the fader up/down it'll keep the balance. It acts kind of like post-fader but it's technically pre-fader. This depends on the plugin.
+
+**Keeping clarity when applying reverb with sidechain compression**
+
+The final step is side chaining the reverb! Without compression, the reverb kind of muddies up everything in the source vocal. With side chaining, we can duck the reverb when we're singing and let it come into play once we're done singing. We want at least around -6dB of gain reduction. This is more or less what I'm working with (use your ears to mess around, this is just a starting point):
+
+![sidechain compression on reverb](/blog/vocals/sidechain-reverb.png)
 
 ## Doubling vocals
 
@@ -163,7 +170,7 @@ You could also do the same technique you use with doubling vocals. This is where
 
 ### Character voices
 
-From Charlie Puth's video on vocals, you can also sing it in kinds of character voices. For example, more open vowels helps with blending. Mess around with different distances from the microphone as well.
+From Charlie Puth's video on vocals, you can also sing it in kinds of character voices. For example, more open vowels helps with blending. Mess around with different distances from the mic as well.
 
 ## Conclusion
 
