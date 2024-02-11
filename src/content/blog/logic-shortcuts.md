@@ -22,3 +22,4 @@ tags: ['logic', 'producing']
 - `enter` bring us back to the beginning of the whole song
 - `enter` then `;` will bring track to beginning
 - `option` + `click` + `drag` will copy the region you are dragging rather than moving it
+- select region, `fn` + `control` + `left` will bring the playhead to the beginning of the region, `fn` + `control` + `right` will bring the playhead to the end of the region
