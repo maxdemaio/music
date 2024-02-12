@@ -23,3 +23,5 @@ tags: ['logic', 'producing']
 - `enter` then `;` will bring track to beginning
 - `option` + `click` + `drag` will copy the region you are dragging rather than moving it
 - select region, `fn` + `control` + `left` will bring the playhead to the beginning of the region, `fn` + `control` + `right` will bring the playhead to the end of the region
+- `control` + `option` + `x` apply default cross fade(s) across selected regions
+- select unconnected regions and pressing `j` will join them, `cmd` + `j` will try to heal any audio in between.
