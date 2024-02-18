@@ -25,4 +25,3 @@ tags: ['logic', 'producing']
 - select region, `fn` + `control` + `left` will bring the playhead to the beginning of the region, `fn` + `control` + `right` will bring the playhead to the end of the region
 - `control` + `option` + `x` apply default cross fade(s) across selected regions
 - select unconnected regions and pressing `j` will join them, `cmd` + `j` will try to heal any audio in between.
-- test
