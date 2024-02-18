@@ -12,59 +12,63 @@ In addition to leveling, mastering the fundamentals of mixing involves four key 
 
 1. **EQ (Equalization)** - EQ shapes instrument tones by boosting or cutting specific frequencies. For instance, enhance the high frequencies for vocals or high hats, but avoid them on a kick drum to maintain a solid foundation.
 2. **Compression** - Compression balances volume by reducing loud peaks and boosting softer elements. Applied to drums or vocals, it ensures a consistent sound, adding punch and cohesion to the mix.
-3. **Reverb** - Reverb adds space and ambiance, simulating different environments. Apply it subtly to vocals for depth or on a snare for a tight studio feel, creating a natural and immersive sound.
+3. **Reverb** - Reverb adds space and ambiance, simulating different environments. Apply it subtly for a tight studio feel, creating a natural and immersive sound.
 4. **Delay** - Delay introduces echoes, adding depth and dimension. Use it on guitars or vocals for a spacious effect, adjusting delay times and feedback for creative enhancements.
 
-Understanding these four elements—EQ, compression, reverb, and delay—lays the groundwork for crafting a professional and balanced mix, enhancing the quality of your music.
+Understanding these four elements—EQ, compression, reverb, and delays lays the groundwork for crafting a professional and balanced mix, enhancing the quality of your music.
 
 ## What is mixing?
 
 Taking multiple tracks and making them work/mix together is mixing. This involves turning the volume up/down on certain tracks to be level (leveling).
 
-Also, having a north star of a production grade song for reference is always good. Pick a song of a similar vibe, and use that as comparison.
+## Reference track
+
+Having a north star of a production grade song for reference is extremely beneficial. Pick a song with a similar vibe, and use that as comparison throughout your mixing process.
 
 ## What mixing won’t do
 
 Mixing won’t fix a bad song. Before you start mixing, all the pieces of your song should be in place from a production standpoint. For example, all instruments should be recorded and the song should be structurally complete.
 
-## Count in
-
-By the way, let the track breathe a bit before starting. Count in to 4 or 8 so it's not missing anything at the beginning or hard to record the start.
-
-## Best possible source
-
-Get all your instruments in tune. If you have a guitar, make sure you have fresh strings on it for the best tone. Similarly apply that concept to any other instrument you're working with. Also, retune after takes!
-
-## File format
-
-Before heading to a professional studio, ask them for the required file format. This is generally 24 WAV bit depth and 48kHz sample rate.
-
 ## Keep an eye on the stereo output decibels
+
+TODO: PROBABLY EXPLAIN THIS PART BETTER
 
 The stereo output serves as the channel for all audio in the mix. Monitoring the stereo decibel output is crucial, indicating the overall volume of the song. Maintaining a level around `-5db` to `-6db` which is in the green ensures optimal headroom and space for subsequent mastering processes. We'd ideally like our resulting master level to end up being around `-3db`.
 
 ## Helpful tips for organization
 
 - Utilize markers to delineate song sections such as verses, pre-choruses, choruses, and bridges. Begin mixing by focusing on specific sections. You could start with the most prominent, like the chorus. Or, picking the loudest section first is also a good strategy.
-- Label your tracks correctly so people other than yourself can understand them. Also, when you label them in exporting, you should number them. That way if you drop them into a new DAW they're imported in the right order. Like `08 Tom 3.wav` or `07 Tom 2.wav`. You'll also need to learn how to consolidate export so they can line up properly when imported to a different DAW.
+- Label your tracks correctly with meaningful names so people other than yourself can understand them. Also, when you label them in exporting, you should number them. That way if you drop them into a new DAW they're imported in the right order. Like `08 Tom 3.wav` or `07 Tom 2.wav`. You'll also need to learn how to consolidate export so they can line up properly when imported to a different DAW.
 - Similarly, we can group tracks. For instance, combine drums, guitar, vocals, bass, etc. To create a track stack, use the “Create Track Stack” option in the right-click dropdown menu or `shift` + `option` + `d`. Folder stacks are ideal for organization, while a summing stack enables global effects, optimizing CPU usage since we won’t have an effect individually on each track.
-- Simplify navigation and visual clarity by color coding tracks. Use `option` + `c` to apply colors either by selecting tracks or dragging over them. Additionally, assign meaningful names to your tracks for a cohesive and organized workflow.
+- Simplify navigation and visual clarity by color coding tracks. Use `option` + `c` to apply colors either by selecting tracks or dragging over them.
 
 ## Mixing Order
 
-Everything should be mixed in accordance to the drums since we start with them. After, we mix the bass in so it sounds good with the drums, then the guitars, the synths and keys, the vocals, atmospheric sounds, and more.
+We'll start with mixing the kick and the snare. This is because they are mainly the guide to how everything else will sit. Keep in mind, we'll be using a reference mix for comparison/guide via levels. After that we'll mix in the vocal.
+
+## Bypass and compare at the same level
+
+When it comes to EQ, compression, and other dynamic effects, if we increase the output volume, your ears perceive it to sound better. But, this may not be the case.
+
+Make sure to adjust the output in the plugin's UI to match the original level without compression/EQ/etc. This is so you can bypass back and forth and compare with ease.
 
 ## Drums
 
+Please note, these are all just examples. You don't have to apply all the same effects that I am, but these are just ideas.
+
 ### Kick
 
-- Mixing a kick drum involves using EQ to shape its tones, applying compression for a consistent volume and punch, and introducing subtle reverb for space without muddying the mix. Adjust settings based on the kick's characteristics and overall mix context.
+Honestly we only need two things in our kick, parallel compression and EQ.
+
+For EQ, at around 60hz we boost about 1.5dB. You can mess around in the lower range for what sounds best. This adds a bit more thump to the kick. Compensate for the increase in volume by turning the gain down in the EQ's plugin UI as mentioned before. This is so we can bypass and compare easily.
+
+Then, we apply parallel compression. We don't want to compress the actual audio of it bc it's probably came from some sample pack that's already processed it.With this, we take the original kick, copy it to another channel that is extremely compressed. You're gonna blend that in with the original kick so you don't damage the original signal. Check out [this video I linked in the resources below](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0).
 
 Next, after the effects have been added to the kick, we want to level our kick. We turn it down until we have enough headroom on it. Like before, you want it around `-0.5db` to `-0.6db`. Also, use your headphones to judge this well.
 
 ### Snares
 
-- EQ to remove low-end frequencies, compression for consistency, subtle reverb for dimension (usually more than the kick to add room presence). Adjust settings thoughtfully, considering the desired spatial impact within the mix.
+- EQ to remove low-end frequencies, compression for consistency, subtle reverb.
 
 To mix the snare with the kick, you kind of do it by ear changing the levels of both of them to your liking while keeping the overall stereo output around `-0.5db` to `-0.6db`.
 
@@ -116,5 +120,8 @@ Incorporate these fundamental mixing principles to sculpt a professional and bal
 
 ## Resources
 
-- [https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
-- [15 MISTAKES to AVOID When Recording at Home! - SpectreSoundStudios](https://youtu.be/MSZ52Lejjog?si=ivV4dn8twpXkuBiC)
+- [ tom as mfer](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
+
+- [Logic Tips - Parallel Compression by Music Tech](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0)
+
+- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
