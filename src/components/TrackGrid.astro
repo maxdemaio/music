@@ -1,0 +1,61 @@
+<style is:global>
+  /* using is:global because of this pepehands issue: https://github.com/withastro/astro/issues/4380 */
+  @media (prefers-reduced-motion: no-preference) {
+    .slide-enter-content2 > * {
+      --stagger2: 0;
+      --delay2: 150ms;
+      --start2: 0ms;
+      animation: slide-enter 1s both 1;
+      animation-delay: calc(var(--start2) + var(--stagger2) * var(--delay2));
+    }
+
+    .slide-enter-content2 > *:nth-child(1) {
+      --stagger2: 1;
+    }
+    .slide-enter-content2 > *:nth-child(2) {
+      --stagger2: 2;
+    }
+    .slide-enter-content2 > *:nth-child(3) {
+      --stagger2: 3;
+    }
+
+    .slide-enter-content2 > *:nth-child(4) {
+      --stagger2: 4;
+    }
+    .slide-enter-content2 > *:nth-child(5) {
+      --stagger2: 5;
+    }
+    .slide-enter-content2 > *:nth-child(6) {
+      --stagger2: 6;
+    }
+    .slide-enter-content2 > *:nth-child(7) {
+      --stagger2: 7;
+    }
+    .slide-enter-content2 > *:nth-child(8) {
+      --stagger2: 8;
+    }
+    .slide-enter-content2 > *:nth-child(9) {
+      --stagger2: 9;
+    }
+    .slide-enter-content2 > *:nth-child(10) {
+      --stagger2: 10;
+    }
+
+    @keyframes slide-enter {
+      0% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  /** end slide enter animations **/
+</style>
+<div class="slide-enter-content2 grid md:grid-cols-2 grid-cols-1 gap-2 mb-10">
+  <!-- Tracks here -->
+  <slot />
+</div>

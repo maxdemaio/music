@@ -1,5 +1,6 @@
 ---
 import Track from "@components/Track.astro";
+import TrackGrid from "@components/TrackGrid.astro";
 
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
@@ -111,6 +112,47 @@ Astro.response.headers.set(
 ---
 
 <style>
+  /** slide enter animations **/
+  @media (prefers-reduced-motion: reduce) {
+    .slide-enter-content > * {
+      /* Disable animation when user prefers reduced motion */
+      animation: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .slide-enter-content1 > * {
+      --stagger1: 0;
+      --delay1: 150ms;
+      --start1: 0ms;
+      animation: slide-enter 1s both 1;
+      animation-delay: calc(var(--start1) + var(--stagger1) * var(--delay1));
+    }
+
+    .slide-enter-content1 > *:nth-child(1) {
+      --stagger1: 1;
+    }
+    .slide-enter-content1 > *:nth-child(2) {
+      --stagger1: 2;
+    }
+    .slide-enter-content1 > *:nth-child(3) {
+      --stagger1: 3;
+    }
+
+    @keyframes slide-enter {
+      0% {
+        transform: translateY(10px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  /** end slide enter animations **/
+
   /* https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items */
   .post-grid {
     grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
@@ -182,7 +224,7 @@ Astro.response.headers.set(
       I've written a total of {totalBlogPosts} posts.
     </p>
 
-    <ul class="grid post-grid gap-4 justify-center">
+    <ul class="slide-enter-content1 grid post-grid gap-4 justify-center">
       {
         blogPosts.map((post) => (
           <>
@@ -234,7 +276,7 @@ Astro.response.headers.set(
     </p>
     {
       tracks ? (
-        <div class="grid md:grid-cols-2 grid-cols-1 gap-2 mb-10">
+        <TrackGrid>
           <>
             {tracks.map((track: ETrack, index: number) => (
               <Track
@@ -246,7 +288,7 @@ Astro.response.headers.set(
               />
             ))}
           </>
-        </div>
+        </TrackGrid>
       ) : (
         <div class="text-center dark:text-red-300 text-red-600 animate-pulse text-xl flex flex-wrap gap-2 justify-center items-center">
           <svg
