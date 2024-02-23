@@ -1,4 +1,9 @@
 ---
+import Track from "@components/Track.astro";
+
+import Default from "@layouts/Default.astro";
+import { getCollection } from "astro:content";
+
 export const prerender = false;
 
 // For local development
@@ -23,33 +28,48 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10`;
 
 const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basic}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      grant_type: "refresh_token",
-      refresh_token: refresh_token || "",
-    }),
-  });
-  return await response.json();
+  try {
+    const response = await fetch(TOKEN_ENDPOINT, {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basic}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        grant_type: "refresh_token",
+        refresh_token: refresh_token || "",
+      }),
+    });
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching access token", error);
+    return {}; // Return an empty object or any other placeholder value
+  }
 };
 
 const getTopTracks = async () => {
-  const { access_token } = await getAccessToken();
-  const url = TOP_TRACKS_ENDPOINT;
-  const payload = {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-  };
-  const res = await fetch(url, payload);
+  try {
+    const { access_token } = await getAccessToken();
+    const url = TOP_TRACKS_ENDPOINT;
+    const payload = {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    };
 
-  const data = await res.json();
-  return data;
+    const res = await fetch(url, payload);
+
+    if (!res.ok) {
+      throw new Error(`Error fetching top tracks: ${res.statusText}`);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching top tracks", error);
+    return []; // Return an empty array
+  }
 };
 
 let { items } = await getTopTracks();
@@ -66,11 +86,6 @@ if (items) {
     albumUrls: track.album.images.map((image: any) => image.url),
   }));
 }
-
-import Track from "@components/Track.astro";
-
-import Default from "@layouts/Default.astro";
-import { getCollection } from "astro:content";
 
 let blogPosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
@@ -139,7 +154,9 @@ Astro.response.headers.set(
     <div
       class="flex flex-wrap gap-2 dark:text-sky-300 text-sky-600 animate-pulse text-xl justify-center items-center"
     >
-      <p class="text-center">Currently in the process of writing and self-producing two tracks...</p>
+      <p class="text-center">
+        Currently in the process of writing and self-producing two tracks...
+      </p>
       <div class="flex">
         <span class="i-solar-microphone-2-line-duotone"></span>
         <span class="i-solar-music-notes-bold-duotone"></span>
@@ -215,9 +232,9 @@ Astro.response.headers.set(
     <p class="mb-6">
       My 10 most played tracks on Spotify over the last 4 weeks, updated daily.
     </p>
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-2 mb-10">
-      {
-        tracks ? (
+    {
+      tracks ? (
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-2 mb-10">
           <>
             {tracks.map((track: ETrack, index: number) => (
               <Track
@@ -229,64 +246,64 @@ Astro.response.headers.set(
               />
             ))}
           </>
-        ) : (
-          <div class="text-red-600 dark:text-red-200 flex opacity-60 items-center gap-2">
-            <svg
-              class="w-6 h-6"
-              viewBox="0 0 1024 1024"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="512" cy="512" r="489.952" fill="currentColor" />
-              <rect
-                x="281.722"
-                y="359.673"
-                width="110.239"
-                height="538.947"
-                rx="55.1196"
-                transform="rotate(-45 281.722 359.673)"
-                fill="#6B0000"
-              />
-              <rect
-                x="662.816"
-                y="281.722"
-                width="110.239"
-                height="538.947"
-                rx="55.1196"
-                transform="rotate(45 662.816 281.722)"
-                fill="black"
-              />
-            </svg>
-            <p>Sorry, couldn't load tracks from the Spotify API </p>
-            <svg
-              class="w-6 h-6"
-              viewBox="0 0 1024 1024"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="512" cy="512" r="489.952" fill="currentColor" />
-              <rect
-                x="281.722"
-                y="359.673"
-                width="110.239"
-                height="538.947"
-                rx="55.1196"
-                transform="rotate(-45 281.722 359.673)"
-                fill="#6B0000"
-              />
-              <rect
-                x="662.816"
-                y="281.722"
-                width="110.239"
-                height="538.947"
-                rx="55.1196"
-                transform="rotate(45 662.816 281.722)"
-                fill="black"
-              />
-            </svg>
-          </div>
-        )
-      }
-    </div>
+        </div>
+      ) : (
+        <div class="text-center dark:text-red-300 text-red-600 animate-pulse text-xl flex flex-wrap gap-2 justify-center items-center">
+          <svg
+            class="w-6 h-6"
+            viewBox="0 0 1024 1024"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="512" cy="512" r="489.952" fill="currentColor" />
+            <rect
+              x="281.722"
+              y="359.673"
+              width="110.239"
+              height="538.947"
+              rx="55.1196"
+              transform="rotate(-45 281.722 359.673)"
+              fill="#6B0000"
+            />
+            <rect
+              x="662.816"
+              y="281.722"
+              width="110.239"
+              height="538.947"
+              rx="55.1196"
+              transform="rotate(45 662.816 281.722)"
+              fill="black"
+            />
+          </svg>
+          <p>Sorry, couldn't load tracks from the Spotify API</p>
+          <svg
+            class="w-6 h-6"
+            viewBox="0 0 1024 1024"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="512" cy="512" r="489.952" fill="currentColor" />
+            <rect
+              x="281.722"
+              y="359.673"
+              width="110.239"
+              height="538.947"
+              rx="55.1196"
+              transform="rotate(-45 281.722 359.673)"
+              fill="#6B0000"
+            />
+            <rect
+              x="662.816"
+              y="281.722"
+              width="110.239"
+              height="538.947"
+              rx="55.1196"
+              transform="rotate(45 662.816 281.722)"
+              fill="black"
+            />
+          </svg>
+        </div>
+      )
+    }
   </section>
 </Default>

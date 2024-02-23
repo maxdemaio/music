@@ -62,7 +62,7 @@ Honestly we only need two things in our kick, parallel compression and EQ.
 
 For EQ, at around 60hz we boost about 1.5dB. You can mess around in the lower range for what sounds best. This adds a bit more thump to the kick. Compensate for the increase in volume by turning the gain down in the EQ's plugin UI as mentioned before. This is so we can bypass and compare easily.
 
-Then, we apply parallel compression. We don't want to compress the actual audio of it bc it's probably came from some sample pack that's already processed it.With this, we take the original kick, copy it to another channel that is extremely compressed. You're gonna blend that in with the original kick so you don't damage the original signal. Check out [this video I linked in the resources below](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0).
+Then, we apply parallel compression. We don't want to compress the actual audio of it bc it's probably came from some sample pack that's already processed it.With this, we take the original kick, duplicate the track, copy the audio to that track (with option + drag) that is extremely compressed. You're gonna blend that in with the original kick so you don't damage the original signal. Check out [this video I linked in the resources below](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0).
 
 Next, after the effects have been added to the kick, we want to level our kick. We turn it down until we have enough headroom on it. Like before, you want it around `-0.5db` to `-0.6db`. Also, use your headphones to judge this well.
 
@@ -113,6 +113,11 @@ You can use automation to have the audio come in and out and not be at just a ce
 ## Adding automation to your mixes
 
 You can use automation to control the audio's volume dynamically, allowing it to fade in and out rather than remain at a fixed level. For instance, imagine having background coffee shop chatter in a track. Automation enables you to seamlessly adjust the volume of this sound throughout the track. This can be achieved through the automation view. Select volume (default) for automation, then click to set a baseline audio level. Add different points on the line and adjust them by dragging. Alternatively, use "T-Latch" to play the audio section, changing the level as it plays, and let Logic automatically add the points for you.
+
+## Parallel Compression
+
+Set the fader of the parallely compressed vocal/whatever track to be all the way down. Then start playing the original and slowly increase the fader (volume) to blend it in. Then it will make the underlying original instrument sound consistent, stable, and powerful.
+
 
 ## Conclusion
 
