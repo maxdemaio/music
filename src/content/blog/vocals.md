@@ -53,7 +53,7 @@ You can also go through and fix any timing issues. If a phrase comes in a little
 
 ## Targeting the hardest parts first
 
-According to Charlie Puth, from their [video on getting your vocals production read](https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW), we should target the hardest vocals first and split up the hardest parts. For example if you have to do an octave jump “hopes up”, split it into “hopes” and “up” and record them separately. Sing the “up” a little bit so you can connect it in the software in the “hopes” part. Blend/combine them with cross fades.
+According to Charlie Puth, from their [video on getting your vocals production ready](https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW), we should target the hardest vocals first and split up the hardest parts. For example if you have to do an octave jump “hopes up”, split it into “hopes” and “up” and record them separately. Sing the “up” a little bit so you can connect it in the software in the “hopes” part. Blend/combine them with cross fades.
 
 ## Vocal Chain
 
