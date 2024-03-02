@@ -1,6 +1,9 @@
 ---
 import Track from "@components/Track.astro";
 import TrackGrid from "@components/TrackGrid.astro";
+import BuildFailed from "@components/BuildFailed.astro";
+import QuoteGrid from "@components/QuoteGrid.astro";
+import QuoteSnippet from "@components/QuoteSnippet.astro";
 
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
@@ -121,7 +124,7 @@ Astro.response.headers.set(
   }
 
   .test {
-    padding: 6px;
+    padding: 8px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -210,7 +213,7 @@ Astro.response.headers.set(
     </div>
   </section>
   <section class="mb-10">
-    <div class="flex justify-between mb-4 items-center">
+    <div class="flex flex-wrap justify-between mb-4 items-center gap-2">
       <h2
         class="uppercase text-black dark:text-white font-kai font-bold text-2xl"
       >
@@ -269,7 +272,7 @@ Astro.response.headers.set(
     </ul>
   </section>
 
-  <section class="mb-6">
+  <section class="mb-10">
     <h2
       class="uppercase text-black dark:text-white font-kai font-bold text-2xl mb-4"
     >
@@ -294,62 +297,39 @@ Astro.response.headers.set(
           </>
         </TrackGrid>
       ) : (
-        <div class="text-center dark:text-red-300 text-red-600 animate-pulse text-xl flex flex-wrap gap-2 justify-center items-center">
-          <svg
-            class="w-6 h-6"
-            viewBox="0 0 1024 1024"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="512" cy="512" r="489.952" fill="currentColor" />
-            <rect
-              x="281.722"
-              y="359.673"
-              width="110.239"
-              height="538.947"
-              rx="55.1196"
-              transform="rotate(-45 281.722 359.673)"
-              fill="#6B0000"
-            />
-            <rect
-              x="662.816"
-              y="281.722"
-              width="110.239"
-              height="538.947"
-              rx="55.1196"
-              transform="rotate(45 662.816 281.722)"
-              fill="black"
-            />
-          </svg>
-          <p>Sorry, couldn't load tracks from the Spotify API</p>
-          <svg
-            class="w-6 h-6"
-            viewBox="0 0 1024 1024"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="512" cy="512" r="489.952" fill="currentColor" />
-            <rect
-              x="281.722"
-              y="359.673"
-              width="110.239"
-              height="538.947"
-              rx="55.1196"
-              transform="rotate(-45 281.722 359.673)"
-              fill="#6B0000"
-            />
-            <rect
-              x="662.816"
-              y="281.722"
-              width="110.239"
-              height="538.947"
-              rx="55.1196"
-              transform="rotate(45 662.816 281.722)"
-              fill="black"
-            />
-          </svg>
-        </div>
+        <BuildFailed />
       )
     }
+  </section>
+  <section class="mb-6">
+    <div class="flex flex-wrap justify-between mb-4 items-center gap-2">
+      <h2
+        class="uppercase text-black dark:text-white font-kai font-bold text-2xl"
+      >
+        Poem/Lyric Snippets
+      </h2>
+      <div>
+        <a href="/poems-lyrics" class="mlink"
+          >All poem/lyric snippets{" "}<span class="i-solar-arrow-right-linear"
+          ></span></a
+        >
+      </div>
+    </div>
+    <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
+    <QuoteGrid>
+      <QuoteSnippet authorAndSource="Braden Bales - A GOOD GOODBYE">
+        I wasted my youth on a life without truth, I’m<br /> just as fake as my promises<br
+        />A slight tinge of blue in mind that’s old news, I<br />used to be such
+        an optimist<br />...<br />I picture my stained glass seat as you file
+        down<br />And pay dues to my pinewood house<br />I can see that the pain
+        won’t leave if I do right now<br />It’s passed around
+      </QuoteSnippet>
+      <QuoteSnippet authorAndSource="Tracy K. Smith - Watershed">
+        the rippling shallow water<br>the white ash trees shedding their leaves
+      </QuoteSnippet>
+      <QuoteSnippet authorAndSource="Taha Muhammad Ali - Meeting at an Airport">
+        my blood rushing<br>like the shadow<br>cast by a cloud of starlings
+      </QuoteSnippet>
+    </QuoteGrid>
   </section>
 </Default>
