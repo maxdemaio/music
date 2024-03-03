@@ -68,15 +68,19 @@ Next, after the effects have been added to the kick, we want to level our kick. 
 
 ### Snares
 
-- EQ to remove low-end frequencies, compression for consistency, subtle reverb.
+With the snare, we can add compressor on it. In Devvon's video, he used a Renaissance axx compressor. 
 
-To mix the snare with the kick, you kind of do it by ear changing the levels of both of them to your liking while keeping the overall stereo output around `-0.5db` to `-0.6db`.
+For EQ, every mix is different so you won't necessarily EQ the same way. You don't want to roll off too much low end which would get rid of the body of the snare. Also, rolling off the high end can be good because if the snare is going through the song it can get annoying. This will also give room for the vocals and other instruments.
 
-### Hats
+We'll want to add parallel compression as well on the snare. This also helps bring some of the body back that you rolled off in the original sound (You don't EQ the parallely compressed sound).
 
-- EQ to remove low-end frequencies, compression for consistency, subtle reverb for dimension.
+You can also add reverb to give it a sense of space.
 
-To mix the hats in with the snare/kick, you also just listen by ear/feel to make sure it all sounds good while keeping it at that overall stereo output decibel level. Keep in mind you can go back and adjust the leveling kick/snare too while also adjusting the hats.
+## Vocals
+
+For EQ: add a high end shelf, a boost from 900 to 3000hz (since that's where speech is mostly intelligible), subtractive eq, a high pass.
+
+Also, you can do de-essing (literally is multiband compression), multiband compression, and parallel compression.
 
 ### Overall
 
@@ -84,13 +88,15 @@ After you’re done mixing all the drums, feel free to add effects on the groupi
 
 This meticulous approach to drum mixing ensures each element contributes to a cohesive and impactful rhythm section. Remember to trust your ears and make adjustments based on the overall sound you aim to achieve.
 
-## Mixing bass
+## Mixing bass/808
 
 - Apply effects and then level
 
 Add your effects on the bass. For EQ’ing a bass guitar usually you don’t want to cut out a lot of lows. Just enough of a low eq cut to shape the frequency. If you don’t cut out the low ends on your tracks, those signals will affect your compressor bc it will increase them. Arrange effects with subtractive processes at the top for organizational clarity. Keep the whole drum group going/selected as you start mixing the bass and adjust the levels accordingly.
 
 You can also side-chain your bass to your kick. What this means is you’re connecting your kick drum to your bass guitar. It’s very common to side-chain a kick with another instrument that shares those frequencies. Whenever the kick hits, you’ll want that space for the kick. But when the bass guitar comes in you also would like to hear that. What side-chaining does is whenever the kick happens, the bass guitar will just get a little bit quieter so you’ll hear more of the kick than you do the bass. You do it with multi-band compression. You can choose to sidechain inside the configuration of the compression effect on the bass. If you’re adding reverb probably add as much as the others so it sounds like its in the same room as the other instruments.
+
+You also want to mono-out your bass. What this means is your want your bass sonically to be right in the middle so it doesn't muddy up the mix.
 
 ## Mixing electric guitar
 
@@ -125,8 +131,15 @@ Incorporate these fundamental mixing principles to sculpt a professional and bal
 
 ## Resources
 
-- [ tom as mfer](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
+- [Mixing The Kick And Snare (Secret) - Help me Devvon](https://youtu.be/XtbSdseGHxI?si=NS5gQjXEiZ-kLtl3)
+
+- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
 
 - [Logic Tips - Parallel Compression by Music Tech](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0)
 
-- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
+- [How to Get Your Vocals to Sit Properly in a Mix](https://youtu.be/wSG6HLeg6Ro?si=rkwiz8yV014srUX3)
+
+- [ tom ass mfer](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
+
+
+

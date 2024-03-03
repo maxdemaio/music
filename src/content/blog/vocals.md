@@ -25,6 +25,7 @@ If you've made it here, you've found the right spot for learning how to record/p
 - [Run Your Reverb & Effects on Inserts or Sends? Pre-Fader or Post-Fader?? - SonicScoop](https://youtu.be/wK9bfwJl4cg?si=leKhg0n_RfHYrPoO)
 - [How To Get A BIG CLEAN REVERB In Your Mixes? - Help Me Devvon](https://youtu.be/VrGKTYxxug0?si=RuCxkTP-yotruF4Y) - super useful to prevent bleed in reverbs
 - [Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy](https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG) - eq and bounce trick
+- [Using the De-Esser to Fix Harsh Vocals - The Band Guide](https://youtu.be/gbzsDXWPn64?si=41Es7mBAa4GfUQd9)
 
 ## Recording always comes first
 
@@ -32,9 +33,11 @@ No matter what kind of vocal chain you add, you can't salvage bad vocals. Make s
 
 **Keep the positioning the distance from your mic consistent**. Mic choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic mic, the Shure SM57. These mics are designed to be used up close. Dynamic mics reject more background noise so they're great if you are in a particularly bad sounding room. But, you'll have to crank up the gain on them. Mess with it just enough so you can't hear background noise really. For me, it's like just off full gain. Also, you do not need phantom power for dynamic mics. **If you are using phantom power in a condenser mic, make sure to turn it off before unplugging the mic**. Finally, You'll definitely need a pop filter to get rid of plosives.
+Personally, I use a dynamic mic, the Shure SM57. These mics are designed to be used up close. Dynamic mics reject more background noise so they're great if you are in a particularly bad sounding room. Also, you do not need phantom power for dynamic mics. **If you are using phantom power in a condenser mic, make sure to turn it off before unplugging the mic**. Finally, You'll definitely need a pop filter to get rid of plosives.
 
 When I record, I use the 3rd Gen Scarlett Solo interface. You should aim for your vocals to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. You should aim so your loudest vocal hits around the -6db mark. This actually applies to most instruments too. This allows for headroom in your mix. Too low, and you won't get any valuable information. Too high, and your tracks will be clipping and distorted.
+
+In addition to the 3rd Gen Scarlett Solo interface, I use a Cloudlifter CL-1. This is because I use a dynamic microphone, the SM57. It needs a lot of gain. The first point of amplification is the most crucial, so the Cloudlifter made perfect sense for the best signal/noise ratio. Without it, I have to crank the gain knob very high on the Scarlett Solo since the pre-amps aren't particularly strong. This mitigates that, and gives me a clean signal. All you do is connect your passive mic to the input and connect the output to a mixer, interface or preamp with +48v phantom power engaged. The Cloudlifter does the rest!
 
 Then, in Logic, I set low latency monitoring mode on. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU when I'm not recording.
 

@@ -1,0 +1,41 @@
+---
+import Default from "@layouts/Default.astro";
+import QuoteGrid from "@components/QuoteGrid.astro";
+import Quote from "@components/Quote.astro";
+---
+
+<Default
+  title="Poem/Lyric Snippets - Max DeMaio Music"
+  description="Poem/Lyrics snippets I enjoy"
+>
+  <section class="mt-8 mb-10">
+    <h2
+      class="uppercase text-black dark:text-white font-kai font-bold text-2xl mb-4"
+    >
+      Poem/Lyric Snippets
+    </h2>
+    <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
+
+    <QuoteGrid>
+      <Quote authorAndSource="Braden Bales - A GOOD GOODBYE">
+        I wasted my youth on a life without truth, I’m<br /> just as fake as my promises<br
+        />A slight tinge of blue in mind that’s old news, I<br />used to be such
+        an optimist<br />...<br />I picture my stained glass seat as you file
+        down<br />And pay dues to my pinewood house<br />I can see that the pain
+        won’t leave if I do right now<br />It’s passed around
+      </Quote>
+      <Quote authorAndSource="Tracy K. Smith - Watershed">
+        the rippling shallow water<br />the white ash trees shedding their
+        leaves
+      </Quote>
+      <Quote authorAndSource="Taha Muhammad Ali - Meeting at an Airport">
+        my blood rushing<br />like the shadow<br />cast by a cloud of starlings
+      </Quote>
+      <Quote authorAndSource="Marge Piercy - The birthday of the world">
+        On the birthday of the world<br />I begin to contemplate<br />what I
+        have done and left<br />undone, but this year<br />not so much
+        rebuilding<br />of my perennially damaged<br />psyche, shoring up eroding<br />friendships, digging out<br />stumps of old resentments<br />that refuse to rot on their own.
+      </Quote>
+    </QuoteGrid>
+  </section>
+</Default>

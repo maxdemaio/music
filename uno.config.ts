@@ -45,6 +45,7 @@ export default defineConfig({
       md: '770px',
       sm: '640px',
       xs: '480px',
+      lg: '1024px',
     },
   },
   rules: [
