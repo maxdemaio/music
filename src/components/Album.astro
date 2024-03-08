@@ -24,7 +24,6 @@
     border-radius: calc(var(--radius) * 1px);
     position: relative;
     box-shadow: 0 1rem 2rem -1rem black;
-    padding: 1.5rem 0 1.5rem 1.5rem;
     display: inline-flex;
     backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
   }
@@ -123,7 +122,7 @@
 <!--For overflowing content, make the outer most md:overflow-hidden 
 and then make the card text have md:overflow-auto-->
 <div>
-  <article data-glow>
+  <article data-glow class="p-6 pr-0 md:pr-0">
     <span class="z-10 top-0 right-0 -mt-[0.35rem] -mr-[0.35rem] absolute flex h-4 w-4">
       <span
         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-100 opacity-60"
@@ -138,7 +137,7 @@ and then make the card text have md:overflow-auto-->
         class="my-img-border object-cover w-[250px] h-[250px]"
       />
       <div
-        class="md:overflow-auto pt-6 md:pl-6 pr-6 md:py-0 md:rounded-b-none gap-3 flex flex-col items-center md:w-[500px] md:h-[250px] w-[250px]"
+        class="md:overflow-auto pt-6 md:px-6 pl-0 pr-0 md:py-0 md:rounded-b-none gap-3 flex flex-col items-center md:w-[500px] md:h-[250px] w-[250px]"
       >
         <div class="text-center">
           <h3 class="font-semibold">dj - jim legxacy (cover)</h3>
