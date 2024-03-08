@@ -4,6 +4,7 @@ import TrackGrid from "@components/TrackGrid.astro";
 import BuildFailed from "@components/BuildFailed.astro";
 import QuoteGrid from "@components/QuoteGrid.astro";
 import QuoteSnippet from "@components/QuoteSnippet.astro";
+import Album from "@components/Album.astro";
 
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
@@ -199,12 +200,16 @@ Astro.response.headers.set(
   title="Home - Max DeMaio Music"
   description="Max DeMaio's personal music website"
 >
-  <section class="mt-8 mb-10">
+
+  <section class="mt-8 mb-10 flex justify-center">
+    <Album/>
+  </section>
+  <section class="mb-10">
     <div
       class="flex flex-wrap gap-2 dark:text-sky-300 text-sky-600 animate-pulse text-xl justify-center items-center"
     >
       <p class="text-center">
-        Currently in the process of writing and self-producing two tracks...
+        Currently in the process of writing and self-producing an original track...
       </p>
       <div class="flex">
         <span class="i-solar-microphone-2-line-duotone"></span>
