@@ -1,0 +1,188 @@
+<style>
+  :root {
+    --backdrop: hsl(0 0% 60% / 0.12);
+    --radius: 14;
+    --border: 1;
+    --backup-border: var(--backdrop);
+    --size: 200;
+    --border-spot-opacity: 0.9;
+    --border-light-opacity: 0.9;
+    --cardblur: 4;
+    --r: 0deg; /* Initial angle for button, firefox will be static */
+  }
+
+  .pulse-bg {
+    backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
+  }
+  /**  Start card styles **/
+  article:first-of-type {
+    --base: 10;
+    --spread: 10;
+    --outer: 1;
+  }
+  article {
+    border-radius: calc(var(--radius) * 1px);
+    position: relative;
+    box-shadow: 0 1rem 2rem -1rem black;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+    display: inline-flex;
+    backdrop-filter: blur(calc(var(--cardblur, 5) * 1px));
+  }
+  .my-img-border {
+    border-radius: calc(var(--radius) * 1px);
+  }
+
+  /* Glow specific styles */
+  [data-glow] {
+    --border-size: calc(var(--border, 2) * 1px);
+    --spotlight-size: calc(var(--size, 150) * 1px);
+    --hue: calc(var(--base) + (var(--xp, 0) * var(--spread, 0)));
+    background-image: radial-gradient(
+      var(--spotlight-size) var(--spotlight-size) at calc(var(--x, 0) * 1px)
+        calc(var(--y, 0) * 1px),
+      hsl(
+        var(--hue, 210) calc(var(--saturation, 100) * 1%)
+          calc(var(--lightness, 70) * 1%) / var(--bg-spot-opacity, 0.1)
+      ),
+      transparent
+    );
+    background-color: var(--backdrop, transparent);
+    background-size: calc(100% + (2 * var(--border-size)))
+      calc(100% + (2 * var(--border-size)));
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    border: var(--border-size) solid var(--backup-border);
+    position: relative;
+    touch-action: none;
+  }
+
+  [data-glow]::before,
+  [data-glow]::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: calc(var(--border-size) * -1);
+    border: var(--border-size) solid transparent;
+    border-radius: calc(var(--radius) * 1px);
+    background-attachment: fixed;
+    background-size: calc(100% + (2 * var(--border-size)))
+      calc(100% + (2 * var(--border-size)));
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    mask: linear-gradient(transparent, transparent),
+      linear-gradient(white, white);
+    mask-clip: padding-box, border-box;
+    mask-composite: intersect;
+  }
+
+  /* This is the emphasis light */
+  [data-glow]::before {
+    background-image: radial-gradient(
+      calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
+        calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+      hsl(
+        var(--hue, 210) calc(var(--saturation, 100) * 1%)
+          calc(var(--lightness, 50) * 1%) / var(--border-spot-opacity, 1)
+      ),
+      transparent 100%
+    );
+    filter: brightness(2);
+  }
+  /* This is the spotlight */
+  [data-glow]::after {
+    background-image: radial-gradient(
+      calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
+        calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+      hsl(0 100% 100% / var(--border-light-opacity, 1)),
+      transparent 100%
+    );
+  }
+  [data-glow] [data-glow] {
+    position: absolute;
+    inset: 0;
+    will-change: filter;
+    opacity: var(--outer, 1);
+  }
+  [data-glow] > [data-glow] {
+    border-radius: calc(var(--radius) * 1px);
+    border-width: calc(var(--border-size) * 20);
+    filter: blur(calc(var(--border-size) * 10));
+    background: none;
+    pointer-events: none;
+  }
+  [data-glow] > [data-glow]::before {
+    inset: -10px;
+    border-width: 10px;
+  }
+  [data-glow] [data-glow] {
+    border: none;
+  }
+  /** End card styles **/
+</style>
+
+<!--For overflowing content, make the outer most md:overflow-hidden 
+and then make the card text have md:overflow-auto-->
+<div>
+  <article data-glow>
+    <span class="z-10 top-0 right-0 -mt-[0.35rem] -mr-[0.35rem] absolute flex h-4 w-4">
+      <span
+        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-100 opacity-60"
+      ></span>
+      <span class="relative inline-flex rounded-full h-4 w-4 bg-neutral-200"></span>
+    </span>
+    <div data-glow></div>
+    <div class="inline-flex flex-col md:flex-row justify-center pr-6 md:pr-0">
+      <img
+        src="/dj.jpeg"
+        alt="dj album art"
+        class="my-img-border object-cover w-[250px] h-[250px]"
+      />
+      <div
+        class="md:overflow-auto pt-6 md:pl-6 pr-6 md:py-0 md:rounded-b-none gap-3 flex flex-col items-center md:w-[500px] md:h-[250px] w-[250px]"
+      >
+        <div class="text-center">
+          <h3 class="font-semibold">dj - jim legxacy (cover)</h3>
+        </div>
+        <div class="flex flex-col gap-3 w-full items-center">
+          <button
+            class="transition-all duration-300 hover:scale-105 gap-2 cursor-pointer flex items-center justify-center px-6 py-4 border rounded-md w-full"
+          >
+            <span class="i-mdi-soundcloud"></span>
+            <span>SoundCloud</span>
+          </button>
+
+          <button
+            class="transition-all duration-300 hover:scale-105 gap-2 cursor-pointer flex items-center justify-center px-6 py-4 border rounded-md w-full"
+          >
+            <span>Next Music Platform...</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+  const syncPointer = (event: PointerEvent) => {
+    const { clientX: x, clientY: y } = event;
+    // x position
+    document.documentElement.style.setProperty("--x", x.toFixed(2));
+
+    // fraction of x position relative to window width
+    document.documentElement.style.setProperty(
+      "--xp",
+      (x / window.innerWidth).toFixed(2)
+    );
+
+    // y position
+    document.documentElement.style.setProperty("--y", y.toFixed(2));
+
+    // fraction of y position relative to window height
+    document.documentElement.style.setProperty(
+      "--yp",
+      (y / window.innerHeight).toFixed(2)
+    );
+  };
+
+  document.body.addEventListener("pointermove", syncPointer);
+</script>
