@@ -117,6 +117,74 @@
     border: none;
   }
   /** End card styles **/
+
+  /** Start hero button styles **/
+  .hero-button {
+    border-radius: 5px;
+  }
+  .hero-button::after {
+    pointer-events: none;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 1px;
+    background: conic-gradient(
+      from var(--a),
+      #414141 0%,
+      white 12.5%,
+      #414141 25%,
+      #414141 50%,
+      white 62.5%,
+      #414141 75%
+    );
+    animation: animate 4s linear infinite;
+    mask-image: url("/mask.svg");
+    mask-size: cover;
+    mask-position: center center;
+    height: 60px;
+    width: 240px;
+  }
+
+  @media (min-width: 770px) {
+    .hero-button::after {
+      pointer-events: none;
+      content: "";
+      z-index: -1;
+      position: absolute;
+      inset: 1px;
+      background: conic-gradient(
+        from var(--a),
+        #414141 0%,
+        white 12.5%,
+        #414141 25%,
+        #414141 50%,
+        white 62.5%,
+        #414141 75%
+      );
+      animation: animate 4s linear infinite;
+      mask-image: url("/mask-md.svg");
+      mask-size: cover;
+      mask-position: center center;
+      height: 70px;
+      width: 350px;
+    }
+  }
+
+  @property --a {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes animate {
+    0% {
+      --a: 0deg;
+    }
+    100% {
+      --a: 360deg;
+    }
+  }
+  /** End hero button styles **/
 </style>
 
 <!--For overflowing content, make the outer most md:overflow-hidden 
@@ -129,7 +197,8 @@ and then make the card text have md:overflow-auto-->
       <span
         class="animate-ping absolute inline-flex h-full w-full rounded-full dark:bg-neutral-100 bg-neutral-300 opacity-60"
       ></span>
-      <span class="relative inline-flex rounded-full h-4 w-4 dark:bg-neutral-200 bg-neutral-400"
+      <span
+        class="relative inline-flex rounded-full h-4 w-4 dark:bg-neutral-200 bg-neutral-400"
       ></span>
     </span>
     <div data-glow></div>
@@ -145,18 +214,21 @@ and then make the card text have md:overflow-auto-->
         <div class="text-center">
           <h3 class="font-semibold">dj - jim legxacy (cover)</h3>
         </div>
-        <div class="flex flex-col gap-3 w-full items-center">
+        <div class="flex flex-col gap-3 w-full justify-center items-center p-1">
           <a
-            href="https://soundcloud.com/maxdemaio/dj-1?si=54dde4abbf1c4128a4e46b753b088be7"
-            class="border-black dark:border-white transition-all duration-300 hover:scale-105 gap-2 cursor-pointer flex items-center justify-center px-6 py-4 border rounded-md w-full"
+            href="https://soundcloud.com/maxdemaio/dj-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="SoundCloud"
+            class="hero-button hover:scale-105 transition-all duration-300 md:h-[72px] md:w-[352px] w-[242px] h-[62px] isolate relative flex gap-2 items-center justify-center cursor-pointer"
           >
             <span class="i-mdi-soundcloud"></span>
             <span>SoundCloud</span>
           </a>
           <button
-            class="border-black dark:border-white transition-all duration-300 hover:scale-105 gap-2 cursor-pointer flex items-center justify-center px-6 py-4 border rounded-md w-full"
+            class="md:h-[72px] md:w-[352px] w-[242px] h-[62px] border-black dark:border-white transition-all duration-300 hover:scale-105 gap-2 cursor-pointer flex items-center justify-center border-[1.5px] rounded-[5px]"
           >
-            <span>Next Music Platform...</span>
+            <span>Music Platform...</span>
           </button>
         </div>
       </div>
