@@ -26,14 +26,14 @@ Songwriting is a skill you build up through lots of practice. There is no perfec
 - Doesn't have to be fully fleshed out lyrics, can just be humming along
 - Go back and see what words fit, almost like a puzzle
 - Look up rhymes, near rhymes, use a thesaurus, or even use ChatGPT to help
-- Go with your gut instinct in beginning, then later go back and iterate
+- Go with your gut instinct in the beginning, then later go back and iterate
 - Write for yourself, don't write for others
-- Pop setup: Verse 1, Prechorus Chorus, Verse 2, Prechorus, Chorus, Bridge, Chorus
+- Pop setup: Verse 1, Prechorus, Chorus, Verse 2, Prechorus, Chorus, Bridge, Chorus
 
 Then, also try these ideas (I stole this from an old Tate McRae video [which is now private]):
 1. Write down words of how you are feeling (Ex. Alone)
-2. Write words next to it that rhyme with that word (It has to make sense tho) (Ex. Own)
-3. Basically just make something outta that (You left me here all on my own, baby I've been feeling so alone)
+2. Write words next to it that rhyme with that word (It has to make sense though) (Ex. Own)
+3. Basically just make something out of that (You left me here all on my own, baby I've been feeling so alone)
 
 ### Be specific
 
@@ -82,7 +82,7 @@ Turning simple things into interesting stories. It helps to look at lyrics the w
 - Start every line with a different letter
 - Etc, up to you
 
-This helps you limit choices and let’s you be creative to make things work.
+This helps you limit choices and lets you be creative to make things work.
 
 ### Readings and analysis
 
@@ -107,6 +107,6 @@ Keep the melody of an already existing song (of an original or a cover) and then
 
 ## Analyzing the lyrics
 
-Go through whole song reading/singing lyrics. Take note of what feels good and what needs work. Ask the question, “am I really saying what I want to say?” Look closely at the lyrics and then ask “am I saying what I want to as clearly as I’d like to?” Nothing wrong with going back through the song and editing it multiple times. You don’t have to nail it the first time.
+Go through the whole song reading/singing lyrics. Take note of what feels good and what needs work. Ask the question, “am I really saying what I want to say?” Look closely at the lyrics and then ask “am I saying what I want to as clearly as I’d like to?” Nothing wrong with going back through the song and editing it multiple times. You don’t have to nail it the first time.
 
 This lets you become more aware of how you write: This allows you to start identifying your stylistic habits, strengths, and areas for improvement.
