@@ -26,3 +26,4 @@ tags: ['logic', 'producing']
 - `control` + `option` + `x` apply default cross fade(s) across selected regions
 - select unconnected regions and pressing `j` will join them, `cmd` + `j` will try to heal any audio in between.
 - Moving the end of an audio region to where the playhead is: place playhead, `cmd` + `r`, `;` to move the duplicated section's start back to playhead, then select original track, `option` + `[`, `option` + `]`
+- `control` + `shift` + `right/left` to clip region to nearest transient
