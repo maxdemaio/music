@@ -8,6 +8,12 @@ tags: ['logic', 'producing']
 draft: true
 ---
 
+
+
+## What is mixing?
+
+Taking multiple tracks and making them work/mix together is mixing. This involves turning the volume up/down on certain tracks to be level (leveling).
+
 In addition to leveling, mastering the fundamentals of mixing involves four key elements:
 
 1. **EQ (Equalization)** - EQ shapes instrument tones by boosting or cutting specific frequencies. For instance, enhance the high frequencies for vocals or high hats, but avoid them on a kick drum to maintain a solid foundation.
@@ -16,10 +22,6 @@ In addition to leveling, mastering the fundamentals of mixing involves four key 
 4. **Delay** - Delay introduces echoes, adding depth and dimension. Use it on guitars or vocals for a spacious effect, adjusting delay times and feedback for creative enhancements.
 
 Understanding these four elements—EQ, compression, reverb, and delays lays the groundwork for crafting a professional and balanced mix, enhancing the quality of your music.
-
-## What is mixing?
-
-Taking multiple tracks and making them work/mix together is mixing. This involves turning the volume up/down on certain tracks to be level (leveling).
 
 ## Reference track
 

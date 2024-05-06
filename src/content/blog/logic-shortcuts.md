@@ -27,3 +27,4 @@ tags: ['logic', 'producing']
 - select unconnected regions and pressing `j` will join them, `cmd` + `j` will try to heal any audio in between.
 - Moving the end of an audio region to where the playhead is: place playhead, `cmd` + `r`, `;` to move the duplicated section's start back to playhead, then select original track, `option` + `[`, `option` + `]`
 - `control` + `shift` + `[/]` to clip region to nearest transient - [https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g](https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g)
+- chopping up audio on transients evenly: choose the scissor tool as secondary tool, select audio, then press `cmd`, `option`, and click generally where the first transient is - [https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199](https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199)
