@@ -5,6 +5,9 @@ pubDate: 'Feb 05 2024'
 title: Recording Guitar
 duration: 9
 tags: ['producing']
+resources: [ {title: "13 things to AVOID when Recording Amp Sims", url: "https://www.youtube.com/watch?v=MXElgek9J78&t=210s"},
+{title: "13 Things to AVOID Recording Guitar in your Home Studio", url: "https://youtu.be/Mc8W-cSkZHo?si=IlWYpEqSJ6mvsfOR"}, {title: "13 Things to AVOID when Recording GUITAR at HOME", url: "https://youtu.be/RvRAL_q3csk?si=fodu-yvtPsApVZYa"}, {title: "Studio One Minute: The Right Way to Double Guitars - PreSonus", url: "https://youtu.be/3I-R9426CC8?si=OxNjUHBJa8EBjUkv"}]
+
 ---
 
 Recording guitar can involve a lot of factors. So, I've created a small overall guide to the process! This ranges from picking the right guitar to all the small bits you need to know while tracking.
@@ -43,15 +46,15 @@ You don't have to go too crazy with effects starting out. Choose a preset and pl
 
 ## Bad levels
 
-Too quiet, your guitar sounds like a wimpy buzzing grasshopper. Too loud, and we get digital clipping. The Scarlett Solo has plenty of headroom. There's room to raise the signal without the signal being clipped.
+Too quiet, your guitar sounds wimpy. Too loud, and we get digital clipping. The Scarlett Solo has plenty of headroom. There's room to raise the signal without the signal being clipped.
 
-You should aim for your guitar to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. Chug on one string/chord as hard as you can until you start seeing some clipping and then back the fader off. You should aim so your loudest sound hits around the -6db mark. You want to leave headroom for the rest of the mix!
+You should aim for your guitar to come through all green on the interface itself. Yellow is fine, but red on the interface means you're clipping. Chug on one string/chord as hard as you can until you start seeing some clipping and then back the fader off. **You should aim so your loudest sound hits around the -6db mark**. You want to leave headroom for the rest of the mix!
 
 ## Latency
 
 Make sure you installed the drivers correctly for your interface. Normally on a Mac, you'd have to try to mess this up.
 
-Next, make sure your audio buffers in Logic. Set yourself to low latency monitoring mode. After, I'll set the I/O buffer size to 64 samples. After, I set it back to 256 samples to save on CPU. Most DAWs will tell you what the latency will be around in milliseconds.
+**Set yourself to low latency monitoring mode. After, I'll set the I/O buffer size to 64 samples**. After, I set it back to 256 samples to save on CPU. Most DAWs will tell you what the latency will be around in milliseconds.
 
 ## Foam to control the strings
 
@@ -110,10 +113,3 @@ Without a bass guitar, your guitars will kinda sound thin and weak. Bass guitar 
 ## Take a break
 
 Sometimes the easiest way to come back to a mix is taking a break and coming back to it. Mental clarity helps bring new perspectives and ideas. Don't feel guilty about taking a break.
-
-## Resources
-
-- [13 things to AVOID when Recording Amp Sims](https://www.youtube.com/watch?v=MXElgek9J78&t=210s)
-- [13 Things to AVOID Recording Guitar in your Home Studio](https://youtu.be/Mc8W-cSkZHo?si=IlWYpEqSJ6mvsfOR)
-- [13 Things to AVOID when Recording GUITAR at HOME](https://youtu.be/RvRAL_q3csk?si=fodu-yvtPsApVZYa)
-- [Studio One Minute: The Right Way to Double Guitars - PreSonus](https://youtu.be/3I-R9426CC8?si=OxNjUHBJa8EBjUkv)

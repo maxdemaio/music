@@ -22,6 +22,7 @@ const blog = defineCollection({
     draft: z.boolean().optional(),
     tags: z.array(z.nativeEnum(Tag)).optional(),
     image: z.string().optional().default('/whisper-music.jpeg'), // default music image for og
+    resources: z.array(z.object({ title: z.string(), url: z.string() })).optional(),
   }),
 });
 

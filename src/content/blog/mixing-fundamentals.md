@@ -8,6 +8,18 @@ tags: ['logic', 'producing']
 draft: true
 ---
 
+- [How to Start Your Mix - Help me Devvon](https://youtu.be/elNrHIqSANA?si=TOS-_YdU8M7_EPR0)
+
+- [Mixing The Kick And Snare (Secret) - Help me Devvon](https://youtu.be/XtbSdseGHxI?si=NS5gQjXEiZ-kLtl3)
+
+- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
+
+- [Logic Tips - Parallel Compression - Music Tech](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0)
+
+- [How to Get Your Vocals to Sit Properly in a Mix - Help me Devvon](https://youtu.be/wSG6HLeg6Ro?si=rkwiz8yV014srUX3)
+
+- [Logic Pro X Mixing Tutorial - Charles Cleyn](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
+
 
 
 ## What is mixing?
@@ -100,48 +112,12 @@ You can also side-chain your bass to your kick. What this means is you’re conn
 
 You also want to mono-out your bass. What this means is your want your bass sonically to be right in the middle so it doesn't muddy up the mix.
 
-## Mixing electric guitar
-
-- Apply effects and then level
-
-If you have some hits on bass notes you could side-chain it with the kick again so it doesn’t overpower it. A strategy is to look away from the screen and move to level accordingly as you’re listening to choose the best spot you feel.
-
-## Mixing Synths/Keys
-
-- Apply effects and then level
-
-If using preset instruments, you don’t need to adjust the effects much, given stock compression and EQ. Utilize Logic's cycle feature to ensure proper starting points for your mix.
-
-Reverb adds spatial context, influencing perception of depth in the mix. Keep main song elements centered, enhancing focus. When panning, consider creating a stage-like atmosphere; for instance, pan a Wurlitzer Modern keyboard slightly left to envision a band on stage. Experiment with panning for different keys/synths to achieve a balanced spatial arrangement.
-
-## Mixing atmospheric and background noise
-
-You can use automation to have the audio come in and out and not be at just a certain level. For example, let’s say we had some background coffee shop chatter in the background. You could use automation to make that sound come in and out at a low volume throughout the track. This can be done w/ the automation view. You’d choose to automate the volume (default) and then click to add a baseline audio level. You can click to add different points on the line and drag them around. Or you could use “T-Latch” and play the audio section, changing the level as it plays and Logic will auto add the points for you.
-
-## Adding automation to your mixes
-
-You can use automation to control the audio's volume dynamically, allowing it to fade in and out rather than remain at a fixed level. For instance, imagine having background coffee shop chatter in a track. Automation enables you to seamlessly adjust the volume of this sound throughout the track. This can be achieved through the automation view. Select volume (default) for automation, then click to set a baseline audio level. Add different points on the line and adjust them by dragging. Alternatively, use "T-Latch" to play the audio section, changing the level as it plays, and let Logic automatically add the points for you.
-
 ## Parallel Compression
 
 Set the fader of the parallely compressed vocal/whatever track to be all the way down. Then start playing the original and slowly increase the fader (volume) to blend it in. Then it will make the underlying original instrument sound consistent, stable, and powerful.
 
-
 ## Conclusion
 
 Incorporate these fundamental mixing principles to sculpt a professional and balanced sound in your music production journey. Mastering EQ, compression, reverb, and delay empowers you to create impactful mixes that elevate your music to new heights.
-
-## Resources
-
-- [Mixing The Kick And Snare (Secret) - Help me Devvon](https://youtu.be/XtbSdseGHxI?si=NS5gQjXEiZ-kLtl3)
-
-- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
-
-- [Logic Tips - Parallel Compression by Music Tech](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0)
-
-- [How to Get Your Vocals to Sit Properly in a Mix](https://youtu.be/wSG6HLeg6Ro?si=rkwiz8yV014srUX3)
-
-- [ tom ass mfer](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
-
 
 
