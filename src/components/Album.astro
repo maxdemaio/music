@@ -237,26 +237,41 @@ and then make the card text have md:overflow-auto-->
 </div>
 
 <script>
-  const syncPointer = (event: PointerEvent) => {
-    const { clientX: x, clientY: y } = event;
-    // x position
-    document.documentElement.style.setProperty("--x", x.toFixed(2));
+  const isNonMobile = () => {
+    // Check if the user agent matches a common mobile device pattern
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /mobile|android|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
 
-    // fraction of x position relative to window width
-    document.documentElement.style.setProperty(
-      "--xp",
-      (x / window.innerWidth).toFixed(2)
-    );
+    // Additionally, you can check screen size if needed
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
-    // y position
-    document.documentElement.style.setProperty("--y", y.toFixed(2));
-
-    // fraction of y position relative to window height
-    document.documentElement.style.setProperty(
-      "--yp",
-      (y / window.innerHeight).toFixed(2)
-    );
+    return !isMobile && screenWidth > 480 && screenHeight > 320;
   };
 
-  document.body.addEventListener("pointermove", syncPointer);
+  if (isNonMobile()) {
+    const syncPointer = (event: PointerEvent) => {
+      const { clientX: x, clientY: y } = event;
+      // x position
+      document.documentElement.style.setProperty("--x", x.toFixed(2));
+
+      // fraction of x position relative to window width
+      document.documentElement.style.setProperty(
+        "--xp",
+        (x / window.innerWidth).toFixed(2)
+      );
+
+      // y position
+      document.documentElement.style.setProperty("--y", y.toFixed(2));
+
+      // fraction of y position relative to window height
+      document.documentElement.style.setProperty(
+        "--yp",
+        (y / window.innerHeight).toFixed(2)
+      );
+    };
+
+    document.body.addEventListener("pointermove", syncPointer);
+  }
 </script>
+
