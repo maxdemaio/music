@@ -1,10 +1,25 @@
 ---
 fileName: audio-file-speed-slow
 description: How to Speed Up or Slow Down Tracks in Logic Pro
-pubDate: 'Jan 20 2024'
+pubDate: "Jan 20 2024"
 title: How to Speed Up or Slow Down Tracks in Logic Pro
 duration: 3
-tags: ['logic', 'producing']
+tags: ["logic", "producing"]
+resources:
+  [
+    {
+      title: "How to Speed up or Slow down Tracks in Logic Pro - John Mike",
+      url: "https://www.youtube.com/watch?v=XGw9-VMSvzA",
+    },
+    {
+      title: "How To Make Any Sample or Loop Fit Your Project Tempo in Logic X - Echo Sound Works",
+      url: "https://youtu.be/fJjnx7HQq0w?si=V0s55NaPvsjwklVq",
+    },
+    {
+      title: "Add to Loop Library Apple Article",
+      url: "https://discussions.apple.com/thread/4724207?sortBy=best",
+    },
+  ]
 ---
 
 In this blog post, we'll go into how to speed up or slow down audio tracks in Logic Pro. I found there are two ways you could approach this, so let's get right into it!
@@ -34,9 +49,3 @@ If you'd like to delete your loop, navigate to `/Audio/Apple Loops/User Loops/`.
 The other way I found was using the flex tool. But, I found your global project BPM has to be the same as the original track BPM beforehand. Basically, double-click your audio track so the audio track editor comes up in the bottom. There is a flex icon, click that. Then, directly to the right of the flex icon, you should have a drop-down menu. Choose Flex Time - Polyphonic. You could also mess around with other flex times. Now changing the project BPM should update the track's BPM. You could also manually pitch things up/down semitones as needed.
 
 If you wanted to do this on import, you could do so via global project "Smart Tempo" and adjust its settings. There's [a nice video](https://youtu.be/fJjnx7HQq0w?si=UhTVZ7bSTWAQfqJm) done on this as well.
-
-## Resources
-
-- [How to Speed up or Slow down Tracks in Logic Pro - John Mike](https://www.youtube.com/watch?v=XGw9-VMSvzA)
-- [How To Make Any Sample or Loop Fit Your Project Tempo in Logic X - Echo Sound Works](https://youtu.be/fJjnx7HQq0w?si=V0s55NaPvsjwklVq)
-- [Add to Loop Library Apple Article](https://discussions.apple.com/thread/4724207?sortBy=best)

@@ -1,19 +1,28 @@
 ---
 fileName: analyzing-lyrics-writing-songs
 description: How to analyze lyrics and write songs
-pubDate: 'Feb 09 2024'
+pubDate: "Feb 09 2024"
 title: Analyzing Lyrics and Writing Songs
 duration: 4
-tags: ['songwriting']
+tags: ["songwriting"]
+resources:
+  [
+    {
+      title: "Conan Gray - How to Write a Song",
+      url: "https://youtu.be/aYictpxV5z0?si=Z7EJPyMgQIOSR8P1",
+    },
+    {
+      title: "Olivia Rodrigo - Writing a Song Starting with Lyrics",
+      url: "https://youtube.com/shorts/0hiEHG5KgsU?si=aS3Zn60WJAWwtTnD",
+    },
+    {
+      title: "How to Write Better Song Lyrics (for beginners/noobs)",
+      url: "https://youtu.be/64d0QqbJdRo?si=wMAmKUhMDhDQqJSQ",
+    },
+  ]
 ---
 
 Writing songs isn't easy. Here, I've put some useful tips I've found along the way. Now take this, go forth, and write!
-
-## Resources
-
-- [Conan Gray - How to Write a Song](https://youtu.be/aYictpxV5z0?si=Z7EJPyMgQIOSR8P1)
-- [Olivia Rodrigo - Writing a Song Starting with Lyrics](https://youtube.com/shorts/0hiEHG5KgsU?si=aS3Zn60WJAWwtTnD)
-- [How to Write Better Song Lyrics (for beginners/noobs)](https://youtu.be/64d0QqbJdRo?si=wMAmKUhMDhDQqJSQ)
 
 ## Writing a song
 
@@ -31,6 +40,7 @@ Songwriting is a skill you build up through lots of practice. There is no perfec
 - Pop setup: Verse 1, Prechorus, Chorus, Verse 2, Prechorus, Chorus, Bridge, Chorus
 
 Then, also try these ideas (I stole this from an old Tate McRae video [which is now private]):
+
 1. Write down words of how you are feeling (Ex. Alone)
 2. Write words next to it that rhyme with that word (It has to make sense though) (Ex. Own)
 3. Basically just make something out of that (You left me here all on my own, baby I've been feeling so alone)
@@ -99,7 +109,7 @@ Keep the melody of an already existing song (of an original or a cover) and then
 ### Be honest
 
 - songs can be stories and experiences
-    - people relate to ones that are honest and vulnerable
+  - people relate to ones that are honest and vulnerable
 
 ### Write bad lyrics
 

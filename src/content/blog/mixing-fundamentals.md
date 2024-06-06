@@ -1,26 +1,39 @@
 ---
 fileName: mixing-fundamentals
 description: The fundamentals of mixing
-pubDate: 'Jan 15 2024'
+pubDate: "Jan 15 2024"
 title: Mixing Fundamentals
 duration: 9
-tags: ['logic', 'producing']
+tags: ["logic", "producing"]
 draft: true
+resources:
+  [
+    {
+      title: "How to Start Your Mix - Help me Devvon",
+      url: "https://youtu.be/elNrHIqSANA?si=TOS-_YdU8M7_EPR0",
+    },
+    {
+      title: "Mixing The Kick And Snare (Secret) - Help me Devvon",
+      url: "https://youtu.be/XtbSdseGHxI?si=NS5gQjXEiZ-kLtl3",
+    },
+    {
+      title: "How To Make Your Kick Kick - Help me Devvon",
+      url: "https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR",
+    },
+    {
+      title: "Logic Tips - Parallel Compression - Music Tech",
+      url: "https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0",
+    },
+    {
+      title: "How to Get Your Vocals to Sit Properly in a Mix - Help me Devvon",
+      url: "https://youtu.be/wSG6HLeg6Ro?si=rkwiz8yV014srUX3",
+    },
+    {
+      title: "Logic Pro X Mixing Tutorial - Charles Cleyn",
+      url: "https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk",
+    },
+  ]
 ---
-
-- [How to Start Your Mix - Help me Devvon](https://youtu.be/elNrHIqSANA?si=TOS-_YdU8M7_EPR0)
-
-- [Mixing The Kick And Snare (Secret) - Help me Devvon](https://youtu.be/XtbSdseGHxI?si=NS5gQjXEiZ-kLtl3)
-
-- [How To Make Your Kick Kick - Help me Devvon](https://youtu.be/-NxA3Yln67E?si=TxQo-U1-SE7OepQR)
-
-- [Logic Tips - Parallel Compression - Music Tech](https://youtu.be/iZT_1Gm8zik?si=6gzpBM-mAO87kbQ0)
-
-- [How to Get Your Vocals to Sit Properly in a Mix - Help me Devvon](https://youtu.be/wSG6HLeg6Ro?si=rkwiz8yV014srUX3)
-
-- [Logic Pro X Mixing Tutorial - Charles Cleyn](https://youtu.be/azJPTYtwK_o?si=BAxxmUV6oAtL91wk)
-
-
 
 ## What is mixing?
 
@@ -82,7 +95,7 @@ Next, after the effects have been added to the kick, we want to level our kick. 
 
 ### Snares
 
-With the snare, we can add compressor on it. In Devvon's video, he used a Renaissance axx compressor. 
+With the snare, we can add compressor on it. In Devvon's video, he used a Renaissance axx compressor.
 
 For EQ, every mix is different so you won't necessarily EQ the same way. You don't want to roll off too much low end which would get rid of the body of the snare. Also, rolling off the high end can be good because if the snare is going through the song it can get annoying. This will also give room for the vocals and other instruments.
 
@@ -119,5 +132,3 @@ Set the fader of the parallely compressed vocal/whatever track to be all the way
 ## Conclusion
 
 Incorporate these fundamental mixing principles to sculpt a professional and balanced sound in your music production journey. Mastering EQ, compression, reverb, and delay empowers you to create impactful mixes that elevate your music to new heights.
-
-

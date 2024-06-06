@@ -5,27 +5,72 @@ pubDate: "Feb 10 2024"
 title: Starting Knowledge for Vocals
 duration: 15
 tags: ["logic", "producing"]
+resources:
+  [
+    {
+      title: "The Secret To Beautiful Vocals - Alex Rome",
+      url: "https://youtu.be/ce7kEQecS-I?si=fs6TNNq_pAkAp7DW",
+    },
+    {
+      title: "Getting your vocals production ready - Charlie Puth",
+      url: "https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW",
+      description: "Mainly about setting up vocal harmonies and how to record tricky vocal parts.",
+    },
+    {
+      title: "I Reveal How The Pro’s Mix Vocals - Streaky",
+      url: "https://youtu.be/Cf0DCaVa5sM?si=N7fGCCPqbUPo2lCq",
+      description: "This one is mainly if you have a pre-existing beat just as an audio file and you want to blend your vocals into it via EQing/leveling so the vocal sits in the pockets. This makes a **huge** difference.",
+    },
+    {
+      title: "Noise Gate: 12 Tips For A Clean And Natural Tone - Drew Swisher",
+      url: "https://mastering.com/noise-gate/",
+      description: "Goes over everything you need to know about noise gates.",
+    },
+    {
+      title: "How to Use Flex Pitch in Logic Pro X | Tutorial - Nathan James Larsen",
+      url: "https://youtu.be/uGScoEhjKus?si=SIr24y-4mXpiHCcK",
+    },
+    {
+      title: "Flex Pitch vs. Pitch Correction (autotune) - The Band Guide",
+      url: "https://youtu.be/14sTNC0lCHQ?si=O_7Xd8J4WP134_Gg",
+    },
+    {
+      title: "What's the Difference Between Gain and Volume? - Fender",
+      url: "https://www.fender.com/articles/setup/amp-basics-gain-vs-volume",
+    },
+    {
+      title: "11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios",
+      url: "https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg",
+    },
+    {
+      title: "How to Use Reverb in Logic Pro X - Wayne.wav",
+      url: "https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_",
+      description: "can also be used for delay, flangers, and other time-based effects",
+    },
+    {
+      title: "Run Your Reverb & Effects on Inserts or Sends? Pre-Fader or Post-Fader?? - SonicScoop",
+      url: "https://youtu.be/wK9bfwJl4cg?si=leKhg0n_RfHYrPoO",
+    },
+    {
+      title: "How To Get A BIG CLEAN REVERB In Your Mixes? - Help Me Devvon",
+      url: "https://youtu.be/VrGKTYxxug0?si=RuCxkTP-yotruF4Y",
+      description: "super useful to prevent bleed in reverbs",
+    },
+    {
+      title: "Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy",
+      url: "https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG",
+      description: "EQ and bounce trick",
+    },
+    {
+      title: "Using the De-Esser to Fix Harsh Vocals - The Band Guide",
+      url: "https://youtu.be/gbzsDXWPn64?si=41Es7mBAa4GfUQd9",
+    },
+  ]
 ---
 
 If you've made it here, you've found the right spot for learning how to record/produce vocals. By the way, honestly, the stock plugins that come with your DAW are pretty sweet. I wouldn't recommend buying plugins unless you really feel the need. This is my starting point for learning to record/produce vocals, so I'm putting a good amount of tips in here.
 
 ---
-
-## Resources
-
-- [The Secret To Beautiful Vocals - Alex Rome](https://youtu.be/ce7kEQecS-I?si=fs6TNNq_pAkAp7DW)
-- [Getting your vocals production ready - Charlie Puth](https://youtu.be/Ja_emre9Wwc?si=eG3zZqDijzumgQzW) - Mainly about setting up vocal harmonies and how to record tricky vocal parts.
-- [I Reveal How The Pro’s Mix Vocals - Streaky](https://youtu.be/Cf0DCaVa5sM?si=N7fGCCPqbUPo2lCq) - This one is mainly if you have a pre-existing beat just as an audio file and you want to blend your vocals into it via EQing/leveling so the vocal sits in the pockets. This makes a **huge** difference.
-- [Noise Gate: 12 Tips For A Clean And Natural Tone - Drew Swisher](https://mastering.com/noise-gate/) - Goes over everything you need to know about noise gates.
-- [How to Use Flex Pitch in Logic Pro X | Tutorial - Nathan James Larsen](https://youtu.be/uGScoEhjKus?si=SIr24y-4mXpiHCcK)
-- [Flex Pitch vs. Pitch Correction (autotune) - The Band Guide](https://youtu.be/14sTNC0lCHQ?si=O_7Xd8J4WP134_Gg)
-- [What's the Difference Between Gain and Volume? - Fender](https://www.fender.com/articles/setup/amp-basics-gain-vs-volume)
-- [11 MISTAKES to AVOID when Recording Vocals at Home - SpectreSoundStudios](https://youtu.be/zljEd53T2HY?si=BkxErcsNDzSQD0vg)
-- [How to Use Reverb in Logic Pro X - Wayne.wav](https://youtu.be/X5xMGBDhaS4?si=zm0L46nO_nzsirL_) can also be used for delay, flangers, and other time-based effects
-- [Run Your Reverb & Effects on Inserts or Sends? Pre-Fader or Post-Fader?? - SonicScoop](https://youtu.be/wK9bfwJl4cg?si=leKhg0n_RfHYrPoO)
-- [How To Get A BIG CLEAN REVERB In Your Mixes? - Help Me Devvon](https://youtu.be/VrGKTYxxug0?si=RuCxkTP-yotruF4Y) - super useful to prevent bleed in reverbs
-- [Logic Pro X - Remove Plosives from Vocal Recordings - MuiscTechHelpGuy](https://youtu.be/Xaxcoqddklg?si=iX-4n7Qq4UvFmNDG) - EQ and bounce trick
-- [Using the De-Esser to Fix Harsh Vocals - The Band Guide](https://youtu.be/gbzsDXWPn64?si=41Es7mBAa4GfUQd9)
 
 ## Recording always comes first
 
