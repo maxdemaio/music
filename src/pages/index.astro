@@ -116,50 +116,6 @@ Astro.response.headers.set(
 ---
 
 <style>
-  /** slide enter animations **/
-  @media (prefers-reduced-motion: reduce) {
-    .slide-enter-content > * {
-      /* Disable animation when user prefers reduced motion */
-      animation: none;
-    }
-  }
-
-  .test {
-    padding: 8px;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .slide-enter-content1 > * {
-      --stagger1: 0;
-      --delay1: 150ms;
-      --start1: 0ms;
-      animation: slide-enter 1s both 1;
-      animation-delay: calc(var(--start1) + var(--stagger1) * var(--delay1));
-    }
-
-    .slide-enter-content1 > *:nth-child(1) {
-      --stagger1: 1;
-    }
-    .slide-enter-content1 > *:nth-child(2) {
-      --stagger1: 2;
-    }
-    .slide-enter-content1 > *:nth-child(3) {
-      --stagger1: 3;
-    }
-
-    @keyframes slide-enter {
-      0% {
-        transform: translateY(10px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  }
-  /** end slide enter animations **/
 
   /* https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items */
   .post-grid {
