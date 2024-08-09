@@ -29,3 +29,4 @@ tags: ['logic', 'producing']
 - Moving the end of an audio region to where the playhead is: place playhead, `cmd` + `r`, `;` to move the duplicated section's start back to playhead, then select original track, `option` + `[`, `option` + `]`
 - clip region to nearest transient: `control` + `shift` + `[` or `]` - [https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g](https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g)
 - chopping up audio on transients evenly: choose the scissor tool as secondary tool, select audio, then press `cmd`, `option`, and click generally where the first transient is - [https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199](https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199)
+- splitting an audio region where the cursor is: `cmd` + `t`
