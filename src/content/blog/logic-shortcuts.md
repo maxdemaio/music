@@ -30,4 +30,4 @@ tags: ['logic', 'producing']
 - clip region to nearest transient: `control` + `shift` + `[` or `]` - [https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g](https://youtu.be/aHYa7atif1U?si=Hu-NIYXUjliPmD3g)
 - chopping up audio on transients evenly: choose the scissor tool as secondary tool, select audio, then press `cmd`, `option`, and click generally where the first transient is - [https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199](https://youtu.be/ZIPRm5SMir4?si=-RMziG-IXoxWTqNM&t=199)
 - splitting an audio region where the cursor is: `cmd` + `t`
-  - note: for clipping regions to the cursor, just `cmd` + `t` to split the audio, then delete the extra portion!
+  - note: for clipping/trimming regions to the cursor, just `cmd` + `t` to split the audio, then delete the extra portion!
