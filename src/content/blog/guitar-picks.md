@@ -24,7 +24,7 @@ As a guitarist, I've tried a wide variety of picks, and I thought I'd make a pos
 
 Keep in mind, sometimes I don't even play with a pick. But when I do here are my ones in order:
 
-1. My top choice is the Jim Dunlop Jazz III series, with the 'Jazz III Ultex' (1.38mm, yellow) as my favorite, followed by the 'Jazz III Nylon' (1.38mm, red) and 'Jazz III Tortex' (1.14mm, black).
+1. My top choice is the Jim Dunlop Jazz III series, with the "Jazz III Ultex" (1.38mm, yellow) as my favorite, followed by the "Jazz III Nylon" (1.38mm, red) and "Jazz III Tortex" (1.14mm, black).
 
 2. Next up, I really like the 2.0mm gator grip pick from Jim Dunlop. To quote their website, this pick offers "superior playing control and a dark, beefy sound. A matte surface allows for a tight, nonslip grip, and a molded, beveled edge provides for a smooth attack and a soft release so you can play with unimpeded intensity and dexterity."
 
