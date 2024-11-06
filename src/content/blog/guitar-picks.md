@@ -36,7 +36,7 @@ Keep in mind, sometimes I don't even play with a pick. But when I do here are my
 
 Note, I usually don’t use a pick when playing acoustic guitar, but here are my go-to picks when I do:
 
-I'm not a huge fan of thin picks for the electric guitar. I'm not keen on the lack of tone/attack when you hit the chords/notes. The pick is more flexible so it could bounce to other strings and there's not that security you get with a thicker/sturdier pick.
+I'm not a huge fan of thin picks for the electric guitar. I'm not keen on the lack of tone/attack when you hit chords/notes. The pick is more flexible so it could bounce to other strings and there's not that security you get with a thicker/sturdier pick.
 
  **However**, when strumming on an acoustic guitar thinner picks sound pretty sweet as the flexibility of a thinner pick swipes through the strings. For acoustic guitars, I feel like heavier picks dull the natural tone of the guitar when strumming. If I'm going with a thin pick, I'll go with a Guild triangular thin pick or the Jim Dunlop 0.5mm classic Tortex pick. Or, I'll also go up to a more medium gauge pick that I already listed above.
 
