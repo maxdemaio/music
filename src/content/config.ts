@@ -7,6 +7,7 @@ export enum Tag {
   LOGIC = 'logic',
   PRODUCING = 'producing',
   SONGWRITING = 'songwriting',
+  GUITAR = 'guitar',
 }
 
 // Define schemas for each collection we'd like to validate.

@@ -4,7 +4,7 @@ description: All the steps you need to record guitar
 pubDate: 'Feb 05 2024'
 title: Recording Guitar
 duration: 9
-tags: ['producing']
+tags: ['producing', 'guitar']
 resources: [ {title: "13 things to AVOID when Recording Amp Sims", url: "https://www.youtube.com/watch?v=MXElgek9J78&t=210s"},
 {title: "13 Things to AVOID Recording Guitar in your Home Studio", url: "https://youtu.be/Mc8W-cSkZHo?si=IlWYpEqSJ6mvsfOR"}, {title: "13 Things to AVOID when Recording GUITAR at HOME", url: "https://youtu.be/RvRAL_q3csk?si=fodu-yvtPsApVZYa"}, {title: "Studio One Minute: The Right Way to Double Guitars - PreSonus", url: "https://youtu.be/3I-R9426CC8?si=OxNjUHBJa8EBjUkv"}]
 
