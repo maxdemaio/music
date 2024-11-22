@@ -3,13 +3,15 @@ import UnoCSS from 'unocss/astro';
 import sitemap from '@astrojs/sitemap';
 import vercel from "@astrojs/vercel/serverless";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
   site: 'https://music.maxdemaio.com',
   integrations: [UnoCSS({
     injectReset: true
-  }), sitemap()],
+  }), sitemap(), mdx()],
   markdown: {
     shikiConfig: {
       theme: 'github-dark-dimmed'
@@ -17,7 +19,7 @@ export default defineConfig({
   },
   adapter: vercel({
     webAnalytics: {
-      enabled: true,
-    },
-  }),
+      enabled: true
+    }
+  })
 });
