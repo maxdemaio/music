@@ -252,7 +252,6 @@ Astro.response.headers.set(
     {
       tracks ? (
         <TrackGrid>
-          <div>
             {tracks.map((track: ETrack, index: number) => (
               <Track
                 ranking={index + 1}
@@ -262,7 +261,6 @@ Astro.response.headers.set(
                 albumUrls={track.albumUrls}
               />
             ))}
-          </div>
         </TrackGrid>
       ) : (
         <BuildFailed />
