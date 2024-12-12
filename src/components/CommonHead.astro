@@ -5,12 +5,13 @@ export interface Props {
   title: string;
   description: string;
   image?: string;
+  type?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Image has website default
-const { title, description, image = SITE_IMAGE } = Astro.props;
+const { title, type, description, image = SITE_IMAGE } = Astro.props;
 ---
 
 <head>
@@ -20,6 +21,7 @@ const { title, description, image = SITE_IMAGE } = Astro.props;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
+  <!-- End Global Metadata -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
@@ -35,13 +37,15 @@ const { title, description, image = SITE_IMAGE } = Astro.props;
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
+  <!-- End Primary Meta Tags -->
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
+  <!-- Open Graph Essentials -->
+  <meta property="og:type" content={type ? type : "website"} />
   <meta property="og:url" content={Astro.url} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.url)} />
+  <!-- End Open Graph Essentials -->
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
@@ -49,4 +53,5 @@ const { title, description, image = SITE_IMAGE } = Astro.props;
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.url)} />
+  <!-- End Twitter -->
 </head>
