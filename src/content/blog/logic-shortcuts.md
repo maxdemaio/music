@@ -1,7 +1,7 @@
 ---
 fileName: logic-shortcuts
 description: All the logic shortcuts I find useful
-pubDate: 'Jan 28 2024'
+pubDate: 2024-01-28
 title: Logic Shortcuts
 duration: 0
 tags: ['logic', 'producing']

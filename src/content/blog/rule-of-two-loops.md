@@ -1,7 +1,7 @@
 ---
 fileName: rule-of-two-loops
 description: The rule of two loops for creating powerful arrangements
-pubDate: "Jan 25 2024"
+pubDate: 2024-01-25
 title: The Rule of Two Loops
 duration: 2
 tags: ["logic", "producing", "songwriting"]

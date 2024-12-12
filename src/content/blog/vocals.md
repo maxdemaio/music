@@ -1,7 +1,7 @@
 ---
 fileName: vocals
 description: Starter knowledge to producing vocals
-pubDate: "Feb 10 2024"
+pubDate: 2024-02-10
 title: Starting Knowledge for Vocals
 duration: 15
 tags: ["logic", "producing"]

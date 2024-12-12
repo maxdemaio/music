@@ -1,7 +1,7 @@
 ---
 fileName: guitar-picks
 description: All my favorite guitar picks!
-pubDate: 'Nov 06 2024'
+pubDate: 2024-11-06
 title: My Favorite Guitar Picks
 duration: 3
 tags: ['guitar']

@@ -1,7 +1,7 @@
 ---
 fileName: analyzing-lyrics-writing-songs
 description: How to analyze lyrics and write songs
-pubDate: "Feb 09 2024"
+pubDate: 2024-02-09
 title: Analyzing Lyrics and Writing Songs
 duration: 4
 tags: ["songwriting"]

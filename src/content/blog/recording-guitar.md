@@ -1,7 +1,7 @@
 ---
 fileName: recording-guitar
 description: All the steps you need to record guitar
-pubDate: 'Feb 05 2024'
+pubDate: 2024-02-05
 title: Recording Guitar
 duration: 9
 tags: ['producing', 'guitar']

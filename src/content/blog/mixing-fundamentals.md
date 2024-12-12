@@ -1,7 +1,7 @@
 ---
 fileName: mixing-fundamentals
 description: The fundamentals of mixing
-pubDate: "Jan 15 2024"
+pubDate: 2024-01-15
 title: Mixing Fundamentals
 duration: 9
 tags: ["logic", "producing"]

@@ -1,17 +1,25 @@
 ---
-import { SITE_IMAGE } from '../config';
+import type { Tag } from "src/content/config";
+import { SITE_IMAGE } from "../config";
 
 export interface Props {
   title: string;
   description: string;
   image?: string;
   type?: string;
+  tags?: Tag[];
+  publishedTime?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 // Image has website default
-const { title, type, description, image = SITE_IMAGE } = Astro.props;
+const {
+  title,
+  type,
+  tags,
+  description,
+  publishedTime,
+  image = SITE_IMAGE,
+} = Astro.props;
 ---
 
 <head>
@@ -25,13 +33,25 @@ const { title, type, description, image = SITE_IMAGE } = Astro.props;
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-  <link rel="icon" type="image/png" href="/favicon_io/favicon.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16" />
-  <link rel="apple-touch-icon" type="image/png" href="/favicon_io/apple-touch-icon.png" sizes="180x180" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/favicon_io/favicon.png"
+    sizes="32x32"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    href="/favicon_io/favicon-16x16.png"
+    sizes="16x16"
+  />
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    href="/favicon_io/apple-touch-icon.png"
+    sizes="180x180"
+  />
   <link rel="manifest" href="/favicon_io/site.webmanifest" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href={canonicalURL} />
 
   <!-- Primary Meta Tags -->
   <title>{title}</title>
@@ -46,6 +66,31 @@ const { title, type, description, image = SITE_IMAGE } = Astro.props;
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(image, Astro.url)} />
   <!-- End Open Graph Essentials -->
+
+  <!-- Open Graph Optionals -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Max DeMaio's Music Website" />
+  <!-- End Open Graph Optionals -->
+
+  <!-- Article Specific Meta Tags -->
+  {
+    tags && (
+      <>
+        {tags.map((tag) => (
+          <meta property="article:tag" content={tag} />
+        ))}
+      </>
+    )
+  }
+  {
+    publishedTime && (
+      <meta property="article:published_time" content={publishedTime} />
+    )
+  }
+  <!-- End Article Specific Meta Tags -->
+
+  <!-- Music Specific Meta Tags -->
+  <!-- End Music Specific Meta Tags -->
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
