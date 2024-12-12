@@ -40,7 +40,7 @@ const { title, type, description, image = SITE_IMAGE } = Astro.props;
   <!-- End Primary Meta Tags -->
 
   <!-- Open Graph Essentials -->
-  <meta property="og:type" content={type ? type : "website"} />
+  <meta property="og:type" content={type ?? "website"} />
   <meta property="og:url" content={Astro.url} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
