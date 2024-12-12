@@ -101,7 +101,7 @@ const totalBlogPosts = blogPosts.length;
 blogPosts = blogPosts
   .sort(
     (a, b) =>
-      new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+      b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   )
   .slice(0, 3);
 
@@ -115,7 +115,6 @@ Astro.response.headers.set(
 ---
 
 <style>
-
   /* https://stackoverflow.com/questions/32802202/how-to-center-a-flex-container-but-left-align-flex-items */
   .post-grid {
     grid-template-columns: repeat(auto-fit, minmax(15rem, max-content));
@@ -213,8 +212,8 @@ Astro.response.headers.set(
                 </div>
                 <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
                   <div class="flex gap-1">
-                    <time datetime={post.data.pubDate}>
-                      {new Date(post.data.pubDate).toLocaleDateString("en-us", {
+                    <time datetime={post.data.pubDate.toDateString()}>
+                      {post.data.pubDate.toLocaleDateString("en-us", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
@@ -252,15 +251,15 @@ Astro.response.headers.set(
     {
       tracks ? (
         <TrackGrid>
-            {tracks.map((track: ETrack, index: number) => (
-              <Track
-                ranking={index + 1}
-                songUrl={track.songUrl}
-                artist={track.artist}
-                title={track.title}
-                albumUrls={track.albumUrls}
-              />
-            ))}
+          {tracks.map((track: ETrack, index: number) => (
+            <Track
+              ranking={index + 1}
+              songUrl={track.songUrl}
+              artist={track.artist}
+              title={track.title}
+              albumUrls={track.albumUrls}
+            />
+          ))}
         </TrackGrid>
       ) : (
         <BuildFailed />
@@ -283,7 +282,10 @@ Astro.response.headers.set(
     </div>
     <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
     <QuoteGrid>
-      <QuoteSnippet authorAndSource="Sylvia Plath - Pursuit" link="https://allpoetry.com/Pursuit">
+      <QuoteSnippet
+        authorAndSource="Sylvia Plath - Pursuit"
+        link="https://allpoetry.com/Pursuit"
+      >
         Now hills hatch menace, spawning shade;<br />
         Midnight cloaks the sultry grove;<br />
         The black marauder, hauled by love<br />
