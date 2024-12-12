@@ -1,9 +1,10 @@
 ---
 export interface Props {
   authorAndSource: string;
+  link?: string;
 }
 
-const { authorAndSource } = Astro.props;
+const { authorAndSource, link } = Astro.props;
 ---
 
 <style>
@@ -25,5 +26,17 @@ const { authorAndSource } = Astro.props;
   >
     <slot />
   </blockquote>
-  <cite class="font-medium">{authorAndSource}</cite>
+  <div class="flex flex-col gap-1">
+    {
+      link && (
+        <div class="truncate w-[280px]">
+          <a href="https://www.linkedin.com/in/maxdemaio" class="mlink">
+            {link}
+          </a>
+        </div>
+      )
+    }
+
+    <cite class="font-medium">{authorAndSource}</cite>
+  </div>
 </div>
