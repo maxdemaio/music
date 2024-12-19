@@ -78,7 +78,7 @@ No matter what kind of vocal chain you add, you can't salvage bad vocals. Make s
 
 **Keep the positioning and distance from your mic consistent**. Mic choice combined with mic position is 80% of your vocal sound. Skip over either of these steps, and your vocal is going to be a lot harder to mix.
 
-Personally, I use a dynamic mic, the Shure SM57. These mics are designed to be used up close. Dynamic mics reject more background noise, so they're great if you are in a particularly bad sounding room. Also, you do not need phantom power for dynamic mics. **If you are using phantom power in a condenser mic, make sure to turn it off before unplugging the mic**. Finally, You'll definitely need a pop filter to get rid of plosives.
+Personally, I use a dynamic mic, the Shure SM57. These mics are designed to be used up close. Dynamic mics reject more background noise, so they're great if you are in a particularly bad sounding room. Rule of thumb is to speaking/sing into the mic a fist away. Also, you do not need phantom power for dynamic mics. **If you are using phantom power in a condenser mic, make sure to turn it off before unplugging the mic**. Finally, You'll definitely need a pop filter to get rid of plosives.
 
 Speaking of removing plosives, if the pop filter isn't doing the job try not talking directly into the mic. Try singing at it in a 30 degree angle and sing “past” the mic. It's a little different sound than singing straight into it. But, this angle takes the edge off and reduces plosives while keeping the sound more faithful than greater angles. You can also put a sock (regular ankle cut) on your mic.
 
