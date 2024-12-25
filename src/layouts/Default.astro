@@ -25,21 +25,9 @@ const { title, description, image, noLimitWidth } = Astro.props;
     class="pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
   >
     <Navbar />
-    {
-      !!noLimitWidth ? (
-        <>
-          <main class="px-8 lt-xs:px-4 mx-auto">
-            <slot />
-          </main>
-        </>
-      ) : (
-        <>
-          <main class="px-8 lt-xs:px-4 max-w-4xl mx-auto">
-            <slot />
-          </main>
-        </>
-      )
-    }
+    <main class="flex flex-col gap-10 px-8 lt-xs:px-4 max-w-6xl mx-auto">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
