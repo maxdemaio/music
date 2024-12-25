@@ -97,10 +97,15 @@ let blogPosts = await getCollection("blog", ({ data }) => {
 
 const totalBlogPosts = blogPosts.length;
 
-// Sort my music posts and only get the 3 most recent
+// Sort my blog posts and only get the 3 most recent
 blogPosts = blogPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
+
+let music = await getCollection("music");
+
+// Sort my music posts
+music.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 // https://github.com/withastro/roadmap/discussions/181
 // Cache this page for a day
@@ -172,61 +177,35 @@ Astro.response.headers.set(
         </div>
       </h2>
       <p class="mb-6">My featured music as of late</p>
-      <div class="music">
-        <ul class="flex flex-col gap-4">
-          <li class="flex gap-2 items-center">
-            <img
-              src="/vortex.jpg"
-              alt="gray eyes album art"
-              class="rounded object-cover w-[100px] h-[100px]"
-            />
-            <div>
-              <a
-                href="https://soundcloud.com/maxdemaio/gray-eyes"
-                class="font-semibold soundLink"
-              >
-                <span class="i-solar:link-bold-duotone"></span>
-                gray eyes
-              </a>
-              <div>June 23, 2024</div>
-            </div>
-          </li>
-          <li class="flex gap-2 items-center">
-            <img
-              src="/dj.jpeg"
-              alt="gray eyes album art"
-              class="rounded object-cover w-[100px] h-[100px]"
-            />
-            <div>
-              <a
-                href="https://soundcloud.com/maxdemaio/dj-1"
-                class="font-semibold soundLink"
-              >
-                <span class="i-solar:link-bold-duotone"></span>
-                dj
-              </a>
-              <div>March 8, 2024</div>
-            </div>
-          </li>
-          <li class="flex gap-2 items-center">
-            <img
-              src="/nerve.png"
-              alt="gray eyes album art"
-              class="rounded object-cover w-[100px] h-[100px]"
-            />
-            <div>
-              <a
-                href="https://soundcloud.com/maxdemaio/nerve"
-                class="font-semibold soundLink"
-              >
-                <span class="i-solar:link-bold-duotone"></span>
-                nerve
-              </a>
-              <div>Feb 2, 2024</div>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <ul class="flex flex-col gap-4">
+        {
+          music.map((song) => (
+            <li class="flex gap-2 items-center">
+              <img
+                src={song.data.image}
+                alt={song.data.imageAlt}
+                class="rounded object-cover w-[100px] h-[100px]"
+              />
+              <div class="flex flex-col gap-1">
+                <div>
+                  <a href={song.data.link} class="font-semibold soundLink">
+                    <span class="i-solar:link-bold-duotone mr-1" />
+                    {song.data.title}
+                  </a>
+                </div>
+
+                <time datetime={song.data.date.toDateString()} class="text-sm">
+                  {song.data.date.toLocaleDateString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
     </section>
     <section class="max-w-lg">
       <h2
