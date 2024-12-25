@@ -177,7 +177,7 @@ Astro.response.headers.set(
         </div>
       </h2>
       <p class="mb-6">My featured music as of late.</p>
-      <ul class="flex flex-col gap-4">
+      <ul class="flex flex-col gap-4 mb-6">
         {
           music.map((song) => (
             <li class="flex gap-2 items-center">
@@ -206,6 +206,9 @@ Astro.response.headers.set(
           ))
         }
       </ul>
+      <a href="https://soundcloud.com/maxdemaio" class="soundLink"
+      >See all music{" "}<span class="i-solar-arrow-right-linear"></span></a
+    >
     </section>
     <section class="max-w-lg">
       <h2
