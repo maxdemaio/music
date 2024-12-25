@@ -99,10 +99,7 @@ const totalBlogPosts = blogPosts.length;
 
 // Sort my music posts and only get the 3 most recent
 blogPosts = blogPosts
-  .sort(
-    (a, b) =>
-      b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  )
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
 // https://github.com/withastro/roadmap/discussions/181
@@ -163,83 +160,136 @@ Astro.response.headers.set(
   title="Home - Max DeMaio Music"
   description="Max DeMaio's personal music website"
 >
-  <!-- <section class="mt-6 mb-10 flex justify-center">
-    <Album />
-  </section> -->
-  <!-- <section class="mb-10">
-    <div
-      class="flex flex-wrap gap-2 dark:text-sky-300 text-sky-600 animate-pulse text-xl justify-center items-center"
-    >
-      <p class="text-center">
-        Currently in the process of writing and self-producing an original track...
-      </p>
-      <div class="flex">
-        <span class="i-solar-microphone-2-line-duotone"></span>
-        <span class="i-solar-music-notes-bold-duotone"></span>
-      </div>
-    </div>
-  </section> -->
-  <section class="mt-8 mb-10">
-    <div class="flex flex-wrap justify-between mb-4 items-center gap-2">
+  <div class="flex flex-wrap gap-10 lg:justify-around">
+    <section>
       <h2
-        class="uppercase text-black dark:text-white font-kai font-bold text-2xl"
+        class="mb-4 flex gap-2 uppercase text-black dark:text-white font-kai font-bold text-2xl"
+      >
+        Music
+        <div class="flex">
+          <span class="i-solar-microphone-2-line-duotone"></span>
+          <span class="i-solar-music-notes-bold-duotone"></span>
+        </div>
+      </h2>
+      <p class="mb-6">My featured music as of late</p>
+      <div class="music">
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-2 items-center">
+            <img
+              src="/vortex.jpg"
+              alt="gray eyes album art"
+              class="rounded object-cover w-[100px] h-[100px]"
+            />
+            <div>
+              <a
+                href="https://soundcloud.com/maxdemaio/gray-eyes"
+                class="font-semibold soundLink"
+              >
+                <span class="i-solar:link-bold-duotone"></span>
+                gray eyes
+              </a>
+              <div>June 23, 2024</div>
+            </div>
+          </li>
+          <li class="flex gap-2 items-center">
+            <img
+              src="/dj.jpeg"
+              alt="gray eyes album art"
+              class="rounded object-cover w-[100px] h-[100px]"
+            />
+            <div>
+              <a
+                href="https://soundcloud.com/maxdemaio/dj-1"
+                class="font-semibold soundLink"
+              >
+                <span class="i-solar:link-bold-duotone"></span>
+                dj
+              </a>
+              <div>March 8, 2024</div>
+            </div>
+          </li>
+          <li class="flex gap-2 items-center">
+            <img
+              src="/nerve.png"
+              alt="gray eyes album art"
+              class="rounded object-cover w-[100px] h-[100px]"
+            />
+            <div>
+              <a
+                href="https://soundcloud.com/maxdemaio/nerve"
+                class="font-semibold soundLink"
+              >
+                <span class="i-solar:link-bold-duotone"></span>
+                nerve
+              </a>
+              <div>Feb 2, 2024</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="max-w-lg">
+      <h2
+        class="mb-4 uppercase text-black dark:text-white font-kai font-bold text-2xl"
       >
         Stay Tuned
       </h2>
-      <div>
-        <a href="/blog" class="mlink"
-          >See all posts{" "}<span class="i-solar-arrow-right-linear"></span></a
-        >
-      </div>
-    </div>
-    <p class="mb-6">
-      <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a collection
-      of all the useful music tips and tricks I've learned along the way. So far,
-      I've written a total of {totalBlogPosts} posts.
-    </p>
+      <p class="mb-6">
+        <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a
+        collection of all the useful music tips and tricks I've learned along the
+        way. So far, I've written a total of {totalBlogPosts} posts.
+      </p>
 
-    <ul class="slide-enter-content1 grid post-grid gap-4 justify-center">
-      {
-        blogPosts.map((post) => (
-          <>
-            <a
-              href={`/blog/${post.slug}`}
-              class="p-4 w-60 rounded group duration-400 ease-in-out shadow-md hover:translate-y-[-5px] bg-neutral-50 hover:shadow-xl dark:hover-shadow-none dark:bg-neutral-950 dark:border dark:border-neutral-800 dark:hover:border-neutral-600 dark:shadow-none"
-            >
-              <li>
-                <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
-                  {post.data.title}
-                </div>
-                <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
-                  <div class="flex gap-1">
-                    <time datetime={post.data.pubDate.toDateString()}>
-                      {post.data.pubDate.toLocaleDateString("en-us", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </time>
-                    <span>·</span>
-                    <span>{post.data.duration}min</span>
+      <ul
+        class="mb-6 flex flex-wrap slide-enter-content1 gap-4 md:justify-start justify-center"
+      >
+        {
+          blogPosts.map((post) => (
+            <>
+              <a
+                href={`/blog/${post.slug}`}
+                class="p-4 w-60 rounded group duration-400 ease-in-out shadow-md hover:translate-y-[-5px] bg-neutral-50 hover:shadow-xl dark:hover-shadow-none dark:bg-neutral-950 dark:border dark:border-neutral-800 dark:hover:border-neutral-600 dark:shadow-none"
+              >
+                <li>
+                  <div class="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
+                    {post.data.title}
                   </div>
-
-                  {post.data.tags && (
-                    <div class="flex gap-1 flex-wrap">
-                      {post.data.tags.map((tag) => (
-                        <span class={`${tag} border rounded px-1`}>{tag}</span>
-                      ))}
+                  <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
+                    <div class="flex gap-1">
+                      <time datetime={post.data.pubDate.toDateString()}>
+                        {post.data.pubDate.toLocaleDateString("en-us", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <span>·</span>
+                      <span>{post.data.duration}min</span>
                     </div>
-                  )}
-                </div>
-              </li>
-            </a>
-          </>
-        ))
-      }
-    </ul>
-  </section>
 
-  <section class="mb-10">
+                    {post.data.tags && (
+                      <div class="flex gap-1 flex-wrap">
+                        {post.data.tags.map((tag) => (
+                          <span class={`${tag} border rounded px-1`}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              </a>
+            </>
+          ))
+        }
+      </ul>
+      <a href="/blog" class="mlink"
+        >See all posts{" "}<span class="i-solar-arrow-right-linear"></span></a
+      >
+    </section>
+  </div>
+
+  <section>
     <h2
       class="uppercase text-black dark:text-white font-kai font-bold text-2xl mb-4"
     >
@@ -266,22 +316,14 @@ Astro.response.headers.set(
       )
     }
   </section>
-  <section class="mb-6">
-    <div class="flex flex-wrap justify-between mb-4 items-center gap-2">
-      <h2
-        class="uppercase text-black dark:text-white font-kai font-bold text-2xl"
-      >
-        Poem/Lyric Snippets
-      </h2>
-      <div>
-        <a href="/poems-lyrics" class="mlink"
-          >All poem/lyric snippets{" "}<span class="i-solar-arrow-right-linear"
-          ></span></a
-        >
-      </div>
-    </div>
+  <section>
+    <h2
+      class="mb-4 uppercase text-black dark:text-white font-kai font-bold text-2xl"
+    >
+      Poem/Lyric Snippets
+    </h2>
     <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
-    <QuoteGrid>
+    <QuoteGrid className="mb-6">
       <QuoteSnippet
         authorAndSource="Sylvia Plath - Pursuit"
         link="https://allpoetry.com/Pursuit"
@@ -300,5 +342,9 @@ Astro.response.headers.set(
         my blood rushing<br />like the shadow<br />cast by a cloud of starlings
       </QuoteSnippet>
     </QuoteGrid>
+    <a href="/poems-lyrics" class="mlink"
+      >All poem/lyric snippets{" "}<span class="i-solar-arrow-right-linear"
+      ></span></a
+    >
   </section>
 </Default>

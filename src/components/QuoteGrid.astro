@@ -1,3 +1,13 @@
-<div class="flex flex-wrap gap-12 slide-enter-content1">
+---
+import { cn } from "../util/styles";
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<div class={cn("flex flex-wrap gap-6 slide-enter-content1", className ?? "")}>
   <slot />
 </div>
