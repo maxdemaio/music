@@ -1,6 +1,6 @@
 ---
 fileName: rule-of-two-loops
-description: The rule of two loops for creating powerful arrangements
+description: Master the Rule of Two Loops for powerful music arrangements. Learn how to create compelling transitions and build dynamic tracks in your songwriting process.
 pubDate: 2024-01-25
 title: The Rule of Two Loops
 duration: 2

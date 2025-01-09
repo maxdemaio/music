@@ -1,6 +1,6 @@
 ---
 fileName: recording-guitar
-description: All the steps you need to record guitar
+description: Learn essential tips for recording guitar, from tuning and amp sims to DI, double tracking, mixing, and avoiding common pitfalls in your home studio!
 pubDate: 2024-02-05
 title: Recording Guitar
 duration: 9

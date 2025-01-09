@@ -1,6 +1,6 @@
 ---
 fileName: vocals
-description: Starter knowledge to producing vocals
+description: Learn how to record and produce vocals with this beginner's guide, covering mic setup, editing, vocal chains, EQ, compression, pitch correction, and reverb.
 pubDate: 2024-02-10
 title: Starting Knowledge for Vocals
 duration: 15

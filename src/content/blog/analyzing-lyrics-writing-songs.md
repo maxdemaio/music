@@ -1,6 +1,6 @@
 ---
 fileName: analyzing-lyrics-writing-songs
-description: How to analyze lyrics and write songs
+description: Learn how to analyze lyrics and write songs with tips on brainstorming, using poetic devices, practicing honesty, and refining your unique writing style.
 pubDate: 2024-02-09
 title: Analyzing Lyrics and Writing Songs
 duration: 4

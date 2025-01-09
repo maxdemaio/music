@@ -1,10 +1,10 @@
 ---
 fileName: guitar-picks
-description: All my favorite guitar picks!
+description: Discover my favorite guitar picks for electric and acoustic guitars!
 pubDate: 2024-11-06
 title: My Favorite Guitar Picks
 duration: 3
-tags: ['guitar']
+tags: ["guitar"]
 resources:
   [
     {
@@ -13,8 +13,8 @@ resources:
     },
     {
       title: "Are You SURE You're Using the Right Pick Gauge?",
-      url: "https://www.youtube.com/watch?v=EDcHGKAVsOo"
-    }
+      url: "https://www.youtube.com/watch?v=EDcHGKAVsOo",
+    },
   ]
 ---
 
@@ -38,9 +38,9 @@ Note, I usually don’t use a pick when playing acoustic guitar, but here are my
 
 I'm not a huge fan of thin picks for the electric guitar. I'm not keen on the lack of tone/attack when you hit chords/notes. The pick is more flexible so it could bounce to other strings and there's not that security you get with a thicker/sturdier pick.
 
- **However**, when strumming on an acoustic guitar thinner picks sound pretty sweet as the flexibility of a thinner pick swipes through the strings. For acoustic guitars, I feel like heavier picks dull the natural tone of the guitar when strumming. If I'm going with a thin pick, I'll go with a Guild triangular thin pick or the Jim Dunlop 0.5mm classic Tortex pick. Or, I'll also go up to a more medium gauge pick that I already listed above.
+**However**, when strumming on an acoustic guitar thinner picks sound pretty sweet as the flexibility of a thinner pick swipes through the strings. For acoustic guitars, I feel like heavier picks dull the natural tone of the guitar when strumming. If I'm going with a thin pick, I'll go with a Guild triangular thin pick or the Jim Dunlop 0.5mm classic Tortex pick. Or, I'll also go up to a more medium gauge pick that I already listed above.
 
- So, if I’m just strumming, I’ll pick a thinner pick; for a mix of strumming and picking notes, I prefer a medium gauge. And if it’s mostly picking single notes, I go for the thicker guitar picks I listed earlier in the electric guitar section.
+So, if I’m just strumming, I’ll pick a thinner pick; for a mix of strumming and picking notes, I prefer a medium gauge. And if it’s mostly picking single notes, I go for the thicker guitar picks I listed earlier in the electric guitar section.
 
 ## Conclusion
 

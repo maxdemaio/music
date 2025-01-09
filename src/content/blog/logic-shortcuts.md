@@ -1,10 +1,10 @@
 ---
 fileName: logic-shortcuts
-description: All the logic shortcuts I find useful
+description: Discover essential Logic shortcuts to streamline your music production workflow. Learn time-saving tips and boost productivity with these powerful Logic Pro commands.
 pubDate: 2024-01-28
 title: Logic Shortcuts
 duration: 0
-tags: ['logic', 'producing']
+tags: ["logic", "producing"]
 ---
 
 1. Open the editor window: `e`
@@ -35,4 +35,5 @@ tags: ['logic', 'producing']
 24. Play a software instrument using musical typing: while having the software instrument track selected press `cmd` + `k`. Or, choose `Window` > Show `Musical Typing` - [https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac](https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac)
 25. Move the cursor to the start/end of an audio region: select audio region, `fn` + `control` + `arrow key`
 26. `shift` + `i` inverts your selection
-  - useful for selecting a MIDI note and then selecting everything except that MIDI note
+
+- useful for selecting a MIDI note and then selecting everything except that MIDI note
