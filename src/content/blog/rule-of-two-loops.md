@@ -20,7 +20,7 @@ We start with a loop. Let's say a guitar riff and chords. We repeat that loop tw
 
 Two loops in, we need to change something: add an instrument, add expression to an existing instrument, reduce expression to an existing instrument, or remove an instrument. For us, let's add in a shaker in the background.
 
-![loop lib screenshot](/blog/rule-of-two-loops/loops-pic.png)
+![loop lib screenshot](/blog/rule-of-two-loops/loops-pic.webp)
 
 It is to be noted there are two sides to every transition:
 

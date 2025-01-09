@@ -34,3 +34,5 @@ tags: ['logic', 'producing']
     - Note: Really useful with #25 then making another audio section the same size.
 24. Play a software instrument using musical typing: while having the software instrument track selected press `cmd` + `k`. Or, choose `Window` > Show `Musical Typing` - [https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac](https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac)
 25. Move the cursor to the start/end of an audio region: select audio region, `fn` + `control` + `arrow key`
+26. `shift` + `i` inverts your selection
+  - useful for selecting a MIDI note and then selecting everything except that MIDI note
