@@ -7,7 +7,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'hybrid',
+  output: 'static',
   site: 'https://music.maxdemaio.com',
   integrations: [UnoCSS({
     injectReset: true
