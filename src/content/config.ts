@@ -37,11 +37,11 @@ const blog = defineCollection({
 
 const music = defineCollection({
   type: "data",
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     date: z.date(),
     link: z.string().url(),
-    image: z.string().optional(),
+    image: image(),
     imageAlt: z.string(),
     draft: z.boolean().optional(),
   }),

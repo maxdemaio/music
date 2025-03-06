@@ -30,7 +30,7 @@ The first way I came across was exporting the audio file to the Loop Library and
 
 So, start by highlighting the track you'd like to change, right-click, `export`, `Add to Loop Library...`. Then enter in all the relevant information and add it! Keep in mind **it has to be of type "Loop"** to be able to change BPM/key in your global project when re-imported.
 
-![loop lib screenshot](/blog/audio-file-speed-slow/loop-lib.webp)
+![loop lib screenshot](./images/audio-file-speed-slow/loop-lib.webp)
 
 If you can't get it to be of type "Loop," I have some tips for you. First, check out this [official Apple article](https://discussions.apple.com/thread/4724207?sortBy=best).
 

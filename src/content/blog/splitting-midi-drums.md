@@ -29,7 +29,7 @@ Let's start with a MIDI drum track containing two drum elements: a kick and a sn
 
 Here’s what the original MIDI looks like:
 
-![MIDI original screenshot](/blog/splitting-midi-drums/combined-midi.webp)
+![MIDI original screenshot](./images/splitting-midi-drums/combined-midi.webp)
 
 To split these elements, we’ll need an additional track. Follow these steps:
 
@@ -46,7 +46,7 @@ The goal is to have one track with just the kick and another with just the snare
 1. Open the MIDI editor for the original track.
 2. Select all the kick notes by clicking the corresponding key on the piano roll:
 
-![Logic MIDI note select screenshot](/blog/splitting-midi-drums/select1.webp)
+![Logic MIDI note select screenshot](./images/splitting-midi-drums/select1.webp)
 
 3. Invert the selection by pressing `shift` + `i`. This will select all notes _except_ the kick.
 4. Press `delete` to remove the selected notes. Now, only the kick notes remain on the track.
