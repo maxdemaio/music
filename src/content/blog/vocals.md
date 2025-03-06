@@ -119,9 +119,9 @@ Normally with your pop filter, you shouldn't have harsh plosives. There are othe
 
 We'll use the marquee tool to select the region where the plosive is happening. We'll want to be a bit generous with the selection because we'll have to crossfade and blend it back in. After you've made your selection, click on it to separate. You'll want to do a high pass EQ filter on that region. Set the cycle on that region by using the "Set Locators" function in the toolbar menu. Then, listen as you set the high pass filter. For a general starting point, apply a 150Hz 48 dB/Oct pass on the lows. Then, we bounce the selection with source as "leave" and the destination as "new track" and check to include the volume levels. Normalize should be off. Leave everything else unchecked.
 
-![bouncing plosive image](/blog/vocals/bouncing-plosive.webp)
+![bouncing plosive image](./images/vocals/bouncing-plosive.webp)
 
-![eq'd plosive](/blog/vocals/plosive-eq.webp)
+![eq'd plosive](./images/vocals/plosive-eq.webp)
 
 After bouncing to a new track, you should see there's no longer huge peaks in our waveform after EQ'ing it. Delete the old section, pull the newly EQ'd section in its place. Then, take the regions adjacent to it and apply a subtle crossfade. The final step would just be joining the clips back together.
 
@@ -163,7 +163,7 @@ Personally, I've seen very good results with both. Basically, I make sure I get 
 
 This is what the manual "Flex Pitch" looks like in the editor window:
 
-![flex pitch image](/blog/vocals/flex-pitch.webp)
+![flex pitch image](./images/vocals/flex-pitch.webp)
 
 The scissor tool will be your best friend in this. You can chop up the areas where you are `N` cents off the note within the scale you're trying to fit in and can pitch-shift it. Note, it will tell you the average amount it's off so but you can tell with the lines where you were going off pitch.
 
@@ -175,7 +175,7 @@ The graph just looks like a large piecewise function and pitch-shifting involves
 
 **Pitch Correction Plugin**
 
-![pitch correction plugin](/blog/vocals/pitch-plugin.webp)
+![pitch correction plugin](./images/vocals/pitch-plugin.webp)
 
 Setting the response and tolerance to 0 will set the plugin in full effect and you can tweak from there. Honestly, it's all based on feel. For me, a tolerance of around 20 cents and a range of response from anywhere from 100ms to 200ms is usually good.
 
@@ -204,7 +204,7 @@ If you apply a reverb without a send directly on your vocal, you're applying it 
 
 The final step is side-chaining the reverb! Without compression, the reverb kind of muddies up everything in the source vocal. With side-chaining, we can duck the reverb when we're singing and let it come into play once we're done singing. We want at least around -6dB of gain reduction. This is more or less what I'm working with (use your ears to mess around, this is just a starting point):
 
-![sidechain compression on reverb](/blog/vocals/sidechain-reverb.webp)
+![sidechain compression on reverb](./images/vocals/sidechain-reverb.webp)
 
 ## Doubling vocals
 
