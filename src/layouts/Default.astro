@@ -9,9 +9,10 @@ export interface Props {
   description: string;
   image?: string;
   noLimitWidth?: boolean;
+  uia?: boolean;
 }
 
-const { title, description, image, noLimitWidth } = Astro.props;
+const { title, description, image, uia } = Astro.props;
 ---
 
 <style>
@@ -25,7 +26,18 @@ const { title, description, image, noLimitWidth } = Astro.props;
     class="pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
   >
     <Navbar />
-    <main class="pt-2 flex flex-col gap-10 px-8 lt-xs:px-4 max-w-5xl mx-auto">
+    <main
+      class="relative pt-2 flex flex-col gap-10 px-8 lt-xs:px-4 max-w-5xl mx-auto"
+    >
+      {
+        !!uia && (
+          <img
+            src="/uia-cat.gif"
+            alt=""
+            class="z-99 absolute right-8 bottom-0 h-12"
+          />
+        )
+      }
       <slot />
     </main>
     <Footer />
