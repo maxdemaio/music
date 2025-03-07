@@ -8,77 +8,15 @@ import QuoteSnippet from "@components/QuoteSnippet.astro";
 import Default from "@layouts/Default.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import { getTopTracks, type ETrack } from "src/util/spotify";
 
 export const prerender = false;
 
+const today = new Date();
+
 // For local development
-// make sure you set them via CLI
-const client_id = process.env.SPOTIFY_CLIENT_ID;
-const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
-
-type ETrack = {
-  ranking: number;
-  songUrl: string;
-  artist: string;
-  title: string;
-  albumUrls: string[];
-};
-
-const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
-const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
-
-// Top 10 tracks over 4 week period
-// https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
-const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10`;
-
-const getAccessToken = async () => {
-  try {
-    const response = await fetch(TOKEN_ENDPOINT, {
-      method: "POST",
-      headers: {
-        Authorization: `Basic ${basic}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams({
-        grant_type: "refresh_token",
-        refresh_token: refresh_token || "",
-      }),
-    });
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching access token", error);
-    return {}; // Return an empty object or any other placeholder value
-  }
-};
-
-const getTopTracks = async () => {
-  try {
-    const { access_token } = await getAccessToken();
-    const url = TOP_TRACKS_ENDPOINT;
-    const payload = {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
-    };
-
-    const res = await fetch(url, payload);
-
-    if (!res.ok) {
-      throw new Error(`Error fetching top tracks: ${res.statusText}`);
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching top tracks", error);
-    return []; // Return an empty array
-  }
-};
-
+// make sure you set env variables via CLI
 let { items } = await getTopTracks();
-
 let tracks: ETrack[] | null = null;
 
 if (items) {
@@ -95,7 +33,6 @@ if (items) {
 let blogPosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
 });
-
 const totalBlogPosts = blogPosts.length;
 
 // Sort my blog posts and only get the 3 most recent
@@ -104,7 +41,7 @@ blogPosts = blogPosts
   .slice(0, 3);
 
 let music = await getCollection("music", ({ data }) => {
-  return data.draft !== true;
+  return data.featured == true;
 });
 
 // Sort my music posts
@@ -201,7 +138,6 @@ Astro.response.headers.set(
                     {song.data.title}
                   </a>
                 </div>
-
                 <time datetime={song.data.date.toDateString()} class="text-sm">
                   {song.data.date.toLocaleDateString("en-us", {
                     year: "numeric",
@@ -209,6 +145,13 @@ Astro.response.headers.set(
                     day: "numeric",
                   })}
                 </time>
+                {today.getMonth() - song.data.date.getMonth() >= 0 &&
+                  today.getFullYear() - song.data.date.getFullYear() == 0 &&
+                  today.getMonth() - song.data.date.getMonth() < 2 && (
+                    <div class="text-sm">
+                      <span class="new">new!</span>
+                    </div>
+                  )}
               </div>
             </li>
           ))
