@@ -184,13 +184,16 @@ Astro.response.headers.set(
         {
           music.map((song) => (
             <li class="flex gap-2 items-center">
-              <Image
-                src={song.data.image}
-                alt={song.data.imageAlt}
-                class="rounded object-cover w-[100px] h-[100px]"
-                quality="high"
-                loading="eager"
-              />
+              <div class="relative before:absolute before:left-0 before:rounded before:content-[''] before:w-full before:h-full before:bg-neutral-200 before:dark:bg-neutral-900 before:animate-pulse before:-z-1">
+                <Image
+                  src={song.data.image}
+                  alt={song.data.imageAlt}
+                  class=" rounded object-cover w-[100px] h-[100px]"
+                  quality="high"
+                  loading="eager"
+                />
+              </div>
+
               <div class="flex flex-col gap-1">
                 <div>
                   <a href={song.data.link} class="font-semibold soundLink">
