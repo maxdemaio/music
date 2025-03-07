@@ -1,8 +1,19 @@
+---
+import { Image } from "astro:assets";
+import uia from "../assets/uia-cat.gif"
+---
+
 <footer class="lt-xs:px-4 px-8 max-w-5xl mx-auto">
   <hr class="my-10 mx-1 border-neutral-5 opacity-30" />
   <div class="flex flex-wrap justify-between gap-4 my-10">
-    <span>Website designed by Max DeMaio &copy; {new Date().getFullYear()}</span
+    <div class="flex items-center gap-2">
+      <Image src={uia} alt="uia cat" height={200} width={200} quality={100} class="h-8 w-8"/>
+
+      <span
+      >Website designed by Max DeMaio &copy; {new Date().getFullYear()}</span
     >
+    </div>
+
     <div class="flex gap-6">
       <button title="Top button" class="cursor-pointer">
         <a href="#" class="mlink"
