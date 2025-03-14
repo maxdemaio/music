@@ -1,17 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import uia from "../assets/uia-cat.gif"
+import uia from "../assets/uia-cat.gif";
 ---
 
 <footer class="lt-xs:px-4 px-8 max-w-5xl mx-auto">
   <hr class="my-10 mx-1 border-neutral-5 opacity-30" />
-  <div class="flex flex-wrap justify-between gap-4 my-10">
+  <div class="flex flex-wrap justify-between gap-4 mt-10 mb-5">
     <div class="flex items-center gap-2">
-      <Image src={uia} alt="uia cat" height={200} width={200} quality={100} class="h-8 w-8"/>
+      <Image
+        src={uia}
+        alt="uia cat"
+        height={200}
+        width={200}
+        quality={100}
+        class="h-8 w-8"
+      />
 
       <span
-      >Website designed by Max DeMaio &copy; {new Date().getFullYear()}</span
-    >
+        >Website designed by Max DeMaio &copy; {new Date().getFullYear()}</span
+      >
     </div>
 
     <div class="flex gap-6">
@@ -24,5 +31,52 @@ import uia from "../assets/uia-cat.gif"
         <a href="/" class="mlink">Home</a>
       </button>
     </div>
+  </div>
+  <div class="pointer-events-auto flex gap-2 dark:gap-4 mb-10">
+    <a
+      href="https://soundcloud.com/maxdemaio"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Soundcloud"
+      class="p-2 rounded dark:bg-neutral-900 cursor-pointer transition-color duration-200 ease-in-out hover:text-black dark:hover:text-white text-base grid items-center justify-center"
+    >
+      <div class="i-mdi-soundcloud"></div>
+    </a>
+    <a
+      href="https://instagram.com/maxdemaio"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      class="p-2 rounded dark:bg-neutral-900 cursor-pointer transition-color duration-200 ease-in-out hover:text-black dark:hover:text-white text-base grid items-center justify-center"
+    >
+      <div class="i-mdi-instagram"></div>
+    </a>
+    <a
+      href="https://www.tiktok.com/@mdemaiomcx"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+      class="p-2 rounded dark:bg-neutral-900 cursor-pointer transition-color duration-200 ease-in-out hover:text-black dark:hover:text-white text-base grid items-center justify-center"
+    >
+      <div class="i-bxl-tiktok"></div>
+    </a>
+    <a
+      href="https://github.com/maxdemaio/music"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+      class="p-2 rounded dark:bg-neutral-900 cursor-pointer transition-color duration-200 ease-in-out hover:text-black dark:hover:text-white text-base grid items-center justify-center"
+    >
+      <div class="i-mdi-github-face"></div>
+    </a>
+    <a
+      href="mailto:maxwell.demaio@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Email"
+      class="p-2 rounded dark:bg-neutral-900 cursor-pointer transition-color duration-200 ease-in-out hover:text-black dark:hover:text-white text-base grid items-center justify-center"
+    >
+      <div class="i-mdi-email"></div>
+    </a>
   </div>
 </footer>
