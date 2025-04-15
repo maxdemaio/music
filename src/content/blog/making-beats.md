@@ -14,7 +14,7 @@ resources:
   ]
 ---
 
-Making beats in other DAWs like FL Studio is straightforward. FL Studio has the channel rack and a wide library in the cloud of one shots you can use. Yet, at least for me, it seemed complicated and manual in Logic. But, there are actually some hidden gems that can save you time instead of manually creating in beats.
+Making beats in other DAWs like FL Studio is straightforward. FL Studio has the channel rack and a wide library in the cloud of one shots you can use. Yet, at least for me, it seemed complicated and manual in Logic. But, there are actually some hidden gems that can save you a lot of time.
 
 Before learning these tricks, I’d always end up slicing and arranging loops myself. With these tips you'll be off to the races to create beats and start being creative faster.
 
