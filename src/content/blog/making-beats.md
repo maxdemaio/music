@@ -3,7 +3,7 @@ fileName: making-beats
 description: Make beats in Logic Pro X like FL Studio using the Quick Sampler. Slice loops, build custom patterns, and create pro beats faster with this powerful tool.
 pubDate: 2025-04-15
 title: Making Beats in Logic Pro X
-duration: 4
+duration: 3
 tags: ["logic", "producing"]
 resources:
   [
