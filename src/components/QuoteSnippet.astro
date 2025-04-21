@@ -30,7 +30,7 @@ const { authorAndSource, link } = Astro.props;
     {
       link && (
         <div class="truncate w-[280px]">
-          <a href="https://www.linkedin.com/in/maxdemaio" class="mlink">
+          <a href={link} class="mlink">
             {link}
           </a>
         </div>
