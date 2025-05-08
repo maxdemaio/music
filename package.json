@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/vercel": "^8.0.7",
-    "astro": "^5.3.0",
-    "typescript": "^5.3.3"
+    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/sitemap": "^3.3.1",
+    "@astrojs/vercel": "^8.1.4",
+    "astro": "^5.7.12",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.169",
-    "unocss": "^0.58.3"
+    "@iconify/json": "^2.2.336",
+    "unocss": "^0.58.9"
   }
 }

@@ -14,6 +14,7 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         kai: "Kaisei Tokumin",
+        fraktur: "Fraktur",
       },
     }),
   ],
