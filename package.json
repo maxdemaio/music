@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.336",
-    "unocss": "^0.58.9"
+    "unocss": "^66.1.1"
   }
 }
