@@ -1,8 +1,8 @@
-import { defineConfig, presetIcons, presetUno, presetWebFonts } from "unocss";
+import { defineConfig, presetIcons, presetWind3, presetWebFonts } from "unocss";
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind3(),
     presetIcons({
       extraProperties: {
         display: "inline-block",
@@ -14,7 +14,6 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         kai: "Kaisei Tokumin",
-        fraktur: "Fraktur",
       },
     }),
   ],
