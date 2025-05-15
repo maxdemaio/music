@@ -16,6 +16,7 @@ tags: ["logic", "producing"]
 7. Open the loop browser: `o`
 8. Create new audio track: `option` + `cmd` + `a`
 9. Open mixer window: `cmd` + `2`
+  - also `x` will open the mixing board below and not in a new window
 10. Select: `s`
 11. Mute: `m`
 12. Bring selected track to current cursor: `;`
@@ -35,5 +36,4 @@ tags: ["logic", "producing"]
 24. Play a software instrument using musical typing: while having the software instrument track selected press `cmd` + `k`. Or, choose `Window` > Show `Musical Typing` - [https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac](https://support.apple.com/en-my/guide/logicpro/lgcpb19cbd34/mac)
 25. Move the cursor to the start/end of an audio region: select audio region, `fn` + `control` + `arrow key`
 26. `shift` + `i` inverts your selection
-
-- useful for selecting a MIDI note and then selecting everything except that MIDI note
+  - useful for selecting a MIDI note and then selecting everything except that MIDI note
