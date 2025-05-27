@@ -1,12 +1,19 @@
 <nav
-  class="md:flex-row flex-col pointer-events-none w-full fixed top-0 backdrop-blur-sm pt-6 pb-16 md:pb-22 md:px-14 px-4 z-50 md:[mask-image:linear-gradient(to_bottom,red_40%,transparent)] [mask-image:linear-gradient(to_bottom,red_60%,transparent)] bg-gradient-to-b from-neutral-100/50 dark:from-neutral-950/50 to-transparent select-none justify-between flex font-kai items-center gap-4"
+  class="justify-between items-center gap-4 lg:gap-0 lg:grid lg:grid-cols-4 flex flex-col pointer-events-none w-full fixed top-0 backdrop-blur-sm pt-6 pb-16 lg:pb-22 lg:px-14 px-4 z-50 lg:[mask-image:linear-gradient(to_bottom,red_40%,transparent)] [mask-image:linear-gradient(to_bottom,red_60%,transparent)] bg-gradient-to-b from-neutral-100/50 dark:from-neutral-950/50 to-transparent select-none"
 >
   <a
     href="/"
-    class="pointer-events-auto uppercase text-black dark:text-white font-bold text-base md:text-3xl"
+    class="font-kai pointer-events-auto uppercase text-black dark:text-white font-bold text-base lg:text-3xl"
     >maymax</a
   >
-  <div class="pointer-events-auto flex gap-6">
+  <div
+    class="col-span-2 justify-center pointer-events-auto uppercase font-kai hidden lg:flex gap-18"
+  >
+    <a href="/">Home</a>
+    <a href="/blog">Blog</a>
+    <a href="/poems-lyrics">Inspo</a>
+  </div>
+  <div class="justify-end pointer-events-auto flex gap-6">
     <a
       href="https://soundcloud.com/maymaxmusic"
       target="_blank"
