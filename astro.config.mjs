@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   output: 'static',
   trailingSlash: "never",
-  site: 'https://music.maxdemaio.com',
+  site: 'https://maymaxmusic.com',
   integrations: [UnoCSS({
     injectReset: true
   }), sitemap(), mdx()],
