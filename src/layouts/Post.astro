@@ -40,8 +40,8 @@ const {
     >
       <div class="mb-8">
         <a href="/blog" class="mlink"
-        ><span class="i-solar-arrow-left-linear"></span>{" "}See all posts</a
-      >
+          ><span class="i-solar-arrow-left-linear"></span>{" "}See all posts</a
+        >
       </div>
 
       <section class="mb-10">
@@ -78,31 +78,33 @@ const {
         </div>
       </section>
       <article class="slide-enter-content">
+        <!-- blog content is injected here -->
+        <slot />
         {
           resources && (
             <>
               <h2>Resources</h2>
-              {resources.map((resource) => (
-                <li>
-                  {resource.url ? (
-                    <a
-                      href={resource.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {resource.title}
-                    </a>
-                  ) : (
-                    resource.title
-                  )}
-                  {resource.description && ` - ${resource.description}`}
-                </li>
-              ))}
+              <ul>
+                {resources.map((resource) => (
+                  <li>
+                    {resource.url ? (
+                      <a
+                        href={resource.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {resource.title}
+                      </a>
+                    ) : (
+                      resource.title
+                    )}
+                    {resource.description && ` - ${resource.description}`}
+                  </li>
+                ))}
+              </ul>
             </>
           )
         }
-        <!-- blog content is injected here -->
-        <slot />
       </article>
     </main>
     <!-- prose end -->
