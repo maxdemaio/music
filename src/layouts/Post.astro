@@ -1,8 +1,8 @@
 ---
 import Navbar from "@components/Navbar.astro";
 import type { CollectionEntry } from "astro:content";
-import CommonHead from "@components/CommonHead.astro";
 import "@styles/prose.css";
+import CommonHeadPost from "@components/CommonHeadPost.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -20,51 +20,8 @@ const {
 } = Astro.props;
 ---
 
-<style>
-  /* dynamic stylings unique for tags */
-  .logic {
-    color: rgb(2, 132, 199);
-    border-color: rgb(2, 132, 199);
-  }
-  html.dark .logic {
-    /* sky-300 */
-    color: rgb(125 211 252);
-    border-color: rgb(125 211 252);
-  }
-  .producing {
-    color: rgb(192 38 211);
-    border-color: rgb(192 38 211);
-  }
-  html.dark .producing {
-    color: rgb(240 171 252);
-    border-color: rgb(240 171 252);
-  }
-
-  .songwriting {
-    color: rgb(217 119 6);
-    border-color: rgb(217 119 6);
-  }
-  html.dark .songwriting {
-    color: rgb(252 211 77);
-    border-color: rgb(252 211 77);
-  }
-
-  .guitar {
-    color: rgb(225 29 72);
-    border-color: rgb(225 29 72);
-  }
-  html.dark .guitar {
-    color: rgb(253 164 175);
-    border-color: rgb(253 164 175);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-
 <html lang="en">
-  <CommonHead
+  <CommonHeadPost
     title={title}
     description={description}
     image={image}
