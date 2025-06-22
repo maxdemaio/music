@@ -40,12 +40,10 @@ blogPosts = blogPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-let music = await getCollection("music", ({ data }) => {
-  return data.featured == true;
-});
+let music = await getCollection("music");
 
 // Sort my music posts
-music.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+music = music.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 
 // https://github.com/withastro/roadmap/discussions/181
 // Cache this page for a day
@@ -253,7 +251,7 @@ Astro.response.headers.set(
     <h2
       class="mb-4 uppercase text-black dark:text-white font-kai font-bold text-2xl"
     >
-      Poem/Lyric Snippets
+      Inspo
     </h2>
     <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
     <QuoteGrid className="mb-6">

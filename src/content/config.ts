@@ -43,7 +43,6 @@ const music = defineCollection({
     link: z.string().url(),
     image: image(),
     imageAlt: z.string(),
-    featured: z.boolean().default(false),
   }),
 });
 
