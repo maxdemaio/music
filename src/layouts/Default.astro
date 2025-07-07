@@ -17,11 +17,11 @@ const { title, description, image } = Astro.props;
 <html lang="en">
   <CommonHeadDefault title={title} description={description} image={image} />
   <body
-    class="pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
+    class="flex flex-col min-h-screen items-center pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
   >
     <Navbar />
     <main
-      class="relative pt-2 flex flex-col gap-10 px-8 lt-xs:px-4 max-w-5xl mx-auto"
+      class="flex-1 relative pt-2 flex flex-col gap-10 px-8 lt-xs:px-4 max-w-5xl mx-auto"
     >
       <slot />
     </main>

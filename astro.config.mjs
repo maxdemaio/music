@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import UnoCSS from 'unocss/astro';
 import sitemap from '@astrojs/sitemap';
 import vercel from "@astrojs/vercel/serverless";
+import react from "@astrojs/react";
 
 import mdx from "@astrojs/mdx";
 
@@ -12,7 +13,7 @@ export default defineConfig({
   site: 'https://maymaxmusic.com',
   integrations: [UnoCSS({
     injectReset: true
-  }), sitemap(), mdx()],
+  }), sitemap(), mdx(), react()],
   markdown: {
     shikiConfig: {
       theme: 'github-dark-dimmed'

@@ -49,3 +49,67 @@
   }
 }
 /** end slide enter animations **/
+
+/** Tag styles for blog post filtering **/
+.logic {
+  /* sky-600 */
+  color: rgb(2, 132, 199);
+  border-color: rgb(2, 132, 199);
+}
+html.dark .logic {
+  /* sky-300 */
+  color: rgb(125 211 252);
+  border-color: rgb(125 211 252);
+}
+.producing {
+  color: rgb(192 38 211);
+  border-color: rgb(192 38 211);
+}
+html.dark .producing {
+  color: rgb(240 171 252);
+  border-color: rgb(240 171 252);
+}
+
+.songwriting {
+  color: rgb(217 119 6);
+  border-color: rgb(217 119 6);
+}
+html.dark .songwriting {
+  color: rgb(252 211 77);
+  border-color: rgb(252 211 77);
+}
+
+.guitar {
+  color: rgb(225 29 72);
+  border-color: rgb(225 29 72);
+}
+html.dark .guitar {
+  color: rgb(253 164 175);
+  border-color: rgb(253 164 175);
+}
+/** end tag styles **/
+
+/** Component hydration animation **/
+@keyframes grow-in {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 5000px; /* Large enough to accommodate content */
+    opacity: 1;
+  }
+}
+
+.hydrate-grow {
+  animation: grow-in 650ms ease-in-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hydrate-grow {
+    animation: none;
+    max-height: none;
+    opacity: 1;
+  }
+}
+/** end component hydration animation **/
