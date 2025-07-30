@@ -1,6 +1,6 @@
 ---
 fileName: quick-sampler-drum-machine-designer-changing-audio
-description: example
+description: Learn how to match raw samples with Drum Machine Designer in Logic Pro. Fix volume differences, optimize velocity, and make beat-making faster.
 pubDate: 2025-07-29
 title: Making Beats with Drum Machine Designer (Raw Samples vs. Step Sequencer)
 duration: 3
