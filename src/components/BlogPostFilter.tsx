@@ -132,7 +132,7 @@ const BlogPostFilter = ({ posts, allTags }: BlogPostFilterProps) => {
                 {post.data.tags && <span>·</span>}
                 {post.data.tags && (
                   <>
-                    {post.data.tags.map((tag) => (
+                    {post.data.tags.sort().map((tag) => (
                       <span key={tag} className={`${tag} border rounded px-1`}>
                         {tag}
                       </span>

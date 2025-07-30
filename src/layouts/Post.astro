@@ -3,6 +3,7 @@ import Navbar from "@components/Navbar.astro";
 import type { CollectionEntry } from "astro:content";
 import "@styles/prose.css";
 import CommonHeadPost from "@components/CommonHeadPost.astro";
+import Footer from "@components/Footer.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -30,7 +31,7 @@ const {
     publishedTime={pubDate.toISOString()}
   />
   <body
-    class="pt-28 text-lg text-gray-700 bg-white dark:text-gray-200 dark:bg-neutral-950"
+    class="flex flex-col min-h-screen items-center pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-gray-200 dark:bg-neutral-950"
   >
     <Navbar />
     <!-- prose start -->
@@ -65,7 +66,7 @@ const {
           {
             tags && (
               <>
-                {tags.map((tag) => (
+                {tags.sort().map((tag) => (
                   <span
                     class={`${tag} transition-opacity ease-in-out duration-400 group-hover:opacity-100 border rounded px-1`}
                   >
@@ -108,5 +109,6 @@ const {
       </article>
     </main>
     <!-- prose end -->
+    <Footer />
   </body>
 </html>
