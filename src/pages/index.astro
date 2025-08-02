@@ -43,7 +43,9 @@ blogPosts = blogPosts
 let music = await getCollection("music");
 
 // Sort my music posts
-music = music.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+music = music
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 
 // https://github.com/withastro/roadmap/discussions/181
 // Cache this page for a day
@@ -114,8 +116,15 @@ Astro.response.headers.set(
           <span class="i-solar-music-notes-bold-duotone"></span>
         </div>
       </h2>
-      <p class="mb-6">My featured music as of late.</p>
-      <ul class="flex flex-col gap-4 mb-6">
+      <p class="mb-6 max-w-sm">
+        My featured music as of late. Feel free to <a
+          href="https://soundcloud.com/maymaxmusic"
+          class="soundLink"
+          >listen to all my music on SoundCloud{" "}<span
+            class="i-solar-arrow-right-linear"></span></a
+        >.
+      </p>
+      <ul class="flex flex-col gap-4">
         {
           music.map((song) => (
             <li class="flex gap-2 items-center">
@@ -155,9 +164,6 @@ Astro.response.headers.set(
           ))
         }
       </ul>
-      <a href="https://soundcloud.com/maymaxmusic" class="soundLink"
-        >See all music{" "}<span class="i-solar-arrow-right-linear"></span></a
-      >
     </section>
     <section class="max-w-lg">
       <h2
@@ -165,27 +171,32 @@ Astro.response.headers.set(
       >
         STAY TUNED
       </h2>
-      <p class="mb-6">
+      <p class="mb-6 max-w-sm">
         <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a
         collection of all the useful music tips and tricks I've learned along the
-        way. So far, I've written a total of {totalBlogPosts} posts.
+        way. So far, I've written a total of {totalBlogPosts} posts. You can <a
+          href="/blog"
+          class="mlink"
+          >Read all posts my posts here{" "}<span
+            class="i-solar-arrow-right-linear"></span></a
+        >.
       </p>
 
       <ul
-        class="mb-6 flex flex-wrap slide-enter-content1 gap-4 md:justify-start justify-center"
+        class="flex flex-wrap slide-enter-content1 gap-4 md:justify-start justify-center"
       >
         {
           blogPosts.map((post) => (
             <>
               <a
                 href={`/blog/${post.slug}`}
-                class="p-4 w-60 rounded group duration-400 ease-in-out shadow-md hover:translate-y-[-5px] bg-neutral-50 hover:shadow-xl dark:hover-shadow-none dark:bg-neutral-950 dark:border dark:border-neutral-800 dark:hover:border-neutral-600 dark:shadow-none"
+                class="p-4 w-60 rounded group duration-400 transition-all shadow-md hover:translate-y-[-5px] bg-neutral-50 hover:shadow-xl dark:hover-shadow-none dark:bg-neutral-950 dark:border dark:border-neutral-800 dark:hover:border-neutral-600 dark:shadow-none"
               >
                 <li>
-                  <div class="line-clamp-2 transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
+                  <div class="line-clamp-2 transition-opacity duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
                     {post.data.title}
                   </div>
-                  <div class="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
+                  <div class="transition-opacity duration-400 opacity-40 group-hover:opacity-80 flex flex-col gap-1">
                     <div class="flex gap-1">
                       <time datetime={post.data.pubDate.toDateString()}>
                         {post.data.pubDate.toLocaleDateString("en-us", {
@@ -213,9 +224,6 @@ Astro.response.headers.set(
           ))
         }
       </ul>
-      <a href="/blog" class="mlink"
-        >See all posts{" "}<span class="i-solar-arrow-right-linear"></span></a
-      >
     </section>
   </div>
 
@@ -252,8 +260,15 @@ Astro.response.headers.set(
     >
       Inspo
     </h2>
-    <p class="mb-6">Compilation of snippets from poems and lyrics I enjoy.</p>
-    <QuoteGrid className="mb-6">
+    <p class="mb-6">
+      Compilation of snippets from poems and lyrics I enjoy. <a
+        href="/inspo"
+        class="mlink"
+        >Check out all my inspo snippets here{" "}<span
+          class="i-solar-arrow-right-linear"></span></a
+      >.
+    </p>
+    <QuoteGrid>
       <Quote
         isSnippet
         authorAndSource="Sylvia Plath - Pursuit"
@@ -276,9 +291,5 @@ Astro.response.headers.set(
         my blood rushing<br />like the shadow<br />cast by a cloud of starlings
       </Quote>
     </QuoteGrid>
-    <a href="/inspo" class="mlink"
-      >All inspo snippets{" "}<span class="i-solar-arrow-right-linear"
-      ></span></a
-    >
   </section>
 </Default>

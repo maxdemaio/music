@@ -19,11 +19,11 @@ export default defineConfig({
   ],
   shortcuts: {
     mlinkTextHover:
-      "transition-color transition-bg ease-in-out duration-200 hover:text-sky-950 dark:hover:text-sky-100 hover:bg-sky-50 dark:hover:bg-sky-950",
+      "transition-color transition-bg duration-150 hover:text-sky-950 dark:hover:text-sky-100 hover:bg-sky-50 dark:hover:bg-sky-950",
     soundLinkHover:
-      "transition-color transition-bg ease-in-out duration-200 hover:text-orange-950 dark:hover:text-orange-100 hover:bg-orange-50 dark:hover:bg-orange-950",
+      "transition-color transition-bg duration-150 hover:text-orange-950 dark:hover:text-orange-100 hover:bg-orange-50 dark:hover:bg-orange-950",
     mySponsorLinkHover:
-      "transition-color transition-bg ease-in-out duration-200 hover:text-pink-600 dark:hover:text-pink-50 hover:bg-pink-50 dark:hover:bg-pink-950",
+      "transition-color transition-bg duration-150 hover:text-pink-600 dark:hover:text-pink-50 hover:bg-pink-50 dark:hover:bg-pink-950",
     mlink:
       "rounded-sm p-0.5 text-sky-900 dark:text-sky-200 bg-sky-100 dark:bg-sky-950 mlinkTextHover",
     soundLink:
@@ -34,7 +34,7 @@ export default defineConfig({
     // unfortunately, group doesn't quite work yet in a shortcut
     // mproj: 'group rounded p-4 bg-transparent hover:bg-#88888808',
     mprojItem:
-      "transition-opacity ease-in-out duration-200 opacity-80 group-hover:opacity-100",
+      "transition-opacity duration-150 opacity-80 group-hover:opacity-100",
   },
   theme: {
     colors: {
