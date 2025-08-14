@@ -116,10 +116,10 @@ const BlogPostFilter = ({ posts, allTags }: BlogPostFilterProps) => {
         {filteredPosts.map((post) => (
           <li key={selectedTag + "_" + post.slug}>
             <a href={`/blog/${post.slug}`} className="group">
-              <div className="transition-opacity ease-in-out duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
+              <div className="transition-all duration-400 text-black dark:text-white opacity-60 group-hover:opacity-100">
                 {post.data.title}
               </div>
-              <div className="transition-opacity ease-in-out duration-400 opacity-40 group-hover:opacity-80 flex flex-wrap gap-1">
+              <div className="transition-all duration-400 opacity-40 group-hover:opacity-80 flex flex-wrap gap-1">
                 <time dateTime={post.data.pubDate.toDateString()}>
                   {post.data.pubDate.toLocaleDateString("en-us", {
                     year: "numeric",

@@ -37,3 +37,6 @@ tags: ["logic", "producing"]
 25. Move the cursor to the start/end of an audio region: select audio region, `fn` + `control` + `arrow key`
 26. `shift` + `i` inverts your selection
   - useful for selecting a MIDI note and then selecting everything except that MIDI note
+27. renaming things fast so the tracks match their track header names:
+  - `cmd` + `a` to select all tracks (or just select the tracks you want)
+  - `shift` + `option` + `n`
