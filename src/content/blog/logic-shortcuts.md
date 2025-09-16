@@ -38,5 +38,5 @@ tags: ["logic", "producing"]
 26. `shift` + `i` inverts your selection
   - useful for selecting a MIDI note and then selecting everything except that MIDI note
 27. renaming things fast so the tracks match their track header names:
-  - `cmd` + `a` to select all tracks (or just select the tracks you want)
+  - `cmd` + `a` to select all tracks (or just select the track(s) you want)
   - `shift` + `option` + `n`
