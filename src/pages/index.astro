@@ -105,6 +105,7 @@ Astro.response.headers.set(
   title="Home - maymax music"
   description="maymax's personal music website"
 >
+
   <div class="flex flex-wrap gap-10 lg:justify-between">
     <section>
       <h2
@@ -174,9 +175,8 @@ Astro.response.headers.set(
       <p class="mb-6 max-w-sm">
         <span class="font-bold text-black dark:text-white">Stay Tuned</span> is a
         collection of all the useful music tips and tricks I've learned along the
-        way. So far, I've written a total of {totalBlogPosts} posts. You can <a
-          href="/blog"
-          class="mlink"
+        way. So far, I've written a total of {totalBlogPosts} posts. You can
+        <a href="/blog" class="mlink"
           >Read all posts my posts here{" "}<span
             class="i-solar-arrow-right-linear"></span></a
         >.
@@ -291,5 +291,34 @@ Astro.response.headers.set(
         my blood rushing<br />like the shadow<br />cast by a cloud of starlings
       </Quote>
     </QuoteGrid>
+  </section>
+
+  <section>
+    <h2
+      class="mb-4 uppercase text-black dark:text-white font-kai font-bold text-2xl"
+    >
+      Gear
+    </h2>
+
+    <p class="mb-6">
+      All the gear I use to make music. <a href="/gear" class="mlink"
+        >Check out all my gear{" "}<span class="i-solar-arrow-right-linear"
+        ></span></a
+      >.
+    </p>
+  </section>
+
+  <section>
+    <h2
+      class="mb-4 uppercase text-black dark:text-white font-kai font-bold text-2xl"
+    >
+      Currently
+    </h2>
+
+    <p class="mb-6">
+      What am I up to? Right now I'm working on improving my
+      songwriting/producing skills. I'm trying to create original music and the
+      goal is to release a debut EP.
+    </p>
   </section>
 </Default>

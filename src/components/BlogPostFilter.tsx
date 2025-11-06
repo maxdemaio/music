@@ -77,7 +77,7 @@ const BlogPostFilter = ({ posts, allTags }: BlogPostFilterProps) => {
             className={`px-3 py-1 rounded border transition-all duration-200 ${
               !selectedTag
                 ? "bg-black dark:bg-white text-white dark:text-black border-black dark:border-white"
-                : "border-gray-400 text-gray-600 dark:text-gray-400 hover:border-gray-600 dark:hover:border-gray-300"
+                : "border-neutral-400 text-neutral-600 dark:text-neutral-400 hover:border-neutral-600 dark:hover:border-neutral-300"
             }`}
           >
             all ({posts.length})
@@ -103,7 +103,7 @@ const BlogPostFilter = ({ posts, allTags }: BlogPostFilterProps) => {
           })}
         </div>
         {selectedTag && (
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             showing {filteredPosts.length} post
             {filteredPosts.length !== 1 ? "s " : " "}
             tagged with <span className="font-semibold">{selectedTag}</span>
@@ -147,7 +147,7 @@ const BlogPostFilter = ({ posts, allTags }: BlogPostFilterProps) => {
 
       {filteredPosts.length === 0 && selectedTag && (
         <div className="text-center py-8">
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-neutral-600 dark:text-neutral-400">
             No posts found with the tag "{selectedTag}"
           </p>
           <button onClick={clearFilter} className="mt-2 mlink">
