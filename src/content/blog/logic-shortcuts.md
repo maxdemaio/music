@@ -40,3 +40,4 @@ tags: ["logic", "producing"]
 27. renaming things fast so the tracks match their track header names:
   - `cmd` + `a` to select all tracks (or just select the track(s) you want)
   - `shift` + `option` + `n`
+28. select region `cmd` + `u` sets the cycle region to that audio region
