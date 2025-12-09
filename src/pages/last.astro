@@ -1,0 +1,31 @@
+---
+import CommonHeadDefault from "@components/CommonHeadDefault.astro";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+---
+
+<html lang="en">
+  <CommonHeadDefault title="last" description="last" noindex />
+  <!-- top padding to match height of sticky navbar -->
+  <body
+    class="pt-28 text-lg text-neutral-900 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-950"
+  >
+    <Navbar />
+    <main
+      class="relative pt-2 flex flex-col gap-10 px-8 lt-xs:px-4 max-w-5xl mx-auto"
+    >
+      <div>
+        <a class="soundLink animate-pulse" href="https://soundcloud.com/maymaxmusic"
+          >last...</a>
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      // redirect to soundcloud after 1 second
+      setTimeout(() => {
+        window.location.href = "https://soundcloud.com/maymaxmusic";
+      }, 1000);
+    </script>
+  </body>
+</html>

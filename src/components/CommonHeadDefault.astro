@@ -9,6 +9,7 @@ export interface Props {
   type?: string;
   tags?: Tag[];
   publishedTime?: string;
+  noindex?: boolean;
 }
 
 // Image has website default
@@ -19,6 +20,7 @@ const {
   description,
   publishedTime,
   image = SITE_IMAGE,
+  noindex = false,
 } = Astro.props;
 ---
 
@@ -29,6 +31,7 @@ const {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
+  {noindex && <meta name="robots" content="noindex,nofollow" />}
   <!-- End Global Metadata -->
 
   <!-- Favicon -->
